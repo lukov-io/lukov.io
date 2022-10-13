@@ -1,42 +1,47 @@
-//colors//
-$color-default-white: #ffffff;
-$color-custom-white: #efefef;
-$color-default-black: #1e1e1e;
-$color-custom-black: #191e2d;
-$color-red: #f0083f;
-$color-dark-green: #86a700;
-$color-default-gray: #959595;
-$color-light-gray:#7b7b7b;
-$color-green: rgb(73, 185, 59);
-//colors-text//
-$color-font-white: #ffffff;
-$color-font-gray: #acacac;
-$color-font-black: #1e1e1e;
-$color-font-green: #86a700;
 //font-family//
-$font-family-base: Montserrat,sans-serif;
+$font-family--base: Montserrat,sans-serif;
+//colors//
+$color--white: #ffffff;
+$color--custom--white: rgba(255,255,255,0.85);
+$color--black: #1e1e1e;
+$color--custom-black: #191e2d;
+$color--red: #f0083f;
+$color--dark-green: #86a700;
+$color--gray: #959595;
+$color--custom-gray: #5f5f5f;
+$color--light-gray:#7b7b7b;
+$color--green: rgb(73, 185, 59);
+//colors-text//
+$color-font--white: $color--white;
+$color-font--gray: $color--gray;
+$color-font--black: $color--black;
+$color-font--green: $color--dark-green;
 //font-size-text//
-$font-size-text-base: 1.1rem;
-$font-size-text-small:1.142em;
-$font-size-text-medium:1.142em;
-$font-size-text-big:2.8em;
-$font-size-text-huge: 3.3333em;
-$font-size-text-px-small: 14px;
-$font-size-text-px-medium: 20px;
-$font-size-text-px-big: 20px;
+$font-size: 12px;
+$font-size--base: 14px;
+$font-size--small: 17px;
+$font-size--medium: 20px;
+$font-size--big: 40px;
+$font-size--huge: 80px;
 
 //font-size header//
-$font-size-h1: 90px;
-$font-size-h2: 5.714em;
+$font-size__h1: 90px;
+$font-size__h2: $font-size--huge;
+$font-size__h4: $font-size--medium;
+//colors header//
+$color__h1: $color--white;
+$color__h2: $color--black;
+$color__h4--dark: $color--black;
+$color__h4--white: $color--white;
 //font-weight//
-$font-weight-base: 300;
-$font-weight-text: 400;
-$font-weight-h1: 600;
-$font-weight-h2: 400;
+$font-weight--base: 300;
+$font-weight__text: 400;
+$font-weight__h1: 600;
+$font-weight__h2: 400;
 //line-height//
 $line-height-base: 1.75em;
-$line-height-h1: 48px;
-$line-height-h2: 1.2em;
+$line-height__h1: 48px;
+$line-height__h2: 1.2em;
 
 
 
