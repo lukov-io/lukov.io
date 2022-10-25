@@ -2,7 +2,7 @@
 $font-family--base: Montserrat,sans-serif;
 //colors//
 $color--white: #ffffff;
-$color--custom--white: rgba(255,255,255,0.85);
+$color--custom-white: rgba(255,255,255,0.85);
 $color--black: #1e1e1e;
 $color--custom-black: #191e2d;
 $color--red: #f0083f;
@@ -30,8 +30,8 @@ $h4__font-size: $font-size--medium;
 /*colors header*/
 $h1__color--white: $color--white;
 $h1__color--dark: $color--black;
-$h2__color-white: $color--white;
-$h2__color-dark: $color--black;
+$h2__color--white: $color--white;
+$h2__color--dark: $color--black;
 $h3__color--white: $color--white;
 $h3__color--dark: $color--black;
 $h4__color--white: $color--white;
@@ -45,7 +45,7 @@ $font-weight--base: 300;
 $text__font-weight: 400;
 $h1__font-weight: 600;
 $h2__font-weight: 400;
-//line-height//
+/*line-height*/
 $line-height--base: 1.75em;
 $h1__line-height: 48px;
 $h2__line-height: 1.2em;
@@ -53,12 +53,12 @@ $h2__line-height: 1.2em;
 $letter-spacing: 1px;
 /*background colors*/
 $topbar__background: $color--black;
-$navigation__background: $color--custom--white;
-$canvas__background--dark: $color--black;
+$navigation__background: $color--custom-white;
+$offcanvas__background--dark: $color--black;
 /*hover*/
-$link-hover__background: $color--custom--white;
-$link-hover__background--dark: $color--black;
-$btn__background-hover: $color--green;
+$link__background--hover: $color--custom-white;
+$link__background-dark--hover: $color--black;
+$btn__background--hover: $color--green;
 /*btn*/
 $btn__background--base: $color--red;
 $btn__background--gray: $color--gray;
