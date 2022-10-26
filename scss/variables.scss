@@ -60,8 +60,15 @@ $link__background--hover: $color--custom-white;
 $link__background-dark--hover: $color--black;
 $btn__background--hover: $color--green;
 /*btn*/
+$btn__font-size: $font-size--small;
 $btn__background--base: $color--red;
 $btn__background--gray: $color--gray;
+$btn__color--base: $color--custom-white;
+$btn__background-green--hover: $color--green;
+/*links*/
+$link__background--hover: $color--custom-white;
+$link__background-dark--hover: $color--black;
+$link__color--hover: $color--green;
 
 /* Grid settings */
 $grid-breakpoints: (
@@ -95,3 +102,4 @@ $min-md: '(min-width: #{map-get($grid-breakpoints, md)})' !default;
 $min-lg: '(min-width: #{map-get($grid-breakpoints, lg)})' !default;
 $min-xl: '(min-width: #{map-get($grid-breakpoints, xl)})' !default;
 $min-xxl: '(min-width: #{map-get($grid-breakpoints, xxl)})' !default;
+
