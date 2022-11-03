@@ -5,12 +5,13 @@ $color--white: #ffffff;
 $color--custom-white: rgba(255,255,255,0.85);
 $color--black: #1e1e1e;
 $color--custom-black: #191e2d;
+$color--dark: black;
 $color--red: #f0083f;
-$color--dark-green: #86a700;
+$color--dark-green: rgb(73, 185, 59);
 $color--gray: #959595;
 $color--custom-gray: #5f5f5f;
 $color--light-gray:#7b7b7b;
-$color--green: rgb(73, 185, 59);
+$color--green: #86a700;
 /*colors-text*/
 $text__color--white: $color--white;
 $text__color--gray: $color--gray;
@@ -57,7 +58,7 @@ $navigation__background: $color--custom-white;
 $offcanvas__background--dark: $color--black;
 /*hover*/
 /*btn*/
-$btn__font-size: $font-size--small;
+$btn__font-size: $font-size--base;
 $btn__background--base: $color--red;
 $btn__background--gray: $color--gray;
 $btn__color--base: $color--custom-white;
@@ -66,6 +67,9 @@ $btn__background-green--hover: $color--green;
 $link__background--hover: $color--custom-white;
 $link__background-dark--hover: $color--black;
 $link__color--hover: $color--green;
+/*ikons*/
+$icons-invert--hover: $color--dark;
+$caret-after--hover: $color--green;
 /* Grid settings */
 $grid-breakpoints: (
         xs: 0,
