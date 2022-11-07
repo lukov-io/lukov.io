@@ -41,35 +41,7 @@
         color: $link__color--hover;
       }
     }
-    .caret::after {
-      margin-left: 3px;
-      content: "\f107";
-      font-family: 'Font Awesome 6 Free';
-      @media #{$md} {
-        float: right;
-        padding: 0 5px;
-        background-color: $color--custom-gray;
-      }
-    }
-    .caret:hover::after {
-      color: $caret-after--hover;
-    }
-    .caret-small::after {
-      content: "\f107";
-      font-family: 'Font Awesome 6 Free';
-    }
-    .arrow::after {
-      margin-left: 3px;
-      content: "\f061";
-      font-family: 'Font Awesome 6 Free';
-      float: right;
-      @media #{$md} {
-        transform: rotate(90deg);
-      }
-    }
-    .arrow:hover::after {
-      color: $caret-after--hover;
-    }
+
 
     .menu{
       display: flex;
@@ -226,3 +198,28 @@
 
 
 }
+  .caret::after {
+    margin-left: 3px;
+    content: "\f107";
+    font-family: 'Font Awesome 6 Free';
+    @media #{$md} {
+      float: right;
+      padding: 0 5px;
+      background-color: $color--custom-gray;
+    }
+  }
+  .caret:hover::after {
+    color: $caret-after--hover;
+  }
+  .arrow::after {
+    margin-left: 3px;
+    content: "\f061";
+    font-family: 'Font Awesome 6 Free';
+    float: right;
+    @media #{$md} {
+      transform: rotate(90deg);
+    }
+  }
+  .arrow:hover::after {
+    color: $caret-after--hover;
+  }
