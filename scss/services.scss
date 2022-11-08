@@ -20,9 +20,6 @@
       margin: 0;
     }
   }
-  &__item:hover .fa-solid:before {
-    color: $caret-after--hover;
-  }
   &__content {
     border-right: 1px solid #d5d2d2;
     row-gap: 15px;
@@ -36,6 +33,9 @@
   &__item {
     &:nth-last-child(1) .services__content {
       border-right: none;
+    }
+    &:hover .fa-solid:before {
+      color: $caret-after--hover;
     }
     .fa-solid {
       font-size: 65px;
@@ -69,6 +69,20 @@
         color: $link__color-red--hover;
       }
     }
+    /*for reusable block setting ikon*/
+    &:hover .ikon-num {
+      color: $caret-after--hover;
+    }
+
+    .ikon-num {
+      font-size: 65px;
+      color: $icons-color--red;
+      margin-bottom: 25px;
+    }
+    .ikon-num:hover {
+      color: $caret-after--hover;
+    }
+    /*     */
 }
 }
 .arrow--small:after {
