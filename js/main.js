@@ -1,4 +1,4 @@
-/*hamb*/
+// hamb
 let hamb = document.querySelector(".hamb");
 let menuWrapper = document.querySelector(".wrapper-menu");
 
@@ -9,7 +9,7 @@ hamb.addEventListener("click", function () {
 })
 
 
-/*menu*/
+// menu
 let dropMenuItems = document.querySelectorAll(".dropdown-menu__item");
 
 for (let drop of dropMenuItems) {
