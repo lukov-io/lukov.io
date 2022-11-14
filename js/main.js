@@ -8,7 +8,6 @@ hamb.addEventListener("click", function (event) {
     hamb.classList.toggle("invert");
 })
 
-
 /*menu*/
 let dropMenuItems = document.querySelectorAll(".dropdown-menu__item");
 
@@ -31,6 +30,40 @@ for (let drop of dropMenuItems) {
             event.currentTarget.classList.toggle("active");
         }
 })
+}
+
+/*slider*/
+
+let dotsWrapper = document.querySelector(".wrapper__dots");
+let itemWidth = document.querySelector(".feedback__item").clientWidth;
+let itemLength = document.querySelectorAll(".feedback__item").length;
+let feedbackWrapper = document.querySelector(".feedback__wrapper");
+let feedbackWrapperWidth = document.querySelector(".feedback__wrapper").clientWidth;
+let countItem = feedbackWrapperWidth / itemWidth;
+let countVisibleItem = Math.floor(countItem);
+
+let dotLength = itemLength - (countVisibleItem - 1);
+for (let i = 0; i < dotLength; i++) {
+    let dot = document.createElement("span");
+    dot.classList.add("dot");
+    if(i === 0) {
+        dot.classList.add("dot--active");
+    }
+    dotsWrapper.appendChild(dot);
+    dot.addEventListener("click", function (event) {
+        feedbackWrapper.scrollLeft = itemWidth * i;
+        let targetClassItem = event.currentTarget.classList;
+        if (targetClassItem.contains("dot")) {
+            let itemsClassActive = document.querySelectorAll(".dot.dot--active");
+            itemsClassActive.forEach(function (element) {
+                if(element !== event.currentTarget) {
+                    element.classList.remove("dot--active");
+                }
+            })
+        }
+        event.currentTarget.classList.add("dot--active");
+    })
+
 }
 
 

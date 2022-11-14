@@ -81,12 +81,14 @@ $link__color-red--hover: $color--red;
 $links__font-size--base: $font-size;
 $links__font-size--light: $font-size--base;
 $link__color--green: $color--green;
+/*dots*/
+$dots__background--white: $color--white;
 /*ikons*/
 $icons-color--red: $color--red;
 $icons-invert--hover: $color--dark;
 $caret-after--hover: $color--green;
 /*border colors */
-$border__color--gray: #d5d2d2;
+$border__color--gray: #494848;
 /* Grid settins */
 $grid-breakpoints: (
         xs: 0,
