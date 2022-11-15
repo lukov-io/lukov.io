@@ -4,7 +4,9 @@
 //include files//
 @import "variables";
 @import "common";
-//include section//
+//include components//
+@import "slider";
+//include sections//
 @import "body";
 @import "topbar";
 @import "navigation";
@@ -12,4 +14,4 @@
 @import "services";
 @import "statistics";
 @import "feedback";
-
+@import "why-us";

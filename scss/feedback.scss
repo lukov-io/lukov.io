@@ -6,20 +6,7 @@
   background-size: cover;
   padding: 50px 0 50px 0;
   margin-top: 200px;
-  &__box{
-   &::-webkit-scrollbar {
-     display: none;
-    }
-  }
-  &__wrapper {
-    width: auto;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
+
   &__img {
     margin-top: -200px;
     @media #{$md} {
@@ -57,7 +44,6 @@
     }
   }
   &__item {
-    scroll-snap-align: end;
     min-width: 33%;
     padding: 0 15px 0 15px;
     border-right: 1px solid $border__color--gray;
@@ -93,38 +79,6 @@
     p {
       margin: 0;
       color: $text__color--gray;
-    }
-  }
-  .wrapper__dots {
-    text-align: center;
-    margin-top: 50px;
-    @media #{$md} {
-      margin-top: 25px;
-    }
-  }
-  .dot {
-    background-color: $dots__background--white;
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    display: inline-block;
-    margin-right: 10px;
-    cursor: pointer;
-    opacity: 0.3;
-    &--active {
-      opacity: 1;
-    }
-    &:focus {
-      opacity: 1;
-    }
-    &:active {
-      opacity: 1;
-    }
-    &:visited {
-       opacity: 1;
-     }
-    &:hover {
-      opacity: 1;
     }
   }
 }

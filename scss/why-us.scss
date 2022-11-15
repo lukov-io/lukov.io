@@ -1,0 +1,21 @@
+.why-us {
+  &__header {
+      text-align: center;
+      padding: $content__padding;
+    h3 {
+      color: $h2__color--dark;
+      font-size: $h2__font-size;
+      font-weight: $h2__font-weight;
+      margin-bottom: $header__margin-bottom;
+      @media #{$md} {
+        font-size: $h2__font-size--mobile;
+      }
+    }
+    p {
+      color: $text__color--black;
+      font-size: $font-size--medium;
+      font-weight: $text__font-weight;
+      margin: 0;
+    }
+    }
+}

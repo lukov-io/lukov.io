@@ -34,11 +34,11 @@ for (let drop of dropMenuItems) {
 
 /*slider*/
 
-let dotsWrapper = document.querySelector(".wrapper__dots");
-let itemWidth = document.querySelector(".feedback__item").clientWidth;
-let itemLength = document.querySelectorAll(".feedback__item").length;
-let feedbackWrapper = document.querySelector(".feedback__wrapper");
-let feedbackWrapperWidth = document.querySelector(".feedback__wrapper").clientWidth;
+let dotsWrapper = document.querySelector(".slider__dots");
+let itemWidth = document.querySelector(".slider__item").clientWidth;
+let itemLength = document.querySelectorAll(".slider__item").length;
+let feedbackWrapper = document.querySelector(".slider__wrapper");
+let feedbackWrapperWidth = document.querySelector(".slider__wrapper").clientWidth;
 let countItem = feedbackWrapperWidth / itemWidth;
 let countVisibleItem = Math.floor(countItem);
 
