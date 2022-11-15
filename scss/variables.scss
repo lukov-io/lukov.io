@@ -1,17 +1,19 @@
 /* font-family */
 $font-family--base: Montserrat,sans-serif;
 
-// colors
+/* colors */
 $color--white: #FFF;
 $color--custom-white: rgba(255, 255, 255, 0.85);
 $color--black: #1E1E1E;
 $color--custom-black: #191E2D;
+$color--dark: black;
 $color--red: #F0083F;
-$color--dark-green: #86A700;
+$color--dark-green: rgb(73, 185, 59);
 $color--gray: #959595;
 $color--custom-gray: #5F5F5F;
+$color--dark-gray: #292828;
 $color--light-gray: #7B7B7B;
-$color--green: rgb(73, 185, 59);
+$color--green: #86A700;
 
 /* colors-text */
 $text__color--white: $color--white;
@@ -65,13 +67,8 @@ $topbar__background: $color--black;
 $navigation__background: $color--custom-white;
 $offcanvas__background--dark: $color--black;
 
-/* hover */
-$link__background--hover: $color--custom-white;
-$link__background-dark--hover: $color--black;
-$btn__background--hover: $color--green;
-
 /* btn */
-$btn__font-size: $font-size--small;
+$btn__font-size: $font-size--base;
 $btn__background--base: $color--red;
 $btn__background--gray: $color--gray;
 $btn__color--base: $color--custom-white;
@@ -81,6 +78,11 @@ $btn__background-green--hover: $color--green;
 $link__background--hover: $color--custom-white;
 $link__background-dark--hover: $color--black;
 $link__color--hover: $color--green;
+
+/* ikons */
+$icons-invert--hover: $color--dark;
+$caret-after--hover: $color--green;
+$caret-down__background: $color--dark-gray;
 
 /* Grid settings */
 $grid-breakpoints: (

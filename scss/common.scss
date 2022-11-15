@@ -1,0 +1,31 @@
+/* btn style */
+.btn {
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: $btn__font-size;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn--danger {
+  color: $btn__color--base;
+  background-color: $btn__background--base;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $btn__background-green--hover;
+    color: $btn__color--base;
+  }
+}
+
+.btn--off {
+  @media #{$md} {
+    display: none;
+  }
+}
+
+/* invert */
+.invert {
+  filter: invert(1);
+}
