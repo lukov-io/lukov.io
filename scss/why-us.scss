@@ -22,7 +22,7 @@
   &__item {
     text-align: center;
     scroll-snap-align: end;
-    min-width: 33%;
+    min-width: 33.33%;
     @media #{$md} {
       min-width: 100%;
       border-right: none;

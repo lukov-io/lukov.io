@@ -6,16 +6,6 @@
   background-size: cover;
   padding: $padding__section--base;
   margin-top: 200px;
-
-  &__wrapper {
-    width: auto;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
   &__img {
     margin-top: -200px;
     @media #{$md} {
@@ -54,12 +44,9 @@
   }
   &__item {
     scroll-snap-align: end;
-    min-width: 33%;
+    min-width: 33.33%;
     padding: 0 15px 0 15px;
     border-right: 1px solid $border__color--gray;
-    &:nth-last-child(-n+2) {
-      border-right: none;
-    }
     @media #{$md} {
       min-width: 100%;
       border-right: none;
