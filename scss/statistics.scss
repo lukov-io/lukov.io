@@ -4,34 +4,41 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   @media #{$md} {
     background-image: none;
   }
+
   &__content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     .num {
       color: $text__color--white;
       font-size: $font-size--medium;
       font-weight: $text__font-weight-medium;
       letter-spacing: $letter-spacing;
+
       @media #{$md} {
         color: $text__color--green;
       }
     }
+
     .text {
       color: $text__color--white;
       font-size: $font-size--small;
       letter-spacing: $letter-spacing;
       margin-bottom: 15px;
+
       @media #{$md} {
         color: $text__color--black;
         margin-bottom: 25px;
       }
     }
   }
+
   &__img {
     img {
       width: 100%;
