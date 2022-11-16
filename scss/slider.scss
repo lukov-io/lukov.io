@@ -17,31 +17,30 @@
     @media #{$md} {
       margin-top: 25px;
     }
-    .dot {
-      background-color: $dots__background--white;
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-      display: inline-block;
-      margin-right: 10px;
-      cursor: pointer;
-      opacity: 0.3;
-      &--active {
-        opacity: 1;
-      }
-      &:focus {
-        opacity: 1;
-      }
-      &:active {
-        opacity: 1;
-      }
-      &:visited {
-        opacity: 1;
-      }
-      &:hover {
-        opacity: 1;
-      }
+  }
+  .dot {
+    background-color: $dots__background--base;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    opacity: 0.3;
+    &--active {
+      opacity: 1;
+    }
+    &:focus {
+      opacity: 1;
+    }
+    &:active {
+      opacity: 1;
+    }
+    &:visited {
+      opacity: 1;
+    }
+    &:hover {
+      opacity: 1;
     }
   }
 }
-

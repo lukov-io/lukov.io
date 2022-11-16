@@ -1,12 +1,12 @@
-//include bootstrap components//
+/*include bootstrap components*/
 @import "bootstrap/dist/css/bootstrap-reboot.css";
 @import "bootstrap/scss/bootstrap-grid";
-//include files//
+/*include files*/
 @import "variables";
 @import "common";
-//include components//
+/*include components*/
 @import "slider";
-//include sections//
+/*include sections*/
 @import "body";
 @import "topbar";
 @import "navigation";

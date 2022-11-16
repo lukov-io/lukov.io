@@ -1,6 +1,6 @@
 /*font-family*/
 $font-family--base: Montserrat,sans-serif;
-//colors//
+/*colors*/
 $color--white: #ffffff;
 $color--custom-white: rgba(255,255,255,0.85);
 $color--black: #1e1e1e;
@@ -25,7 +25,7 @@ $font-size--light: 20px;
 $font-size--medium: 33px;
 $font-size--big: 40px;
 $font-size--huge: 80px;
-//content padding*/
+/*content padding*/
 $content__padding: 100px 0;
 /*font-size header*/
 $h1__font-size: $font-size--huge;
@@ -33,7 +33,7 @@ $h1__font-size--mobile: $font-size--big;
 $h2__font-size--mobile: $font-size--big;
 $h2__font-size: 60px;
 $h4__font-size: $font-size--light;
-//headers margin*/
+/*headers margin*/
 $header__margin-bottom: 20px;
 /*colors header*/
 $h1__color--white: $color--white;
@@ -83,12 +83,16 @@ $links__font-size--light: $font-size--base;
 $link__color--green: $color--green;
 /*dots*/
 $dots__background--white: $color--white;
+$dots__background--base: $color--gray;
 /*ikons*/
 $icons-color--red: $color--red;
 $icons-invert--hover: $color--dark;
 $caret-after--hover: $color--green;
 /*border colors */
 $border__color--gray: #494848;
+/* for sections */
+$padding__section--base: 50px 0;
+$padding-bottom__section: 50px;
 /* Grid settins */
 $grid-breakpoints: (
         xs: 0,

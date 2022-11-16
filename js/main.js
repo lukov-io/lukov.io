@@ -33,39 +33,43 @@ for (let drop of dropMenuItems) {
 }
 
 /*slider*/
+let sliders = document.querySelectorAll(".slider");
+sliders.forEach (function (element) {
+    runSlider(element);
+})
 
-let dotsWrapper = document.querySelector(".slider__dots");
-let itemWidth = document.querySelector(".slider__item").clientWidth;
-let itemLength = document.querySelectorAll(".slider__item").length;
-let feedbackWrapper = document.querySelector(".slider__wrapper");
-let feedbackWrapperWidth = document.querySelector(".slider__wrapper").clientWidth;
-let countItem = feedbackWrapperWidth / itemWidth;
-let countVisibleItem = Math.floor(countItem);
+function runSlider (slider) {
+    let dotsWrapper = slider.querySelector(".slider__dots");
+    let itemWidth = slider.querySelector(".slider__item").clientWidth;
+    let itemLength = slider.querySelectorAll(".slider__item").length;
+    let feedbackWrapper = slider.querySelector(".slider__wrapper");
+    let feedbackWrapperWidth = slider.querySelector(".slider__wrapper").clientWidth;
+    let countItem = feedbackWrapperWidth / itemWidth;
+    let countVisibleItem = Math.floor(countItem);
 
-let dotLength = itemLength - (countVisibleItem - 1);
-for (let i = 0; i < dotLength; i++) {
-    let dot = document.createElement("span");
-    dot.classList.add("dot");
-    if(i === 0) {
-        dot.classList.add("dot--active");
-    }
-    dotsWrapper.appendChild(dot);
-    dot.addEventListener("click", function (event) {
-        feedbackWrapper.scrollLeft = itemWidth * i;
-        let targetClassItem = event.currentTarget.classList;
-        if (targetClassItem.contains("dot")) {
-            let itemsClassActive = document.querySelectorAll(".dot.dot--active");
-            itemsClassActive.forEach(function (element) {
-                if(element !== event.currentTarget) {
-                    element.classList.remove("dot--active");
-                }
-            })
+    let dotLength = itemLength - (countVisibleItem - 1);
+    for (let i = 0; i < dotLength; i++) {
+        let dot = document.createElement("span");
+        dot.classList.add("dot");
+        if(i === 0) {
+            dot.classList.add("dot--active");
         }
-        event.currentTarget.classList.add("dot--active");
-    })
-
+        dotsWrapper.appendChild(dot);
+        dot.addEventListener("click", function (event) {
+            feedbackWrapper.scrollLeft = itemWidth * i;
+            let targetClassItem = event.currentTarget.classList;
+            if (targetClassItem.contains("dot")) {
+                let itemsClassActive = slider.querySelectorAll(".dot.dot--active");
+                itemsClassActive.forEach(function (element) {
+                    if(element !== event.currentTarget) {
+                        element.classList.remove("dot--active");
+                    }
+                })
+            }
+            event.currentTarget.classList.add("dot--active");
+        })
+    }
 }
-
 
 
 
