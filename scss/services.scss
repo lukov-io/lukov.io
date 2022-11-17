@@ -86,3 +86,21 @@
     }
   }
 }
+
+.chevron-navigation--right {
+  svg {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    float: right;
+  }
+}
+
+.chevron-right {
+  svg {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
