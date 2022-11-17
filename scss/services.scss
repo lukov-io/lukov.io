@@ -25,10 +25,6 @@
     }
   }
 
-  &__item:hover .fa-solid::before {
-    color: $caret-after--hover;
-  }
-
   &__content {
     border-right: 1px solid #D5D2D2;
     row-gap: 15px;
@@ -42,18 +38,12 @@
   }
 
   &__item {
+    &:hover .icons-settings svg {
+      color: $caret-after--hover;
+    }
+
     &:nth-last-child(1) .services__content {
       border-right: none;
-    }
-
-    .fa-solid {
-      font-size: 65px;
-      color: $icons-color--red;
-      margin-bottom: 25px;
-    }
-
-    .fa-solid:hover::before {
-      color: $caret-after--hover;
     }
 
     h4 {
@@ -84,23 +74,32 @@
         color: $link__color-red--hover;
       }
     }
-  }
-}
 
-.chevron-navigation--right {
-  svg {
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    float: right;
+    @media #{$lg} {
+      padding: 25px;
+    }
   }
-}
 
-.chevron-right {
-  svg {
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    margin-left: 20px;
+  .chevron-right {
+    &:hover svg {
+      color: $icons-base--hover;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+  .icons-settings {
+    svg {
+      width: 85px;
+      height: 85px;
+      display: inline-block;
+      color: $icons-color--red;
+      cursor: pointer;
+    }
   }
 }
