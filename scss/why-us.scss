@@ -29,6 +29,21 @@
     }
     img {
       width: 100%;
+      &:hover img:before {
+        color: $h4__color-green--hover;
+      }
+      &:before {
+        content: '1';
+        position: absolute;
+        background: rgba(0,0,0,.6);
+        opacity: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
     p {
       color: $text__color--black;
