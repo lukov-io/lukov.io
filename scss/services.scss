@@ -38,8 +38,15 @@
   }
 
   &__item {
-    &:hover .icons-settings svg {
+    cursor: pointer;
+
+    &:hover .icons-settings svg,
+    &:hover .services__content h4 {
       color: $caret-after--hover;
+    }
+
+    &:hover .services__content a {
+      color: $link__color-red--hover;
     }
 
     &:nth-last-child(1) .services__content {
@@ -50,10 +57,6 @@
       color: $h4__color--dark;
       font-size: $h4__font-size;
       font-weight: $text__font-weight;
-
-      &:hover {
-        color: $h4__color-green--hover;
-      }
     }
 
     p {
@@ -69,10 +72,6 @@
       color: $link__color--green;
       font-size: $links__font-size--light;
       font-weight: $text__font-weight-medium;
-
-      &:hover {
-        color: $link__color-red--hover;
-      }
     }
 
     @media #{$lg} {
