@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "eslint": "eslint **/*.js",
-    "stylelint": "stylelint scss",
+    "stylelint": "stylelint ./scss",
     "lint": "npm run eslint && npm run stylelint"
   },
   "devDependencies": {
