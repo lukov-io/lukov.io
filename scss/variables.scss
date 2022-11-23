@@ -10,7 +10,7 @@ $color--dark: black;
 $color--red: #F0083F;
 $color--dark-green: rgb(73, 185, 59);
 $color--gray: #959595;
-$color--custom-gray: #5F5F5F;
+$color--custom-gray: #494848;
 $color--dark-gray: #292828;
 $color--light-gray: #7B7B7B;
 $color--green: #86A700;
@@ -19,20 +19,29 @@ $color--green: #86A700;
 $text__color--white: $color--white;
 $text__color--gray: $color--gray;
 $text__color--black: $color--black;
-$text__color--green: $color--dark-green;
+$text__color--green: $color--green;
 
 /* font-size-text */
 $font-size: 12px;
 $font-size--base: 14px;
-$font-size--small: 17px;
-$font-size--medium: 20px;
+$font-size--small: 16px;
+$font-size--light: 20px;
+$font-size--medium: 33px;
 $font-size--big: 40px;
 $font-size--huge: 80px;
 
+/* content padding */
+$content__padding: 100px 0;
+
 /* font-size header */
-$h1__font-size: 90px;
-$h2__font-size: $font-size--huge;
-$h4__font-size: $font-size--medium;
+$h1__font-size: $font-size--huge;
+$h1__font-size--mobile: $font-size--big;
+$h2__font-size--mobile: $font-size--big;
+$h2__font-size: 60px;
+$h4__font-size: $font-size--light;
+
+/* headers margin */
+$header__margin-bottom: 20px;
 
 /* colors header */
 $h1__color--white: $color--white;
@@ -48,9 +57,13 @@ $h5__color--dark: $color--black;
 $h6__color--white: $color--white;
 $h6__color--dark: $color--black;
 
+/* hover headers */
+$h4__color-green--hover: $color--green;
+
 /* font-weight */
 $font-weight--base: 300;
 $text__font-weight: 400;
+$text__font-weight-medium: 600;
 $h1__font-weight: 600;
 $h2__font-weight: 400;
 
@@ -60,7 +73,7 @@ $h1__line-height: 48px;
 $h2__line-height: 1.2em;
 
 /* letter-spacing */
-$letter-spacing: 1px;
+$letter-spacing: 0.5px;
 
 /* background colors */
 $topbar__background: $color--black;
@@ -78,8 +91,17 @@ $btn__background-green--hover: $color--green;
 $link__background--hover: $color--custom-white;
 $link__background-dark--hover: $color--black;
 $link__color--hover: $color--green;
+$link__color-red--hover: $color--red;
+$links__font-size--base: $font-size;
+$links__font-size--light: $font-size--base;
+$link__color--green: $color--green;
+
+/* border colors */
+$border__color--gray: #D5D2D2;
 
 /* ikons */
+$icons-base--hover: $color--red;
+$icons-color--red: $color--red;
 $icons-invert--hover: $color--dark;
 $caret-after--hover: $color--green;
 $caret-down__background: $color--dark-gray;
