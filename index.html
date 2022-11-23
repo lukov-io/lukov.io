@@ -1,201 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/index.scss">
-    <link rel="stylesheet" href="/scss/all.css">
-    <link rel="stylesheet" href="/scss/index.scss">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lukov.io</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/scss/index.scss">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lukov.io</title>
 </head>
 <body>
 <header>
-    <div class="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="topbar-content">
-                     <span class="description">Mobile Applications Development</span>
-                    <div class="contacts">
-                    <span class="phone">+1 800 920 40 50</span>
-                    <div class="icon-box">
-                        <i class="fa-brands fa-square-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-dribbble"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-behance"></i>
-                    </div>
-                </div>
-                    </div>
-                </div>
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="topbar__content">
+            <span class="description">Mobile Applications Development</span>
+            <div class="contacts">
+              <span class="phone">+1 800 920 40 50</span>
+              <div class="icon-box">
+                <a class="icon icon--facebook" href="#">
+                  <svg>
+                    <use xlink:href="/img/icons/icons-sprite.svg#icons-behance"></use>
+                  </svg>
+                </a>
+                <a class="icon icon--twitter" href="#">
+                  <svg>
+                    <use xlink:href="/img/icons/icons-sprite.svg#icons-twitter"></use>
+                  </svg>
+                </a>
+                <a class="icon icon--dribble" href="#">
+                  <svg>
+                    <use xlink:href="/img/icons/icons-sprite.svg#icons-dribble"></use>
+                  </svg>
+                </a>
+                <a class="icon icon--instagram" href="#">
+                  <svg>
+                    <use xlink:href="/img/icons/icons-sprite.svg#icons-instagram"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
-            </div>
-    </div>
-    <div class="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <!-- Menu -->
-
-                        <nav class="nav">
-                            <div class="logo-header">
-                                <div><a href="#" class="logo"><img src="img/logo-main.webp" alt=""></a></div>
-
-                                <input class="side-menu" type="checkbox" id="side-menu"/>
-                                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-                            </div>
-
-                            <div class="wrapper-menu ">
-                                <ul class="menu">
-                                    <li class="dropdown-menu__item"><a class="dropdown-item caret" href="#">home</a>
-                                        <ul class="dropdown-menu dropdown-menu__content">
-                                            <li class="dropdown-menu__item"><a class="dropdown-item" href="#">HOME FULLSCREAN</a></li>
-                                            <li class="dropdown-menu__item"><a class="dropdown-item" href="#">HOME BOXED</a></li>
-                                            <li class="dropdown-menu__item"><a class="dropdown-item" href="#">HOME HEADER STYLE 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-menu__item"><a class="dropdown-item caret" href="#">community</a>
-                                        <ul class="dropdown-menu dropdown-menu__content">
-                                            <li class="dropdown-menu__item"><a class="dropdown-item" href="#">ABOUT US</a></li>
-                                            <li class="dropdown-menu__item"><a class="dropdown-item" href="#">OUR TEAM</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">SERVICES</a></li>
-                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">portfolio</a></li>
-                                    <li class="dropdown-menu__item"><a class="dropdown-item caret" href="#">features</a>
-                                        <ul class="dropdown-menu dropdown-menu__content">
-                                            <li class="dropdown-menu__item"><a class="dropdown-item arrow" href="#">tools</a>
-                                                <ul class="dropdown-menu dropdown-menu__content-inner">
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">tiypography</a></li>
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">shortcodes</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-menu__item"><a class="dropdown-item arrow" href="#">help</a>
-                                                <ul class="dropdown-menu dropdown-menu__content-inner">
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">service plus</a></li>
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">privacy policy</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-menu__item"><a class="dropdown-item arrow" href="#">gallery</a>
-                                                <ul class="dropdown-menu dropdown-menu__content-inner">
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">gallery grid</a></li>
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">gallery cobbles</a></li>
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">gallery masonry</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-menu__item"><a class="dropdown-item" href="#">contacts</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-menu__item"><a class="dropdown-item caret" href="#">blog</a>
-                                        <ul class="dropdown-menu dropdown-menu__content">
-                                            <li class="dropdown-menu__item"><a class="dropdown-item" href="#">streampage</a></li>
-                                            <li class="dropdown-menu__item "><a class="dropdown-item arrow" href="#">classic style</a>
-                                                <ul class="dropdown-menu dropdown-menu__content-inner">
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">2 columns</a></li>
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">3 columns</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-menu__item"><a class="dropdown-item arrow" href="#">portfolio style</a>
-                                                <ul class="dropdown-menu dropdown-menu__content-inner">
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">2 columns</a></li>
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">3 columns</a></li>
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">4 columns</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-menu__item"><a class="dropdown-item arrow" href="#">chess style</a>
-                                                <ul class="dropdown-menu dropdown-menu__content-inner">
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">2 columns</a></li>
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">4 columns</a></li>
-                                                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">6 columns</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <a class="btn btn-danger btn-off" href="#">contact us</a>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav class="nav">
+            <div class="logo-header">
+              <div><a href="#" class="logo"><img src="img/logo-main.webp" alt=""></a></div>
+              <input class="side-menu" type="checkbox" id="side-menu"/>
+              <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            </div>
+            <div class="wrapper-menu ">
+              <ul class="menu">
+                <li class="dropdown-menu__item">
+                  <a class="dropdown-item caret-down" href="#">home
+                    <svg>
+                      <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu__content">
+                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">HOME FULLSCREAN</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">HOME BOXED</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">HOME HEADER STYLE 2</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__item">
+                  <a class="dropdown-item caret-down" href="#">community
+                    <svg>
+                      <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu__content">
+                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">ABOUT US</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">OUR TEAM</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__item"><a class="dropdown-item" href="#">SERVICES</a></li>
+                <li class="dropdown-menu__item"><a class="dropdown-item" href="#">portfolio</a></li>
+                <li class="dropdown-menu__item">
+                  <a class="dropdown-item caret-down" href="#">features
+                    <svg>
+                      <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu__content">
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-item chevron-navigation--right" href="#">tools
+                        <svg>
+                          <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                        </svg>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">tiypography</a></li>
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">shortcodes</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-menu__item"><a class="dropdown-item chevron-navigation--right" href="#">help
+                      <svg>
+                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                      </svg>
+                    </a>
+                      <ul class="dropdown-menu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">service plus</a></li>
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">privacy policy</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-menu__item"><a class="dropdown-item chevron-navigation--right" href="#">gallery
+                      <svg>
+                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                      </svg>
+                    </a>
+                      <ul class="dropdown-menu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">gallery grid</a></li>
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">gallery cobbles</a></li>
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">gallery masonry</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">contacts</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__item">
+                  <a class="dropdown-item caret-down" href="#">blog
+                    <svg>
+                      <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu__content">
+                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">streampage</a></li>
+                    <li class="dropdown-menu__item "><a class="dropdown-item chevron-navigation--right" href="#">classic
+                      style
+                      <svg>
+                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                      </svg>
+                    </a>
+                      <ul class="dropdown-menu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">2 columns</a></li>
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">3 columns</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-menu__item"><a class="dropdown-item chevron-navigation--right" href="#">portfolio
+                      style
+                      <svg>
+                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                      </svg>
+                    </a>
+                      <ul class="dropdown-menu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">2 columns</a></li>
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">3 columns</a></li>
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">4 columns</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-menu__item"><a class="dropdown-item chevron-navigation--right" href="#">chess
+                      style
+                      <svg>
+                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                      </svg>
+                    </a>
+                      <ul class="dropdown-menu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">2 columns</a></li>
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">4 columns</a></li>
+                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">6 columns</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <a class="btn btn--danger btn--off" href="#">contact us</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
+
 <section class="hero">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="hero__header">
-                    <h1>We Just do Apps</h1>
-                    <p>Stunning Mobile Applications<br>
-                        for Your Online Business or Just for Fun</p>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="hero__header">
+          <h1>We Just do Apps</h1>
+          <p>Stunning Mobile Applications<br>
+            for Your Online Business or Just for Fun</p>
         </div>
+      </div>
     </div>
+  </div>
 </section>
+
 <section class="services">
-    <div class="container">
-             <div class="row">
-                 <div class="col">
-                    <div class="services__header">
-                        <h2>Want to Develop an App</h2>
-                        <p>but don't know where to start?</p>
-                     </div>
-                 </div>
-             </div>
-             <div class="row">
-                 <div class="services__item col-lg-4 col-md-6">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <div class="services__content">
-                            <h4>iOS and Android Compatible</h4>
-                            <p>Consectetur adipiscing elit nullam blandit tempus augue nec sollicitudin.</p>
-                            <a class="arrow--small" href="#">learn more</a>
-                        </div>
-                 </div>
-                 <div class="services__item col-lg-4 col-md-6">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <div class="services__content">
-                            <h4>Professional Design and Development</h4>
-                            <p>Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
-                            <a class="arrow--small" href="#">learn more</a>
-                        </div>
-                 </div>
-                 <div class="services__item col-lg-4 col-md-6">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <div class="services__content">
-                            <h4>Technical Support and Improvement</h4>
-                            <p>Consectetur adipiscing elit nullam blandit tempus augue nec sollicitudin.</p>
-                            <a class="arrow--small" href="#">learn more</a>
-                        </div>
-                 </div>
-             </div>
-     </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="services__header">
+          <h2>Want to Develop an App</h2>
+          <p>but don't know where to start?</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="services__item col-lg-4 col-md-6">
+       <span class="icons-settings">
+          <svg>
+          <use xlink:href="/img/icons/icons-sprite.svg#icons-settings"></use>
+        </svg>
+        </span>
+        <div class="services__content">
+          <h4>iOS and Android Compatible</h4>
+          <p>Consectetur adipiscing elit nullam blandit tempus augue nec sollicitudin.</p>
+          <a class="chevron-right" href="#">learn more
+            <svg>
+              <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+        </div>
+      <div class="services__item col-lg-4 col-md-6">
+        <span class="icons-settings">
+          <svg>
+          <use xlink:href="/img/icons/icons-sprite.svg#icons-settings"></use>
+        </svg>
+        </span>
+        <div class="services__content">
+          <h4>Professional Design and Development</h4>
+          <p>Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
+          <a class="chevron-right" href="#">learn more
+            <svg>
+              <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="services__item  col-lg-4 col-md-6">
+        <span class="icons-settings">
+          <svg>
+          <use xlink:href="/img/icons/icons-sprite.svg#icons-settings"></use>
+        </svg>
+        </span>
+        <div class="services__content">
+          <h4>Technical Support and Improvement</h4>
+          <p>Consectetur adipiscing elit nullam blandit tempus augue nec sollicitudin.</p>
+          <a class="chevron-right" href="#">learn more
+            <svg>
+              <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="statistics">
-    <div class="container">
-        <div class="row">
-            <div class="statistics__content col-lg-3 col-md-3">
-                <span class="num">10000</span>
-                <span class="text">Completed Screens</span>
-                <span class="num">12</span>
-                <span class="text">Years of Experience</span>
-                <span class="num">280</span>
-                <span class="text">Developed Apps</span>
-            </div>
-            <div class="col-lg-6 col-md-6 statistics__img">
-                <img src="/img/skills_phone_img.webp" alt="">
-            </div>
-            <div class="statistics__content col-lg-3 col-md-3">
-                <span class="num">20000</span>
-                <span class="text">Happy Customers</span>
-                <span class="num">38</span>
-                <span class="text">Profile Awards</span>
-                <span class="num">120</span>
-                <span class="text">Professionals</span>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="statistics__content col-lg-3 col-md-3">
+        <span class="total">10000</span>
+        <span class="text">Completed Screens</span>
+        <span class="total">12</span>
+        <span class="text">Years of Experience</span>
+        <span class="total">280</span>
+        <span class="text">Developed Apps</span>
+      </div>
+      <div class="col-lg-6 col-md-6 statistics__img">
+        <img src="/img/skills_phone_img.webp" alt="">
+      </div>
+      <div class="statistics__content col-lg-3 col-md-3">
+        <span class="total">20000</span>
+        <span class="text">Happy Customers</span>
+        <span class="total">38</span>
+        <span class="text">Profile Awards</span>
+        <span class="total">120</span>
+        <span class="text">Professionals</span>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="services">

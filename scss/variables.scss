@@ -1,23 +1,27 @@
-/*font-family*/
+/* font-family */
 $font-family--base: Montserrat,sans-serif;
-//colors//
-$color--white: #ffffff;
-$color--custom-white: rgba(255,255,255,0.85);
-$color--black: #1e1e1e;
-$color--custom-black: #191e2d;
+
+/* colors */
+$color--white: #FFF;
+$color--custom-white: rgba(255, 255, 255, 0.85);
+$color--black: #1E1E1E;
+$color--custom-black: #191E2D;
 $color--dark: black;
-$color--red: #f0083f;
+$color--red: #F0083F;
 $color--dark-green: rgb(73, 185, 59);
 $color--gray: #959595;
 $color--custom-gray: #494848;
-$color--light-gray:#7b7b7b;
-$color--green: #86a700;
-/*colors-text*/
+$color--dark-gray: #292828;
+$color--light-gray: #7B7B7B;
+$color--green: #86A700;
+
+/* colors-text */
 $text__color--white: $color--white;
 $text__color--gray: $color--gray;
 $text__color--black: $color--black;
 $text__color--green: $color--green;
-/*font-size-text*/
+
+/* font-size-text */
 $font-size: 12px;
 $font-size--base: 14px;
 $font-size--small: 16px;
@@ -25,17 +29,21 @@ $font-size--light: 20px;
 $font-size--medium: 33px;
 $font-size--big: 40px;
 $font-size--huge: 80px;
-//content padding*/
+
+/* content padding */
 $content__padding: 100px 0;
-/*font-size header*/
+
+/* font-size header */
 $h1__font-size: $font-size--huge;
 $h1__font-size--mobile: $font-size--big;
 $h2__font-size--mobile: $font-size--big;
 $h2__font-size: 60px;
 $h4__font-size: $font-size--light;
-//headers margin*/
+
+/* headers margin */
 $header__margin-bottom: 20px;
-/*colors header*/
+
+/* colors header */
 $h1__color--white: $color--white;
 $h1__color--dark: $color--black;
 $h2__color--white: $color--white;
@@ -48,32 +56,38 @@ $h5__color--white: $color--white;
 $h5__color--dark: $color--black;
 $h6__color--white: $color--white;
 $h6__color--dark: $color--black;
-/*hover headers*/
+
+/* hover headers */
 $h4__color-green--hover: $color--green;
-/*font-weight*/
+
+/* font-weight */
 $font-weight--base: 300;
 $text__font-weight: 400;
 $text__font-weight-medium: 600;
 $h1__font-weight: 600;
 $h2__font-weight: 400;
-/*line-height*/
+
+/* line-height */
 $line-height--base: 1.75em;
 $h1__line-height: 48px;
 $h2__line-height: 1.2em;
-/*letter-spacing*/
+
+/* letter-spacing */
 $letter-spacing: 0.5px;
-/*background colors*/
+
+/* background colors */
 $topbar__background: $color--black;
 $navigation__background: $color--custom-white;
 $offcanvas__background--dark: $color--black;
-/*hover*/
-/*btn*/
+
+/* btn */
 $btn__font-size: $font-size--base;
 $btn__background--base: $color--red;
 $btn__background--gray: $color--gray;
 $btn__color--base: $color--custom-white;
 $btn__background-green--hover: $color--green;
-/*links*/
+
+/* links */
 $link__background--hover: $color--custom-white;
 $link__background-dark--hover: $color--black;
 $link__color--hover: $color--green;
@@ -81,41 +95,42 @@ $link__color-red--hover: $color--red;
 $links__font-size--base: $font-size;
 $links__font-size--light: $font-size--base;
 $link__color--green: $color--green;
-/*ikons*/
+
+/* border colors */
+$border__color--gray: #D5D2D2;
+
+/* ikons */
+$icons-base--hover: $color--red;
 $icons-color--red: $color--red;
 $icons-invert--hover: $color--dark;
 $caret-after--hover: $color--green;
-/*border colors */
-$border__color--gray: #d5d2d2;
-/* Grid settins */
+$caret-down__background: $color--dark-gray;
+
+/* Grid settings */
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px) !default;
-
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px) !default;
 $container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px,
-        xxl: 1450px) !default;
-
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1450px) !default;
 $grid-columns: 12 !default;
 $grid-gutter-width: 1.5rem !default;
-
-$xs: '(max-width: 375px)' !default;
-$sm: '(max-width: #{map-get($grid-breakpoints , sm) - 1px})' !default;
-$md: '(max-width: #{map-get($grid-breakpoints, md) - 1px})' !default;
-$lg: '(max-width: #{map-get($grid-breakpoints, lg) - 1px})' !default;
-$xl: '(max-width: #{map-get($grid-breakpoints, xl) - 1px})' !default;
-$xxl: '(max-width: #{map-get($grid-breakpoints, xxl) - 1px})' !default;
-
-$min-xs: '(min-width: 375px)';
-$min-sm: '(min-width: #{map-get($grid-breakpoints, sm)})' !default;
-$min-md: '(min-width: #{map-get($grid-breakpoints, md)})' !default;
-$min-lg: '(min-width: #{map-get($grid-breakpoints, lg)})' !default;
-$min-xl: '(min-width: #{map-get($grid-breakpoints, xl)})' !default;
-$min-xxl: '(min-width: #{map-get($grid-breakpoints, xxl)})' !default;
+$xs: "(max-width: 375px)" !default;
+$sm: "(max-width: #{map-get($grid-breakpoints , sm) - 1px})" !default;
+$md: "(max-width: #{map-get($grid-breakpoints, md) - 1px})" !default;
+$lg: "(max-width: #{map-get($grid-breakpoints, lg) - 1px})" !default;
+$xl: "(max-width: #{map-get($grid-breakpoints, xl) - 1px})" !default;
+$xxl: "(max-width: #{map-get($grid-breakpoints, xxl) - 1px})" !default;
+$min-xs: "(min-width: 375px)";
+$min-sm: "(min-width: #{map-get($grid-breakpoints, sm)})" !default;
+$min-md: "(min-width: #{map-get($grid-breakpoints, md)})" !default;
+$min-lg: "(min-width: #{map-get($grid-breakpoints, lg)})" !default;
+$min-xl: "(min-width: #{map-get($grid-breakpoints, xl)})" !default;
+$min-xxl: "(min-width: #{map-get($grid-breakpoints, xxl)})" !default;
