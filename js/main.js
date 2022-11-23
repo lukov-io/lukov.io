@@ -1,84 +1,68 @@
-/*hamb*/
-let hamb = document.querySelector(".hamb");
-let menuWrapper = document.querySelector(".wrapper-menu");
+/* hamb */
+const hamburger = document.querySelector('.hamb');
+const menuWrapper = document.querySelector('.wrapper-menu');
 
-hamb.addEventListener("click", function (event) {
-    menuWrapper.classList.toggle("show-menu");
-    menuWrapper.classList.toggle("offcanvas");
-    hamb.classList.toggle("invert");
+hamburger.addEventListener('click', function() {
+  menuWrapper.classList.toggle('show-menu');
+  menuWrapper.classList.toggle('offcanvas');
+  hamburger.classList.toggle('invert');
 })
 
-/*menu*/
-let dropMenuItems = document.querySelectorAll(".dropdown-menu__item");
+/* menu */
+const dropMenuItems = document.querySelectorAll('.dropdown-menu__item');
 
-for (let drop of dropMenuItems) {
-    drop.addEventListener("click", function (event) {
-        event.stopPropagation();
-        let massItems = event.currentTarget.classList;
-        if (massItems.contains("dropdown-menu__item")){
-            let dropMenuItemsActive = document.querySelectorAll(".dropdown-menu__item.active");
-            dropMenuItemsActive.forEach(function (element) {
-                console.log(event.currentTarget, "event");
-                console.log(element, "element");
-                let currentTargetSubMenu = event.currentTarget.querySelectorAll(".dropdown-menu__content-inner");
-                console.log(currentTargetSubMenu, "currentTargetSubMenu");
-                if(element !== event.currentTarget && !currentTargetSubMenu) {
-                    element.classList.remove("active");
-                    console.log("[fe");
-                }
-            })
-            event.currentTarget.classList.toggle("active");
+for (const drop of dropMenuItems) {
+  drop.addEventListener('click', function(event) {
+    event.stopPropagation();
+    const massItems = event.currentTarget.classList;
+    if (massItems.contains('dropdown-menu__item')) {
+      const dropMenuItemsActive = document.querySelectorAll('.dropdown-menu__item.active');
+      dropMenuItemsActive.forEach(function(element) {
+        const currentTargetSubMenu = event.currentTarget.querySelectorAll('.dropdown-menu__content-inner');
+        if (element !== event.currentTarget && !currentTargetSubMenu) {
+          element.classList.remove('active');
         }
-})
-}
-
-/*slider*/
-let sliders = document.querySelectorAll(".slider");
-sliders.forEach (function (element) {
-    runSlider(element);
-})
-
-function runSlider (slider) {
-    let dotsWrapper = slider.querySelector(".slider__dots");
-    let itemWidth = slider.querySelector(".slider__item").clientWidth;
-    let itemLength = slider.querySelectorAll(".slider__item").length;
-    let feedbackWrapper = slider.querySelector(".slider__wrapper");
-    let feedbackWrapperWidth = slider.querySelector(".slider__wrapper").clientWidth;
-    let countItem = feedbackWrapperWidth / itemWidth;
-    let countVisibleItem = Math.floor(countItem);
-
-    let dotLength = itemLength - (countVisibleItem - 1);
-    for (let i = 0; i < dotLength; i++) {
-        let dot = document.createElement("span");
-        dot.classList.add("dot");
-        if(i === 0) {
-            dot.classList.add("dot--active");
-        }
-        dotsWrapper.appendChild(dot);
-        dot.addEventListener("click", function (event) {
-            feedbackWrapper.scrollLeft = itemWidth * i;
-            let targetClassItem = event.currentTarget.classList;
-            if (targetClassItem.contains("dot")) {
-                let itemsClassActive = slider.querySelectorAll(".dot.dot--active");
-                itemsClassActive.forEach(function (element) {
-                    if(element !== event.currentTarget) {
-                        element.classList.remove("dot--active");
-                    }
-                })
-            }
-            event.currentTarget.classList.add("dot--active");
-        })
+      })
+      event.currentTarget.classList.toggle('active');
     }
+  })
 }
 
+/* slider */
+const sliders = document.querySelectorAll('.slider');
+sliders.forEach(function(element) {
+  runSlider(element);
+})
 
+function runSlider(slider) {
+  const dotsWrapper = slider.querySelector('.slider__dots');
+  const itemWidth = slider.querySelector('.slider__item').clientWidth;
+  const itemLength = slider.querySelectorAll('.slider__item').length;
+  const feedbackWrapper = slider.querySelector('.slider__wrapper');
+  const feedbackWrapperWidth = slider.querySelector('.slider__wrapper').clientWidth;
+  const countItem = feedbackWrapperWidth / itemWidth;
+  const countVisibleItem = Math.floor(countItem);
 
-
-
-
-
-
-
-
-
-
+  const dotLength = itemLength - (countVisibleItem - 1);
+  for (let i = 0; i < dotLength; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) {
+      dot.classList.add('dot--active');
+    }
+    dotsWrapper.appendChild(dot);
+    dot.addEventListener('click', function(event) {
+      feedbackWrapper.scrollLeft = itemWidth * i;
+      const targetClassItem = event.currentTarget.classList;
+      if (targetClassItem.contains('dot')) {
+        const itemsClassActive = slider.querySelectorAll('.dot.dot--active');
+        itemsClassActive.forEach(function(element) {
+          if (element !== event.currentTarget) {
+            element.classList.remove('dot--active');
+          }
+        })
+      }
+      event.currentTarget.classList.add('dot--active');
+    })
+  }
+}

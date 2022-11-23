@@ -1,17 +1,21 @@
 .slider {
   text-align: center;
+
   &__wrapper {
     width: auto;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+
     &::-webkit-scrollbar {
       display: none;
     }
   }
+
   &__item {
     scroll-snap-align: end;
   }
+
   &__dots {
     text-align: center;
     margin: 50px 0;
@@ -20,6 +24,7 @@
       margin-top: 25px;
     }
   }
+
   .dot {
     background-color: $dots__background--base;
     width: 10px;
@@ -29,18 +34,23 @@
     margin-right: 10px;
     cursor: pointer;
     opacity: 0.3;
+
     &--active {
       opacity: 1;
     }
+
     &:focus {
       opacity: 1;
     }
+
     &:active {
       opacity: 1;
     }
+
     &:visited {
       opacity: 1;
     }
+
     &:hover {
       opacity: 1;
     }
