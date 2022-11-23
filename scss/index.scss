@@ -6,6 +6,9 @@
 @import "variables";
 @import "common";
 
+/* include components */
+@import "slider";
+
 /* include section */
 @import "body";
 @import "topbar";
@@ -13,3 +16,5 @@
 @import "hero";
 @import "services";
 @import "statistics";
+@import "feedback";
+@import "why-us";
