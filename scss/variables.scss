@@ -4,7 +4,7 @@ $font-family--base: Montserrat,sans-serif;
 /* colors */
 $color--white: #FFF;
 $color--custom-white: rgba(255, 255, 255, 0.85);
-$color--black: #1E1E1E;
+$color--black: #000;
 $color--custom-black: #191E2D;
 $color--dark: black;
 $color--red: #F0083F;
@@ -64,8 +64,9 @@ $h4__color-green--hover: $color--green;
 $font-weight--base: 300;
 $text__font-weight: 400;
 $text__font-weight-medium: 600;
-$h1__font-weight: 600;
-$h2__font-weight: 400;
+$font-weight--bold: bold;
+$h1__font-weight: bold;
+$h2__font-weight: bold;
 $h4__font-weight: bold;
 
 /* line-height */
@@ -82,11 +83,14 @@ $navigation__background: $color--custom-white;
 $offcanvas__background--dark: $color--black;
 
 /* btn */
-$btn__font-size: $font-size--base;
+$btn__font-size: $font-size;
+$btn__font-weight: $font-weight--bold;
 $btn__background--base: $color--red;
 $btn__background--gray: $color--gray;
-$btn__color--base: $color--custom-white;
+$btn__background--dark: $color--black;
+$btn__color--base: $color--white;
 $btn__background-green--hover: $color--green;
+$btn__background-red-hover: $color--red;
 
 /* links */
 $link__background--hover: $color--custom-white;
@@ -107,6 +111,7 @@ $border__color--gray: #494848;
 /* for sections */
 $padding__section--base: 50px 0;
 $padding-bottom__section: 50px;
+$padding__section--normal: 100px 0;
 
 /* ikons */
 $icons-base--hover: $color--red;
