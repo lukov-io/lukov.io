@@ -11,7 +11,7 @@
       font-size: $h2__font-size;
       font-weight: $h2__font-weight;
       margin-bottom: $header__margin-bottom;
-      letter-spacing: 0;
+      text-align: center;
 
       @media #{$md} {
         font-size: $h2__font-size--mobile;
