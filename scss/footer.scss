@@ -1,1 +1,121 @@
 /* Footer */
+.footer {
+  background-color: $footer__background--dark;
+  padding: $padding__section;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+
+    p {
+      color: $text__color--white;
+      font-weight: $font-weight--base;
+      font-size: $font-size;
+      text-align: center;
+
+      input {
+        margin-right: 5px;
+        vertical-align: text-top;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    .phone {
+      color: $text__color--white;
+      font-weight: bold;
+      font-size: $font-size--light;
+
+      @media #{$sm} {
+        font-size: $font-size--small;
+      }
+
+      &:hover {
+        color: $link__color--hover;
+      }
+    }
+  }
+
+  &__email {
+    width: 35%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media #{$lg} {
+      width: 50%;
+    }
+
+    @media #{$md} {
+      width: 70%;
+    }
+
+    @media #{$sm} {
+      width: 100%;
+    }
+
+    input {
+      height: 45px;
+      min-width: 100%;
+      border-radius: 30px;
+      border: 1px solid $color--base-black;
+      background-color: $color--base-black;
+      color: $text__color--white;
+      padding-left: 30px;
+      outline: none;
+    }
+
+    a {
+      color: $btn__color--gray;
+      padding: 12px;
+      position: absolute;
+      right: 0;
+      border-radius: 30px;
+      background-color: $btn__background--custom-dark;
+      display: inline-block;
+      text-decoration: none;
+
+      &:hover {
+        color: $btn__color-white--hover;
+        background-color: $btn__background-dark--hover;
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: auto;
+
+    hr {
+      color: $text__color--gray;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  &__copy {
+    color: $link__color--white;
+    font-size: $links__font-size--light;
+    text-decoration: none;
+
+    &:hover {
+      color: $link__color--hover;
+    }
+  }
+
+  &__privaci {
+    color: $text__color--gray;
+    font-size: $font-size--base;
+  }
+}

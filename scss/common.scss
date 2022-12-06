@@ -19,6 +19,17 @@
   }
 }
 
+.btn--light {
+  color: $btn__color--gray;
+  background-color: $btn__background--base;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $btn__background-green--hover;
+    color: $btn__color--base;
+  }
+}
+
 .btn--off {
   @media #{$md} {
     display: none;
