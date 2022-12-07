@@ -36,17 +36,17 @@
       @media #{$md} {
         font-size: $h2__font-size--mobile;
       }
-    }
 
-    p {
-      color: $text__color--white;
-      margin: 0;
-      line-height: 2;
-      font-size: $font-size--light;
-      font-weight: $text__font-weight;
+      small {
+        color: $text__color--white;
+        margin: 0;
+        line-height: 2;
+        font-size: $font-size--light;
+        font-weight: $text__font-weight;
 
-      @media #{$md} {
-        font-size: $font-size--small;
+        @media #{$md} {
+          font-size: $font-size--small;
+        }
       }
     }
   }
