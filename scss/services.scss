@@ -20,13 +20,13 @@
       @media #{$md} {
         font-size: $h2__font-size--mobile;
       }
-    }
 
-    p {
-      color: $text__color--black;
-      font-size: $font-size--medium;
-      font-weight: $text__font-weight;
-      margin: 0;
+      small {
+        color: $text__color--black;
+        font-size: $font-size--medium;
+        font-weight: $text__font-weight;
+        margin: 0;
+      }
     }
   }
 

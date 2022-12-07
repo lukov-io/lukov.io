@@ -19,17 +19,18 @@
       @media #{$md} {
         font-size: $h1__font-size--mobile;
       }
-    }
 
-    p {
-      color: $text__color--white;
-      margin: 0;
-      line-height: 2;
-      font-size: $font-size--light;
-      font-weight: $text__font-weight;
+      small {
+        color: $text__color--white;
+        margin: 0;
+        line-height: 2;
+        font-size: $font-size--light;
+        font-weight: $text__font-weight;
+        display: inline-block;
 
-      @media #{$md} {
-        font-size: $font-size--small;
+        @media #{$md} {
+          font-size: $font-size--small;
+        }
       }
     }
   }

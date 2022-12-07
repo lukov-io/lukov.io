@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 40px;
 
     h2 {
       color: $h2__color--white;
@@ -20,18 +21,21 @@
       @media #{$md} {
         font-size: $h2__font-size--mobile;
       }
-    }
 
-    p {
-      color: $text__color--white;
-      margin-bottom: 40px;
-      line-height: 2;
-      font-size: $font-size--medium;
-      font-weight: $text__font-weight;
+      small {
+        color: $text__color--white;
+        margin-bottom: 40px;
+        line-height: 2;
+        font-size: $font-size--medium;
+        font-weight: $text__font-weight;
 
-      @media #{$md} {
-        font-size: $font-size--small;
+        @media #{$md} {
+          font-size: $font-size--small;
+        }
+
       }
     }
+
+
   }
 }
