@@ -5,6 +5,8 @@ $font-family--base: Montserrat,sans-serif;
 $color--white: #FFF;
 $color--custom-white: rgba(255, 255, 255, 0.85);
 $color--black: #000;
+$color--base-black: #303030;
+$color--custom-dark: #626262;
 $color--custom-black: #191E2D;
 $color--dark: black;
 $color--red: #F0083F;
@@ -28,6 +30,7 @@ $font-size--small: 16px;
 $font-size--light: 20px;
 $font-size--medium: 33px;
 $font-size--big: 40px;
+$font-size--xl: 55px;
 $font-size--huge: 80px;
 
 /* content padding */
@@ -61,6 +64,7 @@ $h6__color--dark: $color--black;
 $h4__color-green--hover: $color--green;
 
 /* font-weight */
+$text__font-weight--bold: bold;
 $font-weight--base: 300;
 $text__font-weight: 400;
 $text__font-weight-medium: 600;
@@ -81,25 +85,34 @@ $letter-spacing: 0.5px;
 $topbar__background: $color--black;
 $navigation__background: $color--custom-white;
 $offcanvas__background--dark: $color--black;
+$footer__background--dark: $color--black;
 
 /* btn */
 $btn__font-size: $font-size;
 $btn__font-weight: $font-weight--bold;
 $btn__background--base: $color--red;
+$btn__background--custom-dark: $color--custom-dark;
 $btn__background--gray: $color--gray;
 $btn__background--dark: $color--black;
-$btn__color--base: $color--white;
+$btn__color--base: $color--custom-white;
+$btn__color--gray: $color__gray;
 $btn__background-green--hover: $color--green;
+$btn__background-dark--hover: #838383;
+$btn__color-green--hover: $color--green;
+$btn__color-white--hover: $color--white;
 $btn__background-red-hover: $color--red;
 
 /* links */
 $link__background--hover: $color--custom-white;
 $link__background-dark--hover: $color--black;
 $link__color--hover: $color--green;
+$link__color-white--hover: $color--white;
 $link__color-red--hover: $color--red;
 $links__font-size--base: $font-size;
 $links__font-size--light: $font-size--base;
 $link__color--green: $color--green;
+$link__color--white: $color--white;
+$link__color--gray: $color--gray;
 
 /* dots */
 $dots__background--white: $color--white;
@@ -111,7 +124,15 @@ $border__color--gray: #494848;
 /* for sections */
 $padding__section--base: 50px 0;
 $padding-bottom__section: 50px;
+$padding__section: 100px 0 50px 0;
+$section__padding-bottom--mobile: 30px;
 $padding__section--normal: 100px 0;
+
+/* input */
+$input__background--base: #303030;
+
+/* logo */
+$logo__background-color--white: $color--white;
 
 /* ikons */
 $icons-base--hover: $color--red;

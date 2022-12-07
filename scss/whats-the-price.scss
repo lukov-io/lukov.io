@@ -1,0 +1,21 @@
+.whats-the-price {
+  background-image: url("/img/pricing_bg-1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: $padding__section--base;
+
+  &__header {
+    h2 {
+      color: $h2__color--white;
+      font-size: $h2__font-size;
+      font-weight: $h2__font-weight;
+      margin-bottom: $header__margin-bottom;
+      text-align: center;
+
+      @media #{$md} {
+        font-size: $h2__font-size--mobile;
+      }
+    }
+  }
+}
