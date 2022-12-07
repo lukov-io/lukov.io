@@ -30,32 +30,84 @@
     }
   }
 
-  &__content {
-    border-right: 1px solid #D5D2D2;
-    row-gap: 20px;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
+  .chevron-right {
+    &:hover svg {
+      color: $icons-base--hover;
+    }
 
-    @media #{$lg} {
-      border: none;
+    svg {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      margin-left: 10px;
     }
   }
 
-  &__item {
+  .icons-settings {
+    svg {
+      width: 85px;
+      height: 85px;
+      display: inline-block;
+      color: $icons-color--red;
+      cursor: pointer;
+    }
+  }
+
+  .icon-num {
+    width: 85px;
+    height: 85px;
+    display: inline-block;
+    color: $icons-color--red;
     cursor: pointer;
+    font-size: 70px;
+  }
+}
 
-    &:hover .icons-settings svg,
-    &:hover .services__content h4 {
-      color: $caret-after--hover;
+.box-wrapper {
+  cursor: pointer;
+
+  &:hover .icons-settings svg,
+  &:hover .icon-num,
+  &:hover .box-wrapper__content a,
+  &:hover .box-wrapper__content h4 {
+    color: $h4__color-green--hover;
+  }
+
+  &:hover .content--dark a {
+    background-color: $btn__background-green--hover;
+    color: $link__color-white--hover;
+  }
+
+  &:hover .content--light a {
+    color: $link__color-red--hover;
+  }
+
+  &:nth-last-child(1) .box-wrapper__content {
+    border-right: none;
+  }
+
+  @media #{$lg} {
+    padding: 25px;
+  }
+
+  &__content {
+    row-gap: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    text-align: center;
+
+    @media #{$md} {
+      row-gap: 20px;
     }
+  }
 
-    &:hover .services__content a {
-      color: $link__color-red--hover;
-    }
+  .content--light {
+    border-right: 1px solid #D5D2D2;
 
-    &:nth-last-child(1) .services__content {
-      border-right: none;
+    @media #{$lg} {
+      border: none;
     }
 
     h4 {
@@ -78,32 +130,34 @@
       font-size: $links__font-size--light;
       font-weight: $text__font-weight-medium;
     }
-
-    @media #{$lg} {
-      padding: 25px;
-    }
   }
 
-  .chevron-right {
-    &:hover svg {
-      color: $icons-base--hover;
+  .content--dark {
+    h4 {
+      color: $h4__color--white;
+      font-size: $h4__font-size;
+      font-weight: $h4__font-weight;
     }
 
-    svg {
-      width: 12px;
-      height: 12px;
-      display: inline-block;
-      margin-left: 10px;
+    p {
+      color: $text__color--white;
+      font-size: $font-size--small;
+      font-weight: $text__font-weight;
+      margin: 0;
     }
-  }
 
-  .icons-settings {
-    svg {
-      width: 85px;
-      height: 85px;
-      display: inline-block;
-      color: $icons-color--red;
-      cursor: pointer;
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $link__color--white;
+      font-size: $links__font-size--light;
+      font-weight: $text__font-weight-medium;
+    }
+
+    span {
+      color: $text__color--white;
+      font-size: $font-size--xl;
+      font-weight: $text__font-weight--bold;
     }
   }
 }

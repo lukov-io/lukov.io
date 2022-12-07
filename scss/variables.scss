@@ -30,6 +30,7 @@ $font-size--small: 16px;
 $font-size--light: 20px;
 $font-size--medium: 33px;
 $font-size--big: 40px;
+$font-size--xl: 55px;
 $font-size--huge: 80px;
 
 /* content padding */
@@ -63,6 +64,7 @@ $h6__color--dark: $color--black;
 $h4__color-green--hover: $color--green;
 
 /* font-weight */
+$text__font-weight--bold: bold;
 $font-weight--base: 300;
 $text__font-weight: 400;
 $text__font-weight-medium: 600;
@@ -101,6 +103,7 @@ $btn__color-white--hover: $color--white;
 $link__background--hover: $color--custom-white;
 $link__background-dark--hover: $color--black;
 $link__color--hover: $color--green;
+$link__color-white--hover: $color--white;
 $link__color-red--hover: $color--red;
 $links__font-size--base: $font-size;
 $links__font-size--light: $font-size--base;
