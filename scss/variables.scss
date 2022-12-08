@@ -46,6 +46,9 @@ $h4__font-size: $font-size--light;
 /* headers margin */
 $header__margin-bottom: 20px;
 
+/* headers padding */
+$header__padding--base: 100px 0;
+
 /* colors header */
 $h1__color--white: $color--white;
 $h1__color--dark: $color--black;
@@ -120,6 +123,7 @@ $dots__background--base: $color--gray;
 
 /* border colors */
 $border__color--gray: #494848;
+$border__color-gray--light: #D5D2D2;
 
 /* for sections */
 $padding__section--base: 50px 0;
@@ -134,7 +138,7 @@ $input__background--base: #303030;
 /* logo */
 $logo__background-color--white: $color--white;
 
-/* ikons */
+/* icons */
 $icons-base--hover: $color--red;
 $icons-color--red: $color--red;
 $icons-invert--hover: $color--dark;

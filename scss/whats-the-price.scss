@@ -3,9 +3,11 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: $padding__section--base;
+  padding-bottom: $padding-bottom__section;
 
   &__header {
+    padding: $header__padding--base;
+
     h2 {
       color: $h2__color--white;
       font-size: $h2__font-size;
