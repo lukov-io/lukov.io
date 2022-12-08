@@ -7,46 +7,46 @@
   text-transform: uppercase;
   font-weight: $btn__font-weight;
   box-shadow: 0 0 10px #00000026;
-}
 
-.btn--danger {
-  color: $btn__color--base;
-  background-color: $btn__background--base;
-  text-decoration: none;
-  padding: 12px 22px;
-
-  &:hover {
-    background-color: $btn__background-green--hover;
+  &--danger {
     color: $btn__color--base;
+    background-color: $btn__background--base;
+    text-decoration: none;
+    padding: 12px 22px;
+
+    &:hover {
+      background-color: $btn__background-green--hover;
+      color: $btn__color--base;
+    }
   }
-}
 
-.btn--classic {
-  color: $btn__color--base;
-  background-color: $btn__background--dark;
-  text-decoration: none;
-  padding: 15px 28px;
-
-  &:hover {
-    background-color: $btn__background-red-hover;
+  &--classic {
     color: $btn__color--base;
+    background-color: $btn__background--dark;
+    text-decoration: none;
+    padding: 15px 28px;
+
+    &:hover {
+      background-color: $btn__background-red-hover;
+      color: $btn__color--base;
+    }
   }
-}
 
-.btn--light {
-  color: $btn__color--gray;
-  background-color: $btn__background--base;
-  text-decoration: none;
+  &-light {
+    color: $btn__color--gray;
+    background-color: $btn__background--base;
+    text-decoration: none;
 
-  &:hover {
-    background-color: $btn__background-green--hover;
-    color: $btn__color--base;
+    &:hover {
+      background-color: $btn__background-green--hover;
+      color: $btn__color--base;
+    }
   }
-}
 
-.btn--off {
-  @media #{$md} {
-    display: none;
+  &--off {
+    @media #{$md} {
+      display: none;
+    }
   }
 }
 

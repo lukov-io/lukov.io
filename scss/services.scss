@@ -9,7 +9,7 @@
   }
 
   &__header {
-    padding: $content__padding;
+    padding: $header__padding--base;
 
     h2 {
       color: $h2__color--dark;
@@ -104,7 +104,7 @@
   }
 
   .content--light {
-    border-right: 1px solid #D5D2D2;
+    border-right: 1px solid $border__color-gray--light;
 
     @media #{$lg} {
       border: none;
@@ -133,6 +133,12 @@
   }
 
   .content--dark {
+    border-right: 1px solid $border__color--gray;
+
+    @media #{$lg} {
+      border: none;
+    }
+
     h4 {
       color: $h4__color--white;
       font-size: $h4__font-size;
