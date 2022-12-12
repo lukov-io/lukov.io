@@ -13,26 +13,26 @@
       <div class="row">
         <div class="col">
           <div class="topbar__content">
-            <span class="description">Mobile Applications Development</span>
-            <div class="contacts">
-              <span class="phone">+1 800 920 40 50</span>
+            <span class="topbar__description">Mobile Applications Development</span>
+            <div class="topbar__contacts">
+              <a class="phone phone--small" href="">+1 800 920 40 50</a>
               <div class="icon-box">
-                <a class="icon icon--facebook" href="#">
+                <a class="icon-box__item" href="#">
                   <svg>
                     <use xlink:href="/img/icons/icons-sprite.svg#icons-behance"></use>
                   </svg>
                 </a>
-                <a class="icon icon--twitter" href="#">
+                <a class="icon-box__item" href="#">
                   <svg>
                     <use xlink:href="/img/icons/icons-sprite.svg#icons-twitter"></use>
                   </svg>
                 </a>
-                <a class="icon icon--dribble" href="#">
+                <a class="icon-box__item" href="#">
                   <svg>
                     <use xlink:href="/img/icons/icons-sprite.svg#icons-dribble"></use>
                   </svg>
                 </a>
-                <a class="icon icon--instagram" href="#">
+                <a class="icon-box__item" href="#">
                   <svg>
                     <use xlink:href="/img/icons/icons-sprite.svg#icons-instagram"></use>
                   </svg>
@@ -48,122 +48,174 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <nav class="nav">
-            <div class="logo-header">
-              <div><a href="#" class="logo"><img src="img/logo-main.webp" alt=""></a></div>
-              <input class="side-menu" type="checkbox" id="side-menu"/>
-              <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+          <nav class="navigation__nav">
+            <div class="navigation__content">
+              <a class="logo-common" href="#">
+                <img class="logo-common__picture" src="img/logo-main.webp" alt="">
+              </a>
+              <input class="mobile__menu" type="checkbox" id="mobile__menu"/>
+              <label class="hamb" for="mobile__menu"><span class="hamb__line"></span></label>
             </div>
-            <div class="wrapper-menu ">
-              <ul class="menu">
+            <div class="navigation__wrapper">
+              <ul class="dropdown-menu">
                 <li class="dropdown-menu__item">
-                  <a class="dropdown-item caret-down" href="#">home
+                  <a class="dropdown-menu__link caret-down" href="#">home
                     <svg>
                       <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
                     </svg>
                   </a>
-                  <ul class="dropdown-menu dropdown-menu__content">
-                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">HOME FULLSCREAN</a></li>
-                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">HOME BOXED</a></li>
-                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">HOME HEADER STYLE 2</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown-menu__item">
-                  <a class="dropdown-item caret-down" href="#">community
-                    <svg>
-                      <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
-                    </svg>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu__content">
-                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">ABOUT US</a></li>
-                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">OUR TEAM</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown-menu__item"><a class="dropdown-item" href="#">SERVICES</a></li>
-                <li class="dropdown-menu__item"><a class="dropdown-item" href="#">portfolio</a></li>
-                <li class="dropdown-menu__item">
-                  <a class="dropdown-item caret-down" href="#">features
-                    <svg>
-                      <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
-                    </svg>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu__content">
+                  <ul class="dropdown-menu__submenu dropdown-menu__content">
                     <li class="dropdown-menu__item">
-                      <a class="dropdown-item chevron-navigation--right" href="#">tools
+                      <a class="dropdown-menu__link" href="#">HOME FULLSCREAN</a>
+                    </li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link" href="#">HOME BOXED</a>
+                    </li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link" href="#">HOME HEADER STYLE 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__item">
+                  <a class="dropdown-menu__link caret-down" href="#">community
+                    <svg>
+                      <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu__submenu dropdown-menu__content">
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link" href="#">ABOUT US</a>
+                    </li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link" href="#">OUR TEAM</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu__item">
+                  <a class="dropdown-menu__link" href="#">SERVICES</a>
+                </li>
+                <li class="dropdown-menu__item">
+                  <a class="dropdown-menu__link" href="#">portfolio</a>
+                </li>
+                <li class="dropdown-menu__item">
+                  <a class="dropdown-menu__link caret-down" href="#">features
+                    <svg>
+                      <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu__submenu dropdown-menu__content">
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link chevron-navigation--right" href="#">tools
                         <svg>
                           <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
                         </svg>
                       </a>
-                      <ul class="dropdown-menu dropdown-menu__content-inner">
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">tiypography</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">shortcodes</a></li>
+                      <ul class="dropdown-menu__submenu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">tiypography</a>
+                        </li>
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">shortcodes</a>
+                        </li>
                       </ul>
                     </li>
-                    <li class="dropdown-menu__item"><a class="dropdown-item chevron-navigation--right" href="#">help
-                      <svg>
-                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
-                      </svg>
-                    </a>
-                      <ul class="dropdown-menu dropdown-menu__content-inner">
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">service plus</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">privacy policy</a></li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link chevron-navigation--right" href="#">help
+                        <svg>
+                          <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                        </svg>
+                      </a>
+                      <ul class="dropdown-menu__submenu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">service plus</a>
+                        </li>
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">privacy policy</a>
+                        </li>
                       </ul>
                     </li>
-                    <li class="dropdown-menu__item"><a class="dropdown-item chevron-navigation--right" href="#">gallery
-                      <svg>
-                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
-                      </svg>
-                    </a>
-                      <ul class="dropdown-menu dropdown-menu__content-inner">
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">gallery grid</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">gallery cobbles</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">gallery masonry</a></li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link chevron-navigation--right" href="#">gallery
+                        <svg>
+                          <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                        </svg>
+                      </a>
+                      <ul class="dropdown-menu__submenu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">gallery grid</a>
+                        </li>
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">gallery cobbles</a>
+                        </li>
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">gallery masonry</a>
+                        </li>
                       </ul>
                     </li>
-                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">contacts</a></li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link" href="#">contacts</a>
+                    </li>
                   </ul>
                 </li>
                 <li class="dropdown-menu__item">
-                  <a class="dropdown-item caret-down" href="#">blog
+                  <a class="dropdown-menu__link caret-down" href="#">blog
                     <svg>
                       <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron"></use>
                     </svg>
                   </a>
-                  <ul class="dropdown-menu dropdown-menu__content">
-                    <li class="dropdown-menu__item"><a class="dropdown-item" href="#">streampage</a></li>
-                    <li class="dropdown-menu__item "><a class="dropdown-item chevron-navigation--right" href="#">classic
-                      style
-                      <svg>
-                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
-                      </svg>
-                    </a>
-                      <ul class="dropdown-menu dropdown-menu__content-inner">
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">2 columns</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">3 columns</a></li>
+                  <ul class="dropdown-menu__submenu dropdown-menu__content">
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link" href="#">streampage</a>
+                    </li>
+                    <li class="dropdown-menu__item ">
+                      <a class="dropdown-menu__link chevron-navigation--right" href="#">classic style
+                        <svg>
+                          <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                        </svg>
+                      </a>
+                      <ul class="dropdown-menu__submenu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">2 columns</a>
+                        </li>
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">3 columns</a>
+                        </li>
                       </ul>
                     </li>
-                    <li class="dropdown-menu__item"><a class="dropdown-item chevron-navigation--right" href="#">portfolio
-                      style
-                      <svg>
-                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
-                      </svg>
-                    </a>
-                      <ul class="dropdown-menu dropdown-menu__content-inner">
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">2 columns</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">3 columns</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">4 columns</a></li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link chevron-navigation--right" href="#">portfolio style
+                        <svg>
+                          <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                        </svg>
+                      </a>
+                      <ul class="dropdown-menu__submenu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">2 columns</a>
+                        </li>
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">3 columns</a>
+                        </li>
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">4 columns</a>
+                        </li>
                       </ul>
                     </li>
-                    <li class="dropdown-menu__item"><a class="dropdown-item chevron-navigation--right" href="#">chess
-                      style
-                      <svg>
-                        <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
-                      </svg>
-                    </a>
-                      <ul class="dropdown-menu dropdown-menu__content-inner">
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">2 columns</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">4 columns</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-item" href="#">6 columns</a></li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__link chevron-navigation--right" href="#">chess style
+                        <svg>
+                          <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+                        </svg>
+                      </a>
+                      <ul class="dropdown-menu__submenu dropdown-menu__content-inner">
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">2 columns</a>
+                        </li>
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">4 columns</a>
+                        </li>
+                        <li class="dropdown-menu__item">
+                          <a class="dropdown-menu__link" href="#">6 columns</a>
+                        </li>
                       </ul>
                     </li>
                   </ul>
@@ -182,12 +234,11 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="hero__header">
-          <h1>We Just do Apps <br>
+        <div class="box-content">
+          <h1 class="box-content__header header--main">We Just do Apps <br>
             <small>Stunning Mobile Applications<br>
               for Your Online Business or Just for Fun</small>
           </h1>
-
         </div>
       </div>
     </div>
@@ -198,60 +249,69 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="services__header">
-          <h2>Want to Develop an App <br>
+        <div class="box-content">
+          <h2 class="box-content__header header--dark">Want to Develop an App <br>
             <small>but don't know where to start?</small>
           </h2>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="box-wrapper col-lg-4 col-md-6">
-       <span class="icons-settings">
+      <div class="col-lg-4 col-md-6">
+        <div class="box-wrapper">
+          <span class="icons-settings">
           <svg>
           <use xlink:href="/img/icons/icons-sprite.svg#icons-settings"></use>
         </svg>
         </span>
-        <div class="box-wrapper__content content--light">
-          <h4>iOS and Android Compatible</h4>
-          <p>Consectetur adipiscing elit nullam blandit tempus augue nec sollicitudin.</p>
-          <a class="chevron-right" href="#">learn more
-            <svg>
-              <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
-            </svg>
-          </a>
+          <div class="box-wrapper__content box-wrapper__content--dark">
+            <h4 class="box-wrapper__header">iOS and Android Compatible</h4>
+            <p class="box-wrapper__description">Consectetur adipiscing elit nullam blandit tempus augue nec
+              sollicitudin.</p>
+            <a class="box-wrapper__link chevron-right" href="#">learn more
+              <svg>
+                <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="box-wrapper col-lg-4 col-md-6">
-        <span class="icons-settings">
+      <div class="col-lg-4 col-md-6">
+        <div class="box-wrapper">
+           <span class="icons-settings">
           <svg>
           <use xlink:href="/img/icons/icons-sprite.svg#icons-settings"></use>
-        </svg>
+          </svg>
         </span>
-        <div class="box-wrapper__content content--light">
-          <h4>Professional Design and Development</h4>
-          <p>Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
-          <a class="chevron-right" href="#">learn more
-            <svg>
-              <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
-            </svg>
-          </a>
+          <div class="box-wrapper__content box-wrapper__content--dark">
+            <h4 class="box-wrapper__header">Professional Design and Development</h4>
+            <p class="box-wrapper__description">Sit amet consectetur adipiscing elit nullam blandit tempus augue
+              nec.</p>
+            <a class="box-wrapper__link chevron-right" href="#">learn more
+              <svg>
+                <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="box-wrapper  col-lg-4 col-md-6">
-        <span class="icons-settings">
+      <div class="col-lg-4 col-md-6">
+        <div class="box-wrapper">
+            <span class="icons-settings">
           <svg>
           <use xlink:href="/img/icons/icons-sprite.svg#icons-settings"></use>
         </svg>
         </span>
-        <div class="box-wrapper__content content--light">
-          <h4>Technical Support and Improvement</h4>
-          <p>Consectetur adipiscing elit nullam blandit tempus augue nec sollicitudin.</p>
-          <a class="chevron-right" href="#">learn more
-            <svg>
-              <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
-            </svg>
-          </a>
+          <div class="box-wrapper__content box-wrapper__content--dark">
+            <h4 class="box-wrapper__header">Technical Support and Improvement</h4>
+            <p class="box-wrapper__description">Consectetur adipiscing elit nullam blandit tempus augue nec
+              sollicitudin.</p>
+            <a class="box-wrapper__link chevron-right" href="#">learn more
+              <svg>
+                <use xlink:href="/img/icons/icons-sprite.svg#icons-chevron-right"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -261,24 +321,30 @@
 <section class="statistics">
   <div class="container">
     <div class="row">
-      <div class="statistics__content col-lg-3 col-md-3">
-        <span class="total">10000</span>
-        <span class="text">Completed Screens</span>
-        <span class="total">12</span>
-        <span class="text">Years of Experience</span>
-        <span class="total">280</span>
-        <span class="text">Developed Apps</span>
+      <div class="col-lg-3 col-md-3">
+        <div class="statistics__content">
+          <span class="statistics__total">10000</span>
+          <span class="statistics__description">Completed Screens</span>
+          <span class="statistics__total">12</span>
+          <span class="statistics__description">Years of Experience</span>
+          <span class="statistics__total">280</span>
+          <span class="statistics__description">Developed Apps</span>
+        </div>
       </div>
-      <div class="col-lg-6 col-md-6 statistics__img">
-        <img src="/img/skills_phone_img.webp" alt="">
+      <div class="col-lg-6 col-md-6">
+        <div class="statistics__img">
+          <img src="/img/skills_phone_img.webp" alt="">
+        </div>
       </div>
-      <div class="statistics__content col-lg-3 col-md-3">
-        <span class="total">20000</span>
-        <span class="text">Happy Customers</span>
-        <span class="total">38</span>
-        <span class="text">Profile Awards</span>
-        <span class="total">120</span>
-        <span class="text">Professionals</span>
+      <div class="col-lg-3 col-md-3">
+        <div class="statistics__content">
+          <span class="statistics__total">20000</span>
+          <span class="statistics__description">Happy Customers</span>
+          <span class="statistics__total">38</span>
+          <span class="statistics__description">Profile Awards</span>
+          <span class="statistics__total">120</span>
+          <span class="statistics__description">Professionals</span>
+        </div>
       </div>
     </div>
   </div>
@@ -288,34 +354,39 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="services__header">
-          <h2>How it works <br>
+        <div class="box-content">
+          <h2 class="box-content__header header--dark">How it works <br>
             <small>it`s simple</small>
           </h2>
-
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="box-wrapper col-lg-4 col-md-6">
-        <span class="icon-num">01.</span>
-        <div class="box-wrapper__content content--light">
-          <h4>App Design</h4>
-          <p>Consectetur adipiscing elit nullam blandit tempus</p>
+      <div class="col-lg-4 col-md-6">
+        <div class="box-wrapper">
+          <span class="icon-num">01.</span>
+          <div class="box-wrapper__content  box-wrapper__content--dark">
+            <h4 class="box-wrapper__header">App Design</h4>
+            <p class="box-wrapper__description">Consectetur adipiscing elit nullam blandit tempus</p>
+          </div>
         </div>
       </div>
-      <div class="box-wrapper col-lg-4 col-md-6">
-        <span class="icon-num">02.</span>
-        <div class="box-wrapper__content content--light">
-          <h4>Explain Your Idea</h4>
-          <p>Sit amet consectetur ololo prtable</p>
+      <div class=" col-lg-4 col-md-6">
+        <div class="box-wrapper">
+          <span class="icon-num">02.</span>
+          <div class="box-wrapper__content  box-wrapper__content--dark">
+            <h4 class="box-wrapper__header">Explain Your Idea</h4>
+            <p class="box-wrapper__description">Sit amet consectetur ololo prtable</p>
+          </div>
         </div>
       </div>
-      <div class="box-wrapper col-lg-4 col-md-6">
-        <span class="icon-num">03.</span>
-        <div class="box-wrapper__content content--light">
-          <h4>White a While</h4>
-          <p>Consectetur adipiscing elit nullam</p>
+      <div class="col-lg-4 col-md-6">
+        <div class="box-wrapper">
+          <span class="icon-num">03.</span>
+          <div class="box-wrapper__content  box-wrapper__content--dark">
+            <h4 class="box-wrapper__header">White a While</h4>
+            <p class="box-wrapper__description">Consectetur adipiscing elit nullam</p>
+          </div>
         </div>
       </div>
     </div>
@@ -333,8 +404,8 @@
     </div>
     <div class="row">
       <div class="col">
-        <div class="feedback__header">
-          <h2>What Our Customers Say <br>
+        <div class="box-content">
+          <h2 class="box-content__header header--light">What Our Customers Say <br>
             <small>about our community</small>
           </h2>
         </div>
@@ -349,12 +420,13 @@
                 <div class="feedback__logo">
                   <img src="/img/testim-1-90x90.jpg" alt="">
                 </div>
-                <div class="author">
-                  <h4>Anna summers</h4>
-                  <p>Designer</p>
+                <div class="feedback__author">
+                  <h4 class="feedback__author-header">Anna summers</h4>
+                  <p class="feedback__author-profession">Designer</p>
                 </div>
               </div>
-              <p>Every time I need to talk through my ideas with a pro, I know where to go. Your designers
+              <p class="feedback__description">Every time I need to talk through my ideas with a pro, I know where to
+                go. Your designers
                 are the best out there. I appreciate the support they provide!</p>
             </div>
             <div class="feedback__item slider__item">
@@ -362,12 +434,13 @@
                 <div class="feedback__logo">
                   <img src="/img/testim-2-90x90.jpg" alt="">
                 </div>
-                <div class="author">
-                  <h4>Jon Bridges</h4>
-                  <p>Lowyer</p>
+                <div class="feedback__author">
+                  <h4 class="feedback__author-header">Jon Bridges</h4>
+                  <p class="feedback__author-profession">Lowyer</p>
                 </div>
               </div>
-              <p>SIt was great working with your team! Great technical support and creative design made me
+              <p class="feedback__description">SIt was great working with your team! Great technical support and
+                creative design made me
                 pretty happy about the outcome! Keep up the great work you do.</p>
             </div>
             <div class="feedback__item slider__item">
@@ -375,12 +448,13 @@
                 <div class="feedback__logo">
                   <img src="/img/testim-3-90x90.jpg" alt="">
                 </div>
-                <div class="author">
-                  <h4>Jenna Collins</h4>
-                  <p>Musician</p>
+                <div class="feedback__author">
+                  <h4 class="feedback__author-header">Jenna Collins</h4>
+                  <p class="feedback__author-profession">Musician</p>
                 </div>
               </div>
-              <p>Wonderful experience is always the reason to return to the services of the company. Thank
+              <p class="feedback__description">Wonderful experience is always the reason to return to the services of
+                the company. Thank
                 you guys for your professional help with my project. You rock!</p>
             </div>
             <div class="feedback__item slider__item">
@@ -388,12 +462,13 @@
                 <div class="feedback__logo">
                   <img src="/img/testim-4-90x90.jpg" alt="">
                 </div>
-                <div class="author">
-                  <h4>Nicole Smith</h4>
-                  <p>Teacher</p>
+                <div class="feedback__author">
+                  <h4 class="feedback__author-header">Nicole Smith</h4>
+                  <p class="feedback__author-profession">Teacher</p>
                 </div>
               </div>
-              <p>Wonderful experience is always the reason to return to the services of the company. Thank
+              <p class="feedback__description">Wonderful experience is always the reason to return to the services of
+                the company. Thank
                 you guys for your professional help with my project. You rock!</p>
             </div>
             <div class="feedback__item slider__item">
@@ -440,12 +515,13 @@
                 <div class="feedback__logo">
                   <img src="/img/testim-2-90x90.jpg" alt="">
                 </div>
-                <div class="author">
-                  <h4>Jon Bridges</h4>
-                  <p>Lowyer</p>
+                <div class="feedback-author">
+                  <h4 class="">Jon Bridges</h4>
+                  <p class="author__profession">Lowyer</p>
                 </div>
               </div>
-              <p>SIt was great working with your team! Great technical support and creative design made me
+              <p class="author__description">SIt was great working with your team! Great technical support and creative
+                design made me
                 pretty happy about the outcome! Keep up the great work you do.</p>
             </div>
           </div>
@@ -461,8 +537,8 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="why-us__header">
-          <h2>Why Us? We are Awesome <br>
+        <div class="box-content">
+          <h2 class="box-content__header header--dark">Why Us? We are Awesome <br>
             <small>and we love what we do</small>
           </h2>
         </div>
@@ -475,49 +551,49 @@
             <div class="why-us__item slider__item">
               <img src="/img/port-feat-01-1161x810.webp" alt="">
               <div class="why-us__content">
-                <h4>Green. Weather App and Organizer</h4>
-                <p>Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
-                <a class="" href="">LEARN MORE</a>
+                <h4 class="why-us__header">Green. Weather App and Organizer</h4>
+                <p class="why-us__description">Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
+                <a class="why-us__link" href="">LEARN MORE</a>
               </div>
             </div>
             <div class="why-us__item slider__item">
               <img src="/img/port-feat-02-1161x810.webp" alt="">
               <div class="why-us__content">
-                <h4>Green. Weather App and Organizer</h4>
-                <p>Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
-                <a class="" href="">LEARN MORE</a>
+                <h4 class="why-us__header">Green. Weather App and Organizer</h4>
+                <p class="why-us__description">Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
+                <a class="why-us__link" href="">LEARN MORE</a>
               </div>
             </div>
             <div class="why-us__item slider__item">
               <img src="/img/port-feat-03-1161x810.webp" alt="">
               <div class="why-us__content">
-                <h4>Green. Weather App and Organizer</h4>
-                <p>Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
-                <a class="" href="">LEARN MORE</a>
+                <h4 class="why-us__header">Green. Weather App and Organizer</h4>
+                <p class="why-us__description">Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
+                <a class="why-us__link" href="">LEARN MORE</a>
               </div>
             </div>
             <div class="why-us__item slider__item">
               <img src="/img/port-feat-04-1161x810.webp" alt="">
               <div class="why-us__content">
-                <h4>Green. Weather App and Organizer</h4>
-                <p>Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
-                <a class="" href="">LEARN MORE</a>
+                <h4 class="why-us__header">Green. Weather App and Organizer</h4>
+                <p class="why-us__description">Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
+                <a class="why-us__link" href="">LEARN MORE</a>
               </div>
             </div>
             <div class="why-us__item slider__item">
               <img src="/img/port-feat-06-1161x810.webp" alt="">
               <div class="why-us__content">
-                <h4>Green. Weather App and Organizer</h4>
-                <p>Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
-                <a class="" href="">LEARN MORE</a>
+                <h4 class="why-us__header">Green. Weather App and Organizer</h4>
+                <p class="why-us__description">Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
+                <a class="why-us__link" href="">LEARN MORE</a>
               </div>
             </div>
             <div class="why-us__item slider__item">
               <img src="/img/port-feat-08-1161x810.webp" alt="">
               <div class="why-us__content">
-                <h4>Green. Weather App and Organizer</h4>
-                <p>Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
-                <a class="" href="">LEARN MORE</a>
+                <h4 class="why-us__header">Green. Weather App and Organizer</h4>
+                <p class="why-us__description">Sit amet consectetur adipiscing elit nullam blandit tempus augue nec.</p>
+                <a class="why-us__link" href="">LEARN MORE</a>
               </div>
             </div>
           </div>
@@ -534,35 +610,46 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="whats-the-price__header">
-          <h2>What’s the Price?</h2>
+        <div class="box-content">
+          <h2 class="box-content__header header--light">What’s the Price?</h2>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="box-wrapper col-lg-4 col-md-6">
-        <div class="box-wrapper__content content--dark">
-          <h4>App & Support</h4>
-          <span>$7000+</span>
-          <p>Lorem ipsum dolor nec sit amet Consectetur adipiscing ac elit nullam Blandit tempus augue nec
-            sollicitudin</p>
-          <a class="btn btn--danger" href="">LEARN MORE</a>
+      <div class="col-lg-4 col-md-6">
+        <div class="box-wrapper">
+          <div class="box-wrapper__content box-wrapper__content--light">
+            <h4 class="box-wrapper__header">App & Support</h4>
+            <span class="box-wrapper__discount">$7000+</span>
+            <p class="box-wrapper__description">Lorem ipsum dolor nec sit amet Consectetur adipiscing ac elit nullam
+              Blandit tempus augue nec
+              sollicitudin</p>
+            <a class="btn btn--danger" href="">LEARN MORE</a>
+          </div>
         </div>
       </div>
-      <div class="box-wrapper col-lg-4 col-md-6">
-        <div class="box-wrapper__content content--dark">
-          <h4>Consultation</h4>
-          <span>FREE</span>
-          <p>Consectetur adipiscing ac elit nullam Blandit tempus augue nec sollicitudin Sed quam nulla efficitur nec nisi at</p>
-          <a class="btn btn--danger" href="">LEARN MORE</a>
+      <div class=" col-lg-4 col-md-6">
+        <div class="box-wrapper">
+          <div class="box-wrapper__content box-wrapper__content--light">
+            <h4 class="box-wrapper__header">Consultation</h4>
+            <span class="box-wrapper__discount">FREE</span>
+            <p class="box-wrapper__description">Consectetur adipiscing ac elit nullam Blandit tempus augue nec
+              sollicitudin Sed quam nulla efficitur nec
+              nisi at</p>
+            <a class="btn btn--danger" href="">LEARN MORE</a>
+          </div>
         </div>
       </div>
-      <div class="box-wrapper  col-lg-4 col-md-6">
-        <div class="box-wrapper__content content--dark">
-          <h4>App Redesign</h4>
-          <span>$2000+</span>
-          <p>Blandit tempus augue nec sollicitudin Sed quam nulla efficitur nec nisi at Imperdiet luctus dui morbi rhoncus</p>
-          <a class="btn btn--danger" href="">LEARN MORE</a>
+      <div class=" col-lg-4 col-md-6">
+        <div class="box-wrapper">
+          <div class="box-wrapper__content box-wrapper__content--light">
+            <h4 class="box-wrapper__header">App Redesign</h4>
+            <span class="box-wrapper__discount">$2000+</span>
+            <p class="box-wrapper__description">Blandit tempus augue nec sollicitudin Sed quam nulla efficitur nec nisi
+              at Imperdiet luctus dui morbi
+              rhoncus</p>
+            <a class="btn btn--danger" href="">LEARN MORE</a>
+          </div>
         </div>
       </div>
     </div>
@@ -573,11 +660,10 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="interested__content">
-          <h2>Interested?<br>
+        <div class="box-content">
+          <h2 class="box-content__header header--light">Interested?<br>
             <small>don’t waste your time, contact us right now</small>
           </h2>
-
           <a class="btn btn--classic" href="">MAKE AN APPOINTMENT</a>
         </div>
       </div>
@@ -590,26 +676,28 @@
     <div class="row">
       <div class="col">
         <div class="footer__content">
-          <a href="#" class="footer__logo"><img src="img/logo-main.webp" alt=""></a>
-          <div class="footer__item">
-            <span class="phone">+1 800 920 40 50</span>
+          <a class="logo-common" href="#">
+            <img class="logo-common__picture" src="img/logo-main.webp" alt="">
+          </a>
+          <div class="footer__contacts">
+            <a class="phone phone--big" href="">+1 800 920 40 50</a>
             <div class="icon-box">
-              <a class="icon icon--facebook" href="#">
+              <a class="icon-box__item" href="#">
                 <svg>
                   <use xlink:href="/img/icons/icons-sprite.svg#icons-behance"></use>
                 </svg>
               </a>
-              <a class="icon icon--twitter" href="#">
+              <a class="icon-box__item" href="#">
                 <svg>
                   <use xlink:href="/img/icons/icons-sprite.svg#icons-twitter"></use>
                 </svg>
               </a>
-              <a class="icon icon--dribble" href="#">
+              <a class="icon-box__item" href="#">
                 <svg>
                   <use xlink:href="/img/icons/icons-sprite.svg#icons-dribble"></use>
                 </svg>
               </a>
-              <a class="icon icon--instagram" href="#">
+              <a class="icon-box__item" href="#">
                 <svg>
                   <use xlink:href="/img/icons/icons-sprite.svg#icons-instagram"></use>
                 </svg>
@@ -618,9 +706,10 @@
           </div>
           <div class="footer__email">
             <input type="email" placeholder="YOUR EMAIL">
-            <a class="btn" href="#">SUBSCRIBE</a>
+            <a class="btn btn--light" href="#">SUBSCRIBE</a>
           </div>
-          <p><input type="checkbox" name="a" value="agree">I agree that my submitted data is being collected and stored.
+          <p class="footer__description">
+            <input type="checkbox" name="a" value="agree">I agree that my submitted data is being collected and stored.
           </p>
           <div class="footer__line">
             <hr>

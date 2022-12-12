@@ -8,7 +8,7 @@
     align-items: center;
   }
 
-  .contacts {
+  &__contacts {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -21,19 +21,7 @@
     }
   }
 
-  .phone {
-    color: $text__color--white;
-    font-size: $font-size;
-    font-weight: $font-weight--base;
-    letter-spacing: $letter-spacing;
-    cursor: pointer;
-
-    &:hover {
-      color: $link__color--hover;
-    }
-  }
-
-  .description {
+  &__description {
     color: $text__color--white;
     font-size: $font-size;
     font-weight: $font-weight--base;
@@ -52,23 +40,23 @@
   @media #{$md} {
     margin-left: 0;
   }
-}
 
-.icon {
-  display: inline-block;
-  width: 19px;
-  height: 21px;
-  cursor: pointer;
-  margin-left: 15px;
-  color: $text__color--white;
+  &__item {
+    display: inline-block;
+    width: 19px;
+    height: 21px;
+    cursor: pointer;
+    margin-left: 15px;
+    color: $text__color--white;
 
-  &:hover {
-    color: $link__color--hover;
-  }
+    &:hover {
+      color: $link__color--hover;
+    }
 
-  svg {
-    max-width: 100%;
-    max-height: 100%;
-    vertical-align: top;
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+      vertical-align: top;
+    }
   }
 }

@@ -4,35 +4,4 @@
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  padding: $padding__section--normal;
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 40px;
-
-    h2 {
-      color: $h2__color--white;
-      font-size: $h2__font-size;
-      font-weight: $h2__font-weight;
-      margin: 0;
-
-      @media #{$md} {
-        font-size: $h2__font-size--mobile;
-      }
-
-      small {
-        color: $text__color--white;
-        margin-bottom: 40px;
-        line-height: 2;
-        font-size: $font-size--medium;
-        font-weight: $text__font-weight;
-
-        @media #{$md} {
-          font-size: $font-size--small;
-        }
-      }
-    }
-  }
 }
