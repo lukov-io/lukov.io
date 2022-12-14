@@ -32,14 +32,20 @@
     }
   }
 
-  &-light {
+  &--light {
     color: $btn__color--gray;
-    background-color: $btn__background--base;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    border-radius: 30px;
+    background-color: $btn__background--custom-dark;
+    display: inline-block;
     text-decoration: none;
+    height: 100%;
 
     &:hover {
-      background-color: $btn__background-green--hover;
-      color: $btn__color--base;
+      color: $btn__color-white--hover;
+      background-color: $btn__background-dark--hover;
     }
   }
 
@@ -50,7 +56,232 @@
   }
 }
 
+/* icons */
+.chevron-right {
+  &:hover svg {
+    color: $icons-base--hover;
+  }
+
+  svg {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.chevron-navigation--right {
+  svg {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    float: right;
+  }
+}
+
+.icons-settings {
+  svg {
+    width: 85px;
+    height: 85px;
+    display: inline-block;
+    color: $icons-color--red;
+    cursor: pointer;
+  }
+}
+
+.icon-num {
+  width: 85px;
+  height: 85px;
+  display: inline-block;
+  color: $icons-color--red;
+  cursor: pointer;
+  font-size: 70px;
+}
+
+/* reused blocks */
+.box-wrapper {
+  cursor: pointer;
+
+  &:hover .icons-settings svg,
+  &:hover .icon-num,
+  &:hover .box-wrapper__header {
+    color: $h4__color-green--hover;
+  }
+
+  &:hover .box-wrapper__link {
+    color: $link__color-red--hover;
+  }
+
+  @media #{$lg} {
+    padding: 25px;
+  }
+
+  &__content {
+    row-gap: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+
+    @media #{$md} {
+      row-gap: 20px;
+    }
+  }
+
+  &__header {
+    font-size: $h4__font-size;
+    font-weight: $h4__font-weight;
+  }
+
+  &__description {
+    color: $text__color--gray;
+    font-size: $font-size--small;
+    font-weight: $text__font-weight;
+    margin: 0;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $link__color--green;
+    font-size: $links__font-size--light;
+    font-weight: $text__font-weight-medium;
+
+    &:hover a {
+      color: $link__color-red--hover;
+    }
+  }
+
+  &__discount {
+    font-size: $font-size--xl;
+    font-weight: $text__font-weight--bold;
+  }
+
+  &__content--dark {
+    border-right: 1px solid #D5D2D2;
+    color: $text__color--black;
+
+    @media #{$lg} {
+      border: none;
+    }
+  }
+
+  &__content--light {
+    color: $text__color--white;
+    border-right: 1px solid #494848;
+
+    @media #{$lg} {
+      border: none;
+    }
+  }
+}
+
+.box-content {
+  text-align: center;
+  padding: $content__padding;
+
+  &__header {
+    text-align: center;
+
+    @media #{$md} {
+      font-size: $h2__font-size--mobile;
+    }
+  }
+
+  .header--main {
+    color: $h1__color--white;
+    font-size: $h1__font-size;
+    font-weight: $h1__font-weight;
+    margin-bottom: $header__margin-bottom;
+
+    @media #{$md} {
+      font-size: $h1__font-size--mobile;
+    }
+
+    small {
+      display: inline-block;
+      color: $text__color--white;
+      margin: 0;
+      line-height: 2;
+      font-size: $font-size--light;
+      font-weight: $text__font-weight;
+
+      @media #{$md} {
+        font-size: $font-size--small;
+      }
+    }
+  }
+
+  .header--light {
+    color: $h2__color--white;
+    font-size: $h2__font-size;
+    font-weight: $h2__font-weight;
+    margin-bottom: $header__margin-bottom;
+
+    small {
+      display: inline-block;
+      color: $text__color--white;
+      margin: 0;
+      line-height: 2;
+      font-size: $font-size--light;
+      font-weight: $text__font-weight;
+
+      @media #{$md} {
+        font-size: $font-size--small;
+      }
+    }
+  }
+
+  .header--dark {
+    color: $h2__color--dark;
+    font-size: $h2__font-size;
+    font-weight: $h2__font-weight;
+    margin-bottom: $header__margin-bottom;
+
+    small {
+      color: $text__color--black;
+      font-size: $font-size--medium;
+      font-weight: $text__font-weight;
+      margin: 0;
+    }
+  }
+}
+
 /* invert */
 .invert {
   filter: invert(1);
+}
+
+/* reused phone */
+.phone {
+  color: $text__color--white;
+  text-decoration: none;
+
+  @media #{$sm} {
+    font-size: $font-size--small;
+  }
+
+  &:hover {
+    color: $link__color--hover;
+  }
+
+  &--small {
+    font-size: $font-size;
+    font-weight: $font-weight--base;
+  }
+
+  &--big {
+    font-weight: bold;
+    font-size: $font-size--light;
+  }
+}
+
+/* logo for header and footer */
+.logo-common {
+  &__picture {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
 }

@@ -14,28 +14,29 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;
+  }
 
-    .total {
-      color: $text__color--white;
-      font-size: $font-size--medium;
-      font-weight: $text__font-weight-medium;
-      letter-spacing: $letter-spacing;
+  &__total {
+    color: $text__color--white;
+    font-size: $font-size--medium;
+    font-weight: $text__font-weight-medium;
+    letter-spacing: $letter-spacing;
 
-      @media #{$md} {
-        color: $text__color--green;
-      }
+    @media #{$md} {
+      color: $text__color--green;
     }
+  }
 
-    .text {
-      color: $text__color--white;
-      font-size: $font-size--small;
-      letter-spacing: $letter-spacing;
-      margin-bottom: 15px;
+  &__description {
+    color: $text__color--white;
+    font-size: $font-size--small;
+    letter-spacing: $letter-spacing;
+    margin-bottom: 15px;
 
-      @media #{$md} {
-        color: $text__color--black;
-        margin-bottom: 25px;
-      }
+    @media #{$md} {
+      color: $text__color--black;
+      margin-bottom: 25px;
     }
   }
 

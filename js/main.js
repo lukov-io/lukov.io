@@ -1,8 +1,10 @@
 /* hamb */
 const hamburger = document.querySelector('.hamb');
-const menuWrapper = document.querySelector('.wrapper-menu');
+const menuWrapper = document.querySelector('.navigation__wrapper');
+const bodyHidden = document.querySelector('body');
 
 hamburger.addEventListener('click', function() {
+  bodyHidden.classList.toggle('hidden');
   menuWrapper.classList.toggle('show-menu');
   menuWrapper.classList.toggle('offcanvas');
   hamburger.classList.toggle('invert');

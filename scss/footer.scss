@@ -9,37 +9,16 @@
     align-items: center;
     justify-content: center;
     row-gap: 50px;
-
-    p {
-      color: $text__color--white;
-      font-weight: $font-weight--base;
-      font-size: $font-size;
-      text-align: center;
-      margin: 0;
-
-      input {
-        margin-right: 5px;
-        vertical-align: text-top;
-      }
-    }
   }
 
-  &__item {
+  &__contacts {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    .phone {
-      color: $text__color--white;
-      font-weight: bold;
-      font-size: $font-size--light;
-
-      @media #{$sm} {
-        font-size: $font-size--small;
-      }
-
-      &:hover {
-        color: $link__color--hover;
-      }
+    @media #{$sm} {
+      row-gap: 20px;
     }
   }
 
@@ -72,21 +51,17 @@
       padding-left: 30px;
       outline: none;
     }
+  }
 
-    a {
-      color: $btn__color--gray;
-      padding: 12px;
-      position: absolute;
-      right: 0;
-      border-radius: 30px;
-      background-color: $btn__background--custom-dark;
-      display: inline-block;
-      text-decoration: none;
+  &__description {
+    color: $text__color--white;
+    font-weight: $font-weight--base;
+    font-size: $font-size;
+    text-align: center;
 
-      &:hover {
-        color: $btn__color-white--hover;
-        background-color: $btn__background-dark--hover;
-      }
+    input {
+      margin-right: 5px;
+      vertical-align: text-top;
     }
   }
 
@@ -103,6 +78,8 @@
     display: flex;
     align-items: center;
     column-gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__copy {
