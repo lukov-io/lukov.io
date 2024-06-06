@@ -1,0 +1,181 @@
+$purple: #7F58A6;
+$violet: #412973;
+$blue: #012E40;
+$green: #1B594E;
+$turquoise: #9CD9BC;
+$red-brown: #851212;
+
+$gray300:   #f6f6f6;
+$gray400:   #eaeaea;
+$gray500:   #d2d2d2;
+$gray600:   #aaaaaa;
+$gray800:   #4b4b4b;
+$gray-dark: #1b1b1b;
+$white:     #ffffff;
+$black:     #000000;
+
+$primary: $gray400;
+$primary-dark: $gray500;
+$primary-light: $gray300;
+$danger: $red-brown;
+$info: $gray-dark;
+
+$gradient165deg: linear-gradient(165deg,
+				#9CD9BC -0.99%,
+				#107D7D 35.22%,
+				#5B3D78 76.45%,
+				#0B0C39 105.97%);
+
+$gradient0deg: linear-gradient(96.5deg, #9CD9BC 0%, #434DA7 51.56%, #5B3D78 100%);
+
+$text--primary: $primary-dark;
+$text--light: $primary-light;
+$text--gray: $gray800;
+$text--dark: $black;
+$text--white: $white;
+
+$background--primary: $primary;
+$background--light: $primary-light;
+$background--info: $info;
+$background--danger: $danger;
+$background--dark: $black;
+
+// 1px = 0.0694vw при разрешении 1440
+// 1px = 0.0977vh ghb 1024
+
+$fs-xs: 14px;
+$fs-xs-factorial: 0.97vw;
+$fs-s: 16px;
+$fs-s-factorial: 1.11vw;
+$fs-m: 17px;
+$fs-m-factorial: 1.18vw;
+$fs-l: 19px;
+$fs-l-factorial: 1.32vw;
+$fs-xl: 22px;
+$fs-xl-factorial: 1.53vw;
+$fs-xxl: 23px;
+$fs-xxl-factorial: 1.6vw;
+$fs-big-min: 24px;
+$fs-big-min-factorial: 1.67vw;
+$fs-big-xxs: 36px;
+$fs-big-xxs-factorial: 2.5vw;
+$fs-big-xs: 40px;
+$fs-big-xs-factorial: 2.78vw;
+$fs-big-s: 46px;
+$fs-big-s-factorial: 3.19vw;
+$fs-big-m: 48px;
+$fs-big-m-factorial: 3.33vw;
+$fs-big-l: 56px;
+$fs-big-l-factorial: 3.89vw;
+$fs-big-xl: 60px;
+$fs-big-xl-factorial: 4.167vw;
+$fs-big-xxl: 78px;
+$fs-big-xxl-factorial: 5.42vw;
+$fs-big-max: 94px;
+$fs-big-max-factorial: 6.53vw;
+
+$lh-xxl: 150%;
+$lh-xl: 140%;
+$lh-lg: 130%;
+$lh-md: 120%;
+$lh-sm: 110%;
+$lh-xs: 100%;
+
+$fw-extra-light: 100;
+$fw-lighter: 200;
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-demi-bold: 600;
+$fw-bold: 700;
+$fw-bolder: 800;
+$fw-heavy: 900;
+$fw-custom-550: 550;
+
+$spacer-base: 32px;
+$sp-xxs: 8px;
+$sp-xxs-factorial-x: 0.5vw;
+$sp-xxs-factorial-y: 0.8vh;
+$sp-xs: 16px;
+$sp-xs-factorial-x: 1.1vw;
+$sp-xs-factorial-y: 1.6vh;
+$sp-s: 24px;
+$sp-s-factorial-x: 1.7vw;
+$sp-s-factorial-y: 2.3vh;
+$sp-m: 32px;
+$sp-m-factorial-x: 2.2vw;
+$sp-m-factorial-y: 3.1vh;
+$sp-l: 48px;
+$sp-l-factorial-x: 3.3vw;
+$sp-l-factorial-y: 4.7vh;
+$sp-xl: 64px;
+$sp-xl-factorial-x: 4.4vw;
+$sp-xl-factorial-y: 6.2vh;
+$sp-xxl: 72px;
+$sp-xxl-factorial-x: 5vw;
+$sp-xxl-factorial-y: 7vh;
+
+$sp-custom-10: 10px;
+$sp-custom-10-factorial-x: 0.7vw;
+$sp-custom-10factorial-y: 1vh;
+
+$sp-custom-15: 15px;
+$sp-custom-15-factorial-x: 1vw;
+$sp-custom-15-factorial-y: 1.4vh;
+
+$icon-color--dark: $black;
+$icon-color--white: $white;
+
+$icon-circle-padding-min: 15px;
+$icon-circle-padding-factor: 1.05vw;
+
+$icon-circle-color: $background--primary;
+
+/*$border--grey: 1px solid $gray900;
+$border--light: 1px solid $light;*/
+
+$mouse-device: "(hover: hover)";
+$touch-device: "(hover: none)";
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1450px) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+
+$xs: '(max-width: 375px)' !default;
+$sm: '(max-width: #{map-get($grid-breakpoints , sm) - 1px})' !default;
+$md: '(max-width: #{map-get($grid-breakpoints, md) - 1px})' !default;
+$lg: '(max-width: #{map-get($grid-breakpoints, lg) - 1px})' !default;
+$xl: '(max-width: #{map-get($grid-breakpoints, xl) - 1px})' !default;
+$xxl: '(max-width: #{map-get($grid-breakpoints, xxl) - 1px})' !default;
+
+$min-xs: '(min-width: 375px)';
+$min-sm: '(min-width: #{map-get($grid-breakpoints, sm)})' !default;
+$min-md: '(min-width: #{map-get($grid-breakpoints, md)})' !default;
+$min-lg: '(min-width: #{map-get($grid-breakpoints, lg)})' !default;
+$min-xl: '(min-width: #{map-get($grid-breakpoints, xl)})' !default;
+$min-xxl: '(min-width: #{map-get($grid-breakpoints, xxl)})' !default;
+
+
+
+
+
+
+
+
+
+
+
