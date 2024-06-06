@@ -1,12 +1,10 @@
 <template>
   <div class="nav-menu" :class="[ orientation, textColor ]">
-    <NavItem :link-name="'Home'" :path-to="'/Home'" />
+    <NavItem :link-name="'Home'" :path-to="'/home'" />
     <NavItem :link-name="'Works'" :path-to="'/works'" />
     <NavItem :link-name="'Agency'" :path-to="'/agency'" />
     <NavItem :link-name="'Partners'" :path-to="'/partners'" />
     <NavItem :link-name="'Contacts'" :path-to="'/contacts'" />
-    <NavItem :link-name="'Stub'" :path-to="'/'" />
-    <NavItem :link-name="'About'" :path-to="'/about-project'" />
   </div>
 </template>
 
