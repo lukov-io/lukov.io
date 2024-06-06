@@ -61,7 +61,7 @@ import MainLogo from '~/components/MainLogo.vue'
 import MainHeader from '~/composables/MainHeader.vue'
 
 export default {
-  name: 'Home',
+  name: 'home',
   components: { MainHeader, ContactsItem, IconPoint, IconArrowLeft, IconClip, IconPen, MainLogo, AppButton, NavMenu, ServicesMenu, MainTitle },
   methods: {
   }

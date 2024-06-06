@@ -22,7 +22,7 @@ import HeartSvg from '~/components/HeartSvg.vue'
 import MainTitle from '~/components/MainTitle.vue'
 
 export default {
-  name: 'Stub',
+  name: 'stub',
   components: { MainTitle, HeartSvg, MainSlogan, MainHeader, NavMenu }
 }
 </script>
