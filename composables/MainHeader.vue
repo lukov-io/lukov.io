@@ -15,7 +15,7 @@ import MainLogo from '~/components/MainLogo.vue'
 
 export default {
   name: 'MainHeader',
-  components: { AppButton, IconPoint, MainLogo }
+  components: { AppButton, IconPoint, MainLogo },
 }
 </script>
 
@@ -30,5 +30,4 @@ $header-margin: 0 max(8px, 8vw);
     justify-content: space-between;
     align-items: center;
   }
-
 </style>

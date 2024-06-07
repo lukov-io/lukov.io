@@ -1,3 +1,3 @@
 <template>
-  Agency
+  <div>Agency</div>
 </template>

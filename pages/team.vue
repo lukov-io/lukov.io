@@ -1,3 +1,3 @@
 <template>
-  Team
+  <div>Team</div>
 </template>

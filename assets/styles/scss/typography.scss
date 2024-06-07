@@ -31,7 +31,7 @@ $h5-margin-bottom: max($sp-xxs, $sp-xxs-factorial-y);
 	font-style: normal;
 	font-display: auto;
 	src: local('helveticaneuecyr_black'),
-	url('@/assets/font/helveticaneuecyr_black.otf') format('otf')
+	url('/font/helveticaneuecyr_black.otf') format('otf')
 }
 
 body {

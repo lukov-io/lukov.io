@@ -1,5 +1,8 @@
 <template>
-  <nuxt-link class="services-item" :to="pathTo">
+  <nuxt-link
+    class="services-item"
+    :to="pathTo"
+  >
     {{ linkName }}
   </nuxt-link>
 </template>
@@ -10,18 +13,17 @@ export default {
   props: {
     linkName: {
       type: String,
-      required: true
+      required: true,
     },
     pathTo: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 
 <style scoped lang="scss">
-
 $services-item-text-color: $text--dark;
 $services-item-font-size: max($fs-m, $fs-m-factorial);
 $services-item-line-height: $lh-xl;
@@ -52,5 +54,4 @@ $services-item-padding: $sp-custom-15-factorial-y $sp-custom-10-factorial-x;
     }
   }
 }
-
 </style>

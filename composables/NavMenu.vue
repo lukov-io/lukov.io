@@ -1,10 +1,28 @@
 <template>
-  <div class="nav-menu" :class="[ orientation, textColor ]">
-    <NavItem :link-name="'Home'" :path-to="'/home'" />
-    <NavItem :link-name="'Works'" :path-to="'/works'" />
-    <NavItem :link-name="'Agency'" :path-to="'/agency'" />
-    <NavItem :link-name="'Partners'" :path-to="'/partners'" />
-    <NavItem :link-name="'Contacts'" :path-to="'/contacts'" />
+  <div
+    class="nav-menu"
+    :class="[orientation, textColor]"
+  >
+    <NavItem
+      :link-name="'Home'"
+      :path-to="'/home'"
+    />
+    <NavItem
+      :link-name="'Works'"
+      :path-to="'/works'"
+    />
+    <NavItem
+      :link-name="'Agency'"
+      :path-to="'/agency'"
+    />
+    <NavItem
+      :link-name="'Partners'"
+      :path-to="'/partners'"
+    />
+    <NavItem
+      :link-name="'Contacts'"
+      :path-to="'/contacts'"
+    />
   </div>
 </template>
 
@@ -18,20 +36,20 @@ export default {
     orientation: {
       type: String,
       required: false,
-      default: "",
+      default: '',
       validator(value) {
-        return ["", "vertical"].includes(value);
-      }
+        return ['', 'vertical'].includes(value)
+      },
     },
     textColor: {
       type: String,
       required: false,
-      default: "",
+      default: '',
       validator(value) {
-        return ["", "light-text"].includes(value)
-      }
+        return ['', 'light-text'].includes(value)
+      },
     },
-  }
+  },
 }
 </script>
 
@@ -49,7 +67,6 @@ $nav-menu-vertical-padding: 0 max($sp-xxs, 2vw);
 
   &.vertical {
     flex-direction: row;
-    -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
     text-orientation: sideways;
     padding: $nav-menu-vertical-padding;
@@ -57,4 +74,3 @@ $nav-menu-vertical-padding: 0 max($sp-xxs, 2vw);
   }
 }
 </style>
-

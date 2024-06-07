@@ -13,15 +13,14 @@ export default {
   props: {
     text: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 
 <style scoped lang="scss">
-
-$contacts-item__label-font-size: max($fs-m, $fs-m-factorial);
+$contacts-item__label-f-size: max($fs-m, $fs-m-factorial);
 $contacts-item__label-line-height: $lh-xl;
 $contacts-item__label-font-weight: $fw-custom-550;
 $contacts-item__label-margin-bottom: $sp-xxs-factorial-y;
@@ -45,5 +44,4 @@ $contacts-item__text-font-color: $text--white;
     color: $contacts-item__text-font-color;
   }
 }
-
 </style>

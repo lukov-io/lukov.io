@@ -1,3 +1,3 @@
 <template>
-  Partners
+  <div>Partners</div>
 </template>

@@ -1,6 +1,6 @@
-import { defineNuxtPlugin } from '#app';
-import anime from 'animejs';
+import anime from 'animejs'
+import { defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.provide('anime', anime);
-});
+  nuxtApp.provide('anime', anime)
+})

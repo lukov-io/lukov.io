@@ -1,5 +1,8 @@
 <template>
-  <div class="app-button" :class="[ textColor, iconSide ]" >
+  <div
+    class="app-button"
+    :class="[textColor, iconSide]"
+  >
     <span class="app-button__icon">
       <slot />
     </span>
@@ -18,29 +21,28 @@ export default {
     textColor: {
       type: String,
       required: false,
-      default: "",
+      default: '',
       validator(value) {
-        return ["", "light"].includes(value)
-      }
+        return ['', 'light'].includes(value)
+      },
     },
     iconSide: {
       type: String,
       required: false,
-      default: "",
+      default: '',
       validator(value) {
-        return ["", "right"].includes(value)
-      }
+        return ['', 'right'].includes(value)
+      },
     },
     buttonText: {
       type: String,
       required: true,
-    }
-  }
-};
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-
 $app-button__text-left-icon-padding: 15px 19px 15px 13px;
 $app-button__text-right-icon-padding: 15px 13px 15px 19px;
 $app-button__text-hover-left-icon-padding: 15px 19px 15px 3px;

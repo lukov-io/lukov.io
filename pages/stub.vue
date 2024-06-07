@@ -1,16 +1,22 @@
 <template>
-  <div class="wrapper" id="home">
-    <MainHeader class="area-header"/>
-    <NavMenu class="area-saidbar" orientation="vertical"/>
+  <div
+    id="home"
+    class="wrapper"
+  >
+    <MainHeader class="area-header" />
+    <NavMenu
+      class="area-saidbar"
+      orientation="vertical"
+    />
     <div class="main">
-      <HeartSvg/>
+      <HeartSvg />
       <MainTitle class="main__title">
         <span class="main__title-color-word">Профессиональная</span><br>
         <span class="main__title-black-word">Разработка<br>
           сайтов</span>
       </MainTitle>
     </div>
-    <MainSlogan class="area-slogan"></MainSlogan>
+    <MainSlogan class="area-slogan" />
   </div>
 </template>
 
@@ -22,8 +28,8 @@ import HeartSvg from '~/components/HeartSvg.vue'
 import MainTitle from '~/components/MainTitle.vue'
 
 export default {
-  name: 'stub',
-  components: { MainTitle, HeartSvg, MainSlogan, MainHeader, NavMenu }
+  name: 'Stub',
+  components: { MainTitle, HeartSvg, MainSlogan, MainHeader, NavMenu },
 }
 </script>
 
@@ -34,16 +40,10 @@ $main-slogan__color-word-font-size: max($fs-big-min, $fs-big-xxs-factorial);
 $main-slogan__color-word-font-weight: $fw-custom-550;
 $main-slogan__color-word-line-height: $lh-xl;
 
-
 .wrapper {
   display: grid;
   height: 100dvh;
-  grid-template-columns: auto 1fr 90px;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-    "header header header"
-    "saidbar main main"
-    ". slogan slogan";
+  grid-template: "header header header" auto "saidbar main main" 1fr ". slogan slogan" auto / auto 1fr 90px;
 
   .area-header {
     grid-area: header;
@@ -64,8 +64,7 @@ $main-slogan__color-word-line-height: $lh-xl;
     grid-area: main;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-items: center;
+    place-items: center center;
     column-gap: $main-gap;
 
     &__title {
@@ -99,5 +98,4 @@ $main-slogan__color-word-line-height: $lh-xl;
     }
   }
 }
-
 </style>

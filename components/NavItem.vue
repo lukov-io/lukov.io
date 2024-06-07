@@ -1,5 +1,8 @@
 <template>
-  <nuxt-link :class="[ 'nav-item', orientation, textColor ]" :to="pathTo">
+  <nuxt-link
+    :class="['nav-item', orientation, textColor]"
+    :to="pathTo"
+  >
     {{ linkName }}
   </nuxt-link>
 </template>
@@ -10,34 +13,33 @@ export default {
   props: {
     linkName: {
       type: String,
-      required: true
+      required: true,
     },
     pathTo: {
       type: String,
-      required: true
+      required: true,
     },
     textColor: {
       type: String,
       required: false,
-      default: "",
+      default: '',
       validator(value) {
-        return ["", "light-text"].includes(value)
-      }
+        return ['', 'light-text'].includes(value)
+      },
     },
     orientation: {
       type: String,
       required: false,
-      default: "",
+      default: '',
       validator(value) {
-        return ["", "vertical"].includes(value);
-      }
-    }
-  }
+        return ['', 'vertical'].includes(value)
+      },
+    },
+  },
 }
 </script>
 
 <style scoped lang="scss">
-
 $nav-item-font-color: $text--primary;
 $nav-item-hover-font-color: $text--primary;
 $nav-item-font-size-min: 17px;
@@ -80,5 +82,3 @@ $nav-item-dark-font-color: $text--white;
   }
 }
 </style>
-
-
