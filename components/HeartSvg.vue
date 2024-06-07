@@ -57,7 +57,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$heart-width: max(200px, 30vw);
+
 .heart {
-  @include adaptive(width, 200px, 30vw)
+  width: $heart-width;
 }
+
 </style>

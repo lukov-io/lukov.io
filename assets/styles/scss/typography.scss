@@ -1,15 +1,9 @@
-$body-font-size-factor: $fs-xs-factorial;
-$body-font-size-min: $fs-xs;
-$h1-font-size-factor: $fs-big-max-factorial;
-$h1-font-size-min: $fs-big-xxs;
-$h2-font-size-factor: $fs-big-m-factorial;
-$h2-font-size-min: $fs-big-m;
-$h3-font-size-factor:$fs-big-m-factorial;
-$h3-font-size-min: $fs-big-m;
-$h4-font-size-factor: $fs-big-xxs-factorial;
-$h4-font-size-min: $fs-big-xxs;
-$h5-font-size-factor: $fs-big-min-factorial;
-$h5-font-size-min: $fs-big-min;
+$body-font-size: max($fs-xs, $fs-xs-factorial);
+$h1-font-size: max($fs-big-xxs, $fs-big-max-factorial);
+$h2-font-size: max($fs-big-m, $fs-big-m-factorial);
+$h3-font-size: max($fs-big-m, $fs-big-m-factorial);
+$h4-font-size: max($fs-big-xxs, $fs-big-xxs-factorial);
+$h5-font-size: max($fs-big-min, $fs-big-min-factorial);
 
 $body-line-height: $lh-xl;
 $h1-line-height: $lh-sm;
@@ -26,16 +20,11 @@ $h3-font-weight-max: $fw-custom-550;
 $h4-font-weight: $fw-custom-550;
 $h5-font-weight: $fw-custom-550;
 
-$h1-margin-bottom-min: $sp-xxs;
-$h1-margin-bottom-factor: $sp-xxs-factorial-y;
-$h2-margin-bottom-min: $sp-xs;
-$h2-margin-bottom-factor: $sp-xs-factorial-y;
-$h3-margin-bottom-min: $sp-xs;
-$h3-margin-bottom-factor: $sp-xs-factorial-y;
-$h4-margin-bottom-min: $sp-xxs;
-$h4-margin-bottom-factor: $sp-xxs-factorial-y;
-$h5-margin-bottom-min: $sp-xxs;
-$h5-margin-bottom-factor: $sp-xxs-factorial-y;
+$h1-margin-bottom: max($sp-xxs, $sp-xxs-factorial-y);
+$h2-margin-bottom: max($sp-xs, $sp-xs-factorial-y);
+$h3-margin-bottom: max($sp-xs, $sp-xs-factorial-y);
+$h4-margin-bottom: max($sp-xxs, $sp-xxs-factorial-y);
+$h5-margin-bottom: max($sp-xxs, $sp-xxs-factorial-y);
 
 @font-face {
 	font-family: helvetica, sans-serif;
@@ -49,10 +38,7 @@ body {
 	font-family: helvetica, sans-serif;
 	font-weight: $fw-normal;
 	line-height: $body-line-height;
-	@include adaptive(
-			font-size,
-			$body-font-size-min,
-			$body-font-size-factor);
+	font-size: $body-font-size;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,94 +48,34 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	line-height: $h1-line-height;
 	font-weight: $h1-font-weight;
-	
-	@include adaptive(
-			font-size,
-			$h1-font-size-min,
-			$h1-font-size-factor);
-
-	@include adaptive(
-			margin-bottom,
-			$h1-margin-bottom-min,
-			$h1-margin-bottom-factor);
-	
-	@media #{$md} {
-		margin-bottom: $h1-margin-bottom-min;
-	}
+	font-size: $h1-font-size;
+	margin-bottom: $h1-margin-bottom;
 }
 
 h2 {
 	line-height: $h2-line-height;
 	font-weight: $h2-font-weight;
-	@include adaptive(
-			font-size,
-			$h2-font-size-min,
-			$h2-font-size-factor);
-
-	@include adaptive(
-			margin-bottom,
-			$h2-margin-bottom-min,
-			$h2-margin-bottom-factor);
-	
-	@media #{$md} {
-		margin-bottom: $h2-margin-bottom-min;
-	}
+	font-size:$h2-font-size;
+	margin-bottom: $h2-margin-bottom;
 }
 
 h3 {
 	line-height: $h3-line-height;
 	font-weight: $h3-font-weight-min;
-	
-	@include adaptive(
-			font-size,
-			$h3-font-size-min,
-			$h3-font-size-factor);
-
-	@include adaptive(
-			margin-bottom,
-			$h3-margin-bottom-min,
-			$h3-margin-bottom-factor);
-	
-	@media #{$md} {
-		margin-bottom: $h3-margin-bottom-min;
-		font-weight: $h3-font-weight-min;
-	}
+	font-size: $h3-font-size;
+	margin-bottom: $h3-margin-bottom;
 }
 
 h4 {
 	line-height: $h4-line-height;
 	font-weight: $h4-font-weight;
-	
-	@include adaptive(
-			font-size,
-			$h4-font-size-min,
-			$h4-font-size-factor);
-
-	@include adaptive(
-			margin-bottom,
-			$h4-margin-bottom-min,
-			$h4-margin-bottom-factor);
-	
-	@media #{$md} {
-		margin-bottom: $h4-margin-bottom-min;
-	}
+	font-size: $h4-font-size;
+	margin-bottom: $h4-margin-bottom;
 }
 
 h5 {
 	line-height: $h5-line-height;
 	font-weight: $h5-font-weight;
-	
-	@include adaptive(
-			font-size,
-			$h5-font-size-min,
-			$h5-font-size-factor);
-
-	@include adaptive(
-			margin-bottom,
-			$h5-margin-bottom-min,
-			$h5-margin-bottom-factor);
-	
-	@media #{$md} {
-		margin-bottom: $h5-margin-bottom-min;
-	}
+	font-size: $h5-font-size;
+	margin-bottom: $h5-margin-bottom;
 }

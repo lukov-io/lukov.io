@@ -1,6 +1,6 @@
 <template>
-  <div class="app-button d-inline-flex align-items-center" :class="[ textColor, iconSide ]" >
-    <span class="app-button__icon d-inline-flex align-items-center">
+  <div class="app-button" :class="[ textColor, iconSide ]" >
+    <span class="app-button__icon">
       <slot />
     </span>
     <template v-if="buttonText">
@@ -36,7 +36,7 @@ export default {
       required: true,
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -48,45 +48,39 @@ $app-button__text-hover-right-icon-padding: 15px 3px 15px 19px;
 $app-button-gap: 13px;
 $app-button-dark-font-color: $text--light;
 $app-button-light-font-color: $text--dark;
-$app-button__icon-padding: $sp-custom-10;
-$app-button__icon-padding-factorial: $sp-custom-10-factorial-x;
+$app-button__icon-padding: max($sp-custom-10, $sp-custom-10-factorial-x);
 $app-button__icon-color: $icon-circle-color;
-$app-button__text-font-size-factor: $fs-s-factorial;
-$app-button__text-font-size-min: $fs-s;
+$app-button__icon-border-radius: 50%;
+$app-button__text-font-size: max($fs-s, $fs-s-factorial);
 $app-button__text-line-height: $lh-xl;
 
 .app-button {
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: $app-button__icon-border-radius;
   text-align: center;
+  display: inline-flex;
+  align-items: center;
 
   $this: &;
 
   &__icon {
-    @include adaptive(padding, $app-button__icon-padding, $app-button__icon-padding-factorial);
+    display: inline-flex;
+    align-items: center;
+    padding: $app-button__icon-padding;
     background-color: $app-button__icon-color;
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
   }
 
   &__text {
     padding: $app-button__text-left-icon-padding;
     color: $app-button-light-font-color;
     line-height: $app-button__text-line-height;
-
-    @include adaptive(
-        font-size,
-        $app-button__text-font-size-min,
-        $app-button__text-font-size-factor
-    );
+    font-size: $app-button__text-font-size;
 
     @media #{$sm} {
       display: none;
     }
-  }
-
-  &:hover {
-
   }
 
   &.right {

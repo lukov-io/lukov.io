@@ -38,33 +38,22 @@ export default {
 <style scoped lang="scss">
 $nav-menu-row-gap-min: $sp-xs;
 $nav-menu-row-gap-factor: $sp-xs-factorial-y;
-$nav-menu-vertical-column-gap-min: $sp-s;
-$nav-menu-vertical-column-gap-factor: $sp-s-factorial-y;
+$nav-menu-vertical-column-gap: max($sp-s, $sp-s-factorial-y);
+$nav-menu-vertical-padding: 0 max($sp-xxs, 2vw);
 
 .nav-menu {
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-
-  @include adaptive(
-      row-gap,
-      $nav-menu-row-gap-min,
-      $nav-menu-row-gap-factor
-  );
+  row-gap: $nav-menu-vertical-column-gap;
 
   &.vertical {
     flex-direction: row;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
     text-orientation: sideways;
-    padding: 0 max($sp-xxs, 2vw);
-
-    @include adaptive(
-        column-gap,
-        $nav-menu-vertical-column-gap-min,
-        $nav-menu-vertical-column-gap-factor
-    );
-
+    padding: $nav-menu-vertical-padding;
+    column-gap: $nav-menu-vertical-column-gap;
   }
 }
 </style>

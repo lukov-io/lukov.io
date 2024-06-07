@@ -91,7 +91,7 @@ $main-slogan__words-color: $text--primary;
 .main-slogan {
   &__words {
     fill: $main-slogan__words-pattern;
-    filter: url(#pattern_filter);
+    filter: $main-slogan__words-pattern;
   }
 
   &__lines {

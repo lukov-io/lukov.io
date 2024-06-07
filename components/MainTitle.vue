@@ -11,8 +11,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-
 .main-headline {
   width: 80%;
   text-transform: uppercase;

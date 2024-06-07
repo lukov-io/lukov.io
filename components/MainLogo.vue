@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/" class="main-logo d-inline-block" :class="color">
+  <nuxt-link to="/" class="main-logo d-inline-block" :class="color">
     <svg class="main-logo__svg" width="129" height="62" viewBox="0 0 129 62" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path class="main-logo__LK" d="M0 47.7305V0C3.47169 4.54338 5.35252 10.1026 5.35252 15.8205V44.2644L6.69065 43.0673V32.0338C6.69065 29.7878 7.23099 27.5749 8.26605 25.5817L12.3405 17.7356V38.0129C16.7605 34.0723 22.4756 31.8942 28.3981 31.8942L12.3405 45.7993V46.351L30.3309 62H21.7074L12.3405 53.9519V62H6.69065V50.6918L6.61849 50.7543C4.02788 52.9976 0 51.1574 0 47.7305Z"/>
       <path class="main-logo__letter" d="M38.3075 40.5147V56.0084H43.6189V58.0031H36.1272V40.5147H38.3075Z"/>
@@ -26,7 +26,7 @@
         </linearGradient>
       </defs>
     </svg>
-  </router-link>
+  </nuxt-link>
 </template>
 
 <script>
@@ -49,19 +49,14 @@ $logo-color: $black;
 $logo--light-color: $white;
 $logo__lk-gradient: url(#LK_linearGradient);
 $logo__lukov-gradient: url(#Lukov_linearGradient);
-$logo-width-min: 80px;
-$logo-width-factor: 5vw;
+$logo-width: max(80px, 5vw);
+$logo-min-width: 70px;
 
 .main-logo {
   aspect-ratio: 129 / 62;
-  min-width: 70px;
+  min-width: $logo-min-width;
   cursor: pointer;
-
-  @include adaptive(
-      width,
-      $logo-width-min,
-      $logo-width-factor
-  );
+  width: $logo-width;
 
   $this: &;
 

@@ -1,12 +1,10 @@
 <template>
   <div class="header">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <MainLogo />
+    <MainLogo />
 
-      <AppButton button-text="Leave a request">
-        <IconPoint />
-      </AppButton>
-    </div>
+    <AppButton button-text="Leave a request">
+      <IconPoint />
+    </AppButton>
   </div>
 </template>
 
@@ -22,10 +20,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$header-padding: max(8px, 2vh) 0;
+$header-margin: 0 max(8px, 8vw);
 
   .header {
-    padding: max(8px, 2vh) 0;
-    margin: 0 max(8px, 8vw);
+    padding: $header-padding;
+    margin: $header-margin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
 </style>

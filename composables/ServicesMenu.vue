@@ -21,7 +21,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$services-menu-column-gap: max($sp-xxs, $sp-xxs-factorial-x);
+
 .services-menu {
-  column-gap: 8px;
+  column-gap: $services-menu-column-gap;
 }
 </style>

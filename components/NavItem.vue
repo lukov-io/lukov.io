@@ -52,12 +52,7 @@ $nav-item-dark-font-color: $text--white;
   color: $nav-item-font-color;
   line-height: $nav-item-line-height-max;
   font-weight: $nav-item-font-weight;
-
-  @include adaptive(
-      font-size,
-      $nav-item-font-size-min,
-      $nav-item-font-size-factor
-  );
+  font-size: max($nav-item-font-size-min, $nav-item-font-size-factor);
 
   @media #{$mouse-device} {
     &:hover {

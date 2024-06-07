@@ -1,5 +1,0 @@
-@mixin adaptive($property, $value-min, $value-factor) {
-  #{$property}: max(
-          $value-min,
-          $value-factor)
-}

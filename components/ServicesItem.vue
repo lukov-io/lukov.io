@@ -23,8 +23,7 @@ export default {
 <style scoped lang="scss">
 
 $services-item-text-color: $text--dark;
-$services-item-font-size-min: $fs-m;
-$services-item-font-size-factor: $fs-m-factorial;
+$services-item-font-size: max($fs-m, $fs-m-factorial);
 $services-item-line-height: $lh-xl;
 $services-item-font-weight: $fw-custom-550;
 $services-item-hover-gradient: $gradient0deg;
@@ -37,12 +36,7 @@ $services-item-padding: $sp-custom-15-factorial-y $sp-custom-10-factorial-x;
   text-decoration: none;
   color: $services-item-text-color;
   padding: $services-item-padding;
-
-  @include adaptive(
-      font-size,
-      $services-item-font-size-min,
-      $services-item-font-size-factor
-  );
+  font-size: $services-item-font-size;
 
   @media #{$mouse-device} {
     &:hover {

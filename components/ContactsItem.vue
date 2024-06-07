@@ -21,8 +21,7 @@ export default {
 
 <style scoped lang="scss">
 
-$contacts-item__label-font-size-min: $fs-m;
-$contacts-item__label-font-size-factor: $fs-m-factorial;
+$contacts-item__label-font-size: max($fs-m, $fs-m-factorial);
 $contacts-item__label-line-height: $lh-xl;
 $contacts-item__label-font-weight: $fw-custom-550;
 $contacts-item__label-margin-bottom: $sp-xxs-factorial-y;
@@ -35,13 +34,7 @@ $contacts-item__text-font-color: $text--white;
   flex-direction: column;
 
   &__label {
-
-    @include adaptive(
-        font-size,
-        $contacts-item__label-font-size-min,
-        $contacts-item__label-font-size-factor
-    );
-
+    font-size: $contacts-item__label-font-size;
     color: $contacts-item__label-font-color;
     line-height: $contacts-item__label-line-height;
     font-weight: $contacts-item__label-font-weight;
