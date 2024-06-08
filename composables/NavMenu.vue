@@ -1,5 +1,5 @@
 <template>
-  <div
+  <nav
     class="nav-menu"
     :class="[orientation, textColor]"
   >
@@ -23,7 +23,7 @@
       :link-name="'Contacts'"
       :path-to="'/contacts'"
     />
-  </div>
+  </nav>
 </template>
 
 <script>

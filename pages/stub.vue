@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="home"
-    class="wrapper"
-  >
+  <div class="wrapper">
     <MainHeader class="area-header" />
     <NavMenu
       class="area-saidbar"
@@ -11,8 +8,8 @@
     <div class="main">
       <HeartSvg />
       <MainTitle class="main__title">
-        <span class="main__title-color-word">Профессиональная</span><br>
-        <span class="main__title-black-word">Разработка<br>
+        <span class="main__title--color-word">Профессиональная</span><br>
+        <span class="main__title--black-word">Разработка<br>
           сайтов</span>
       </MainTitle>
     </div>
@@ -70,7 +67,7 @@ $main-slogan__color-word-line-height: $lh-xl;
     &__title {
       flex: 1 0 auto;
 
-      &-color-word {
+      &--color-word {
         font-size: $main-slogan__color-word-font-size;
         font-weight: $main-slogan__color-word-font-weight;
         line-height: $main-slogan__color-word-line-height;
@@ -80,7 +77,7 @@ $main-slogan__color-word-line-height: $lh-xl;
         color: transparent;
       }
 
-      &-black-word {
+      &--black-word {
         line-height: $lh-sm;
         text-align: left;
         text-transform: uppercase;
