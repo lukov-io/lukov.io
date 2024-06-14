@@ -1,7 +1,7 @@
 <template>
   <nav
     class="nav-menu"
-    :class="[orientation, textColor]"
+    :class="[orientation]"
   >
     <NavItem
       :link-name="'Home'"
@@ -39,14 +39,6 @@ export default {
       default: '',
       validator(value) {
         return ['', 'vertical'].includes(value)
-      },
-    },
-    textColor: {
-      type: String,
-      required: false,
-      default: '',
-      validator(value) {
-        return ['', 'light-text'].includes(value)
       },
     },
   },

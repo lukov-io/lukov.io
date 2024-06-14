@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    :class="['nav-item', orientation, textColor]"
+    :class="['nav-item', orientation === 'vertical']"
     :to="pathTo"
   >
     {{ linkName }}
@@ -18,14 +18,6 @@ export default {
     pathTo: {
       type: String,
       required: true,
-    },
-    textColor: {
-      type: String,
-      required: false,
-      default: '',
-      validator(value) {
-        return ['', 'light-text'].includes(value)
-      },
     },
     orientation: {
       type: String,
@@ -75,10 +67,6 @@ $nav-item-dark-font-color: $text--white;
   &.vertical {
     font-size: $nav-item-font-size-min;
     line-height: $nav-item-line-height-min;
-  }
-
-  &.light-text {
-    color: $nav-item-dark-font-color;
   }
 }
 </style>

@@ -1,15 +1,21 @@
 <template>
   <div class="header">
     <MainLogo />
+
+    <AppButton button-text="Leave a request">
+      <IconPoint />
+    </AppButton>
   </div>
 </template>
 
 <script>
 import MainLogo from '~/components/MainLogo.vue'
+import AppButton from '~/composables/AppButton.vue'
+import IconPoint from '~/components/icons/IconPoint.vue'
 
 export default {
   name: 'MainHeader',
-  components: { MainLogo },
+  components: { MainLogo, AppButton, IconPoint },
 }
 </script>
 

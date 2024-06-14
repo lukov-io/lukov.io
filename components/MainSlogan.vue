@@ -220,6 +220,7 @@ export default {
 $main-slogan__words-pattern: url(#pattern_slogan);
 $main-slogan__words-filter: url(#filter_slogan);
 $main-slogan__words-color: $text--primary;
+$main-slogan__lines-color: $decoration-line-color;
 
 .main-slogan {
   &__words {
@@ -231,7 +232,7 @@ $main-slogan__words-color: $text--primary;
   }
 
   &__lines {
-    stroke: black;
+    stroke: $main-slogan__lines-color;
   }
 }
 </style>

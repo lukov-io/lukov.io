@@ -1,47 +1,5 @@
-$purple: #7F58A6;
-$violet: #412973;
-$blue: #012E40;
-$green: #1B594E;
-$turquoise: #9CD9BC;
-$red-brown: #851212;
-
-$gray300:   #f6f6f6;
-$gray400:   #eaeaea;
-$gray500:   #d2d2d2;
-$gray600:   #aaaaaa;
-$gray800:   #4b4b4b;
-$gray-dark: #1b1b1b;
-$white:     #ffffff;
-$black:     #000000;
-
-$primary: $gray400;
-$primary-dark: $gray500;
-$primary-light: $gray300;
-$danger: $red-brown;
-$info: $gray-dark;
-
-$gradient165deg: linear-gradient(165deg,
-				#9CD9BC -0.99%,
-				#107D7D 35.22%,
-				#5B3D78 76.45%,
-				#0B0C39 105.97%);
-
-$gradient0deg: linear-gradient(96.5deg, #9CD9BC 0%, #434DA7 51.56%, #5B3D78 100%);
-
-$text--primary: $primary-dark;
-$text--light: $primary-light;
-$text--gray: $gray800;
-$text--dark: $black;
-$text--white: $white;
-
-$background--primary: $primary;
-$background--light: $primary-light;
-$background--info: $info;
-$background--danger: $danger;
-$background--dark: $black;
-
-// 1px = 0.0694vw при разрешении 1440
-// 1px = 0.0977vh при 1024
+// 1px = 0.0694vw при ширине 1440
+// 1px = 0.0977vh при высоте 1024
 
 $fs-xs: 14px;
 $fs-xs-factorial: 0.97vw;
@@ -123,13 +81,8 @@ $sp-custom-15: 15px;
 $sp-custom-15-factorial-x: 1vw;
 $sp-custom-15-factorial-y: 1.4vh;
 
-$icon-color--dark: $black;
-$icon-color--white: $white;
-
 $icon-circle-padding-min: 15px;
 $icon-circle-padding-factor: 1.05vw;
-
-$icon-circle-color: $background--primary;
 
 /*$border--grey: 1px solid $gray900;
 $border--light: 1px solid $light;*/

@@ -1,7 +1,7 @@
 <template>
   <div
     class="app-button"
-    :class="[textColor, iconSide]"
+    :class="[iconSide]"
   >
     <span class="app-button__icon">
       <slot />
@@ -18,14 +18,6 @@
 export default {
   name: 'AppButton',
   props: {
-    textColor: {
-      type: String,
-      required: false,
-      default: '',
-      validator(value) {
-        return ['', 'light'].includes(value)
-      },
-    },
     iconSide: {
       type: String,
       required: false,
@@ -48,7 +40,6 @@ $app-button__text-right-icon-padding: 15px 13px 15px 19px;
 $app-button__text-hover-left-icon-padding: 15px 19px 15px 3px;
 $app-button__text-hover-right-icon-padding: 15px 3px 15px 19px;
 $app-button-gap: 13px;
-$app-button-dark-font-color: $text--light;
 $app-button-light-font-color: $text--dark;
 $app-button__icon-padding: max($sp-custom-10, $sp-custom-10-factorial-x);
 $app-button__icon-color: $icon-circle-color;
@@ -93,12 +84,6 @@ $app-button__text-line-height: $lh-xl;
     #{$this}__text {
       padding: $app-button__text-right-icon-padding;
       text-align: center;
-    }
-  }
-
-  &.light {
-    #{$this}__text {
-      color: $app-button-dark-font-color;
     }
   }
 }
