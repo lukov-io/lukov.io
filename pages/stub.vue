@@ -1,10 +1,6 @@
 <template>
   <div class="wrapper">
     <MainHeader class="area-header" />
-    <NavMenu
-      class="area-saidbar"
-      orientation="vertical"
-    />
     <div class="main">
       <HeartSvg />
       <MainTitle class="main__title">
@@ -18,7 +14,6 @@
 </template>
 
 <script>
-import NavMenu from '~/composables/NavMenu.vue'
 import MainHeader from '~/composables/MainHeader.vue'
 import MainSlogan from '~/components/MainSlogan.vue'
 import HeartSvg from '~/components/HeartSvg.vue'
@@ -26,7 +21,7 @@ import MainTitle from '~/components/MainTitle.vue'
 
 export default {
   name: 'Stub',
-  components: { MainTitle, HeartSvg, MainSlogan, MainHeader, NavMenu },
+  components: { MainTitle, HeartSvg, MainSlogan, MainHeader },
 }
 </script>
 
@@ -61,7 +56,7 @@ $main-slogan__color-word-line-height: $lh-xl;
     grid-area: main;
     display: flex;
     flex-direction: row;
-    place-items: center center;
+    align-items: center;
     column-gap: $main-gap;
 
     &__title {
