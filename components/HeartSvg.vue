@@ -120,10 +120,11 @@ export default {
       if (this.hoveredPieceIndex === null) return false
 
       const neighbors = this.pieces[this.hoveredPieceIndex].neighbors
+
       return neighbors.includes(index)
     },
 
-    getCursorPoint(event) {
+    getCursorPoint() {
       const svg = this.$refs.heartSvg
 
       if (!svg) return null
