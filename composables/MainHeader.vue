@@ -1,15 +1,38 @@
 <template>
   <div class="header">
     <MainLogo />
+    <AppButton
+      button-text="Leave a request"
+      tag="span"
+      type="button"
+      collapse-on-mobile="collapse"
+      itemprop="url"
+      @click="openModal"
+    >
+      <IconEnvelope />
+    </AppButton>
   </div>
 </template>
 
 <script>
 import MainLogo from '~/components/MainLogo.vue'
+import AppButton from '~/composables/AppButton.vue'
+import IconEnvelope from '~/components/icons/IconEnvelope.vue'
+import { useModalStore } from '~/stores/modal'
 
 export default {
   name: 'MainHeader',
-  components: { MainLogo },
+  components: { MainLogo, AppButton, IconEnvelope },
+  setup() {
+    return {
+      modalStore: useModalStore(),
+    }
+  },
+  methods: {
+    openModal() {
+      this.modalStore.openModal()
+    },
+  },
 }
 </script>
 

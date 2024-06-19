@@ -336,5 +336,10 @@ $heart-width: max(200px, 30vw);
 
 .heart {
   width: $heart-width;
+  padding-left: 1vw;
+
+  @media #{$md} {
+    padding-left: 0;
+  }
 }
 </style>

@@ -4,9 +4,9 @@
     <div class="main">
       <HeartSvg />
       <MainTitle class="main__title">
-        <span class="main__title--color-word">Профессиональная</span><br>
-        <span class="main__title--black-word">Разработка<br>
-          сайтов</span>
+        <span class="main__title--color-word">Powerfull</span><br>
+        <span class="main__title--black-word">Web<br>
+          development</span>
       </MainTitle>
     </div>
     <MainSlogan class="area-slogan" />
