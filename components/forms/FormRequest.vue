@@ -33,7 +33,7 @@
         :disabled="isSubmitting"
         @submit.prevent="submitForm"
       >
-        <IconPen />
+        <IconEnvelope />
       </AppButton>
     </div>
   </form>
@@ -42,14 +42,14 @@
 <script>
 import axios from 'axios'
 import AppButton from '~/composables/AppButton'
-import IconPen from '~/components/icons/IconPen'
+import IconEnvelope from '~/components/icons/IconEnvelope'
 import { useModalStore } from '~/stores/modal'
 
 export default {
   name: 'FormRequest',
   components: {
     AppButton,
-    IconPen,
+    IconEnvelope,
   },
   setup() {
     return {
@@ -71,6 +71,7 @@ export default {
         await axios.post('/request-call.php', {
           phone: this.phone,
         })
+
         this.message = 'Successful submission'
 
         setTimeout(() => {
@@ -80,6 +81,7 @@ export default {
       catch (error) {
         this.message = 'Sending error'
       }
+
       finally {
         this.isSubmitting = false
       }

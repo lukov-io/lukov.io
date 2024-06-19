@@ -9,7 +9,7 @@
       itemprop="url"
       @click="openModal"
     >
-      <IconEnvelope />
+      <IconPen />
     </AppButton>
   </div>
 </template>
@@ -17,12 +17,12 @@
 <script>
 import MainLogo from '~/components/MainLogo.vue'
 import AppButton from '~/composables/AppButton.vue'
-import IconEnvelope from '~/components/icons/IconEnvelope.vue'
+import IconPen from '~/components/icons/IconPen.vue'
 import { useModalStore } from '~/stores/modal'
 
 export default {
   name: 'MainHeader',
-  components: { MainLogo, AppButton, IconEnvelope },
+  components: { MainLogo, AppButton, IconPen },
   setup() {
     return {
       modalStore: useModalStore(),
