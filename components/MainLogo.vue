@@ -128,7 +128,7 @@ $logo-color: $black;
 $logo--light-color: $white;
 $logo__lk-gradient: url(#LK_linearGradient);
 $logo__lukov-gradient: url(#Lukov_linearGradient);
-$logo-width: max(80px, 5vw);
+$logo-width: max(80px, 7vw);
 $logo-min-width: 70px;
 
 .main-logo {
