@@ -1,5 +1,50 @@
-// 1px = 0.0694vw при ширине 1440
-// 1px = 0.0977vh при высоте 1024
+$purple: #7F58A6;
+$violet: #412973;
+$blue: #012E40;
+$green: #1B594E;
+$turquoise: #9CD9BC;
+$red-brown: #851212;
+
+$gray300:   #f6f6f6;
+$gray400:   #eaeaea;
+$gray500:   #d2d2d2;
+$gray600:   #aaaaaa;
+$gray800:   #4b4b4b;
+$gray-dark: #1b1b1b;
+$white:     #ffffff;
+$black:     #000000;
+
+$primary: $gray400;
+$primary-dark: $gray500;
+$primary-light: $gray300;
+$danger: $red-brown;
+$info: $gray-dark;
+
+$gradient165deg: linear-gradient(165deg,
+				#9CD9BC -0.99%,
+				#107D7D 35.22%,
+				#5B3D78 76.45%,
+				#0B0C39 105.97%);
+
+$gradient0deg: linear-gradient(96.5deg,
+				#9CD9BC 0%,
+				#434DA7 51.56%,
+				#5B3D78 100%);
+
+$text--primary: $primary-dark;
+$text--light: $primary-light;
+$text--gray: $gray800;
+$text--dark: $black;
+$text--white: $white;
+
+$background--primary: $primary;
+$background--light: $primary-light;
+$background--info: $info;
+$background--danger: $danger;
+$background--dark: $black;
+
+// 1440: 1px = 0.0694vw
+// 1024: 1px = 0.0977vh
 
 $fs-xs: 14px;
 $fs-xs-factorial: 0.97vw;
@@ -32,12 +77,12 @@ $fs-big-xxl-factorial: 5.42vw;
 $fs-big-max: 94px;
 $fs-big-max-factorial: 6.53vw;
 
-$lh-xxl: 150%;
-$lh-xl: 140%;
-$lh-lg: 130%;
-$lh-md: 120%;
-$lh-sm: 110%;
-$lh-xs: 100%;
+$lh-xxl: 1.5;
+$lh-xl: 1.4;
+$lh-lg: 1.3;
+$lh-md: 1.2;
+$lh-sm: 1.1;
+$lh-xs: 1;
 
 $fw-extra-light: 100;
 $fw-lighter: 200;
@@ -77,15 +122,28 @@ $sp-custom-10: 10px;
 $sp-custom-10-factorial-x: 0.7vw;
 $sp-custom-10factorial-y: 1vh;
 
+$sp-custom-13: 13px;
+$sp-custom-13-factorial-x: 0.9022vw;
+$sp-custom-13factorial-y: 1,2701vh;
+
 $sp-custom-15: 15px;
 $sp-custom-15-factorial-x: 1vw;
 $sp-custom-15-factorial-y: 1.4vh;
 
+$sp-custom-20: 20px;
+$sp-custom-20-factorial-x: 1.4vw;
+$sp-custom-20-factorial-y: 2vh;
+
+$icon-color--dark: $black;
+$icon-color--white: $white;
+
 $icon-circle-padding-min: 15px;
 $icon-circle-padding-factor: 1.05vw;
 
-/*$border--grey: 1px solid $gray900;
-$border--light: 1px solid $light;*/
+$icon-circle-color: $background--primary;
+
+$border--grey: 0.0694vw solid $gray800;
+$border--light: 0.0694vw solid $primary;
 
 $mouse-device: "(hover: hover)";
 $touch-device: "(hover: none)";

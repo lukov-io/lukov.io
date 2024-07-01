@@ -6,6 +6,7 @@
 
 body {
 	min-width: 320px;
+	min-height: 320px;
 }
 
 ::-webkit-scrollbar {
@@ -27,4 +28,68 @@ a {
 [class*=" icon-"] {
 	width: max(24px, 1.5vw);
 	aspect-ratio: 1 / 1;
+}
+
+$vti__field-height: max(64px, $sp-xl-factorial-y);
+$vti__input-padding: 0 max(10px, $sp-custom-20-factorial-x) 0 max(5px, $sp-custom-10-factorial-x);
+$vti__dropdown-padding: 0 0 0 max(10px, $sp-custom-20-factorial-x);
+$vti__field-border-bottom: 0.1vw solid #00000029;
+$vti__field-font-size: max($fs-m, $fs-m-factorial);
+$vti__field-line-height: 1.6;
+$vti__field-height: max(64px, $sp-xl-factorial-y);
+$vti__field-background-color: $background--primary;
+$vti__dropdown-list-height: 220%;
+$vti__dropdown-list-width: max(291px, 20vw);
+
+.custom-vti {
+	border-left: none !important;
+	border-right: none !important;
+	border-top: none !important;
+	
+	&:focus-within {
+		border-left: none !important;
+		border-right: none !important;
+		border-top: none !important;
+		box-shadow: none !important;
+	}
+	
+	.vti {
+		&__input {
+			width: 100%;
+			padding: $vti__input-padding;
+			background-color: $background--primary;
+		}
+		
+		&__dropdown {
+			padding: $vti__dropdown-padding;
+		}
+		
+		&__dropdown,
+		&__input {
+			height: $vti__field-height;
+			border: none;
+			border-left: none !important;
+			border-right: none !important;
+			border-top: none !important;
+			border-bottom: $vti__field-border-bottom;
+			background-color: $vti__field-background-color;
+		}
+		
+		&__country-code,
+		&__input,
+		&__selection {
+			font-size: $vti__field-font-size;
+			line-height: $vti__field-line-height;
+		}
+		
+		&__dropdown-list {
+			height: $vti__dropdown-list-height;
+			width: $vti__dropdown-list-width;
+			max-height: none;
+			
+			&.below {
+				top: 100%;
+			}
+		}
+	}
 }

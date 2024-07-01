@@ -12,7 +12,6 @@ export default <RouterConfig> {
       path: '/',
       component: () => import('~/pages/stub.vue').then(r => r.default || r),
     },
-    /* Дублируется stub, иначе не пререндерится */
     {
       name: 'stub',
       path: '/stub',

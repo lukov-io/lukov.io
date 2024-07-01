@@ -3,6 +3,36 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   ssr: true,
 
+  css: [
+    '~/assets/styles/index.scss',
+  ],
+
+  components: true,
+
+  modules: [
+    '@nuxtjs/stylelint-module',
+    '@nuxt/eslint',
+  ],
+
+  plugins: [
+    '~/plugins/pinia.js',
+    '~/plugins/anime.js',
+    '~/plugins/global-components.js',
+    '~/plugins/vue-tel-input.js',
+  ],
+
+  buildModules: [
+    '@nuxtjs/stylelint-module',
+  ],
+
+  router: {
+    middleware: ['manifest-route-rule'],
+  },
+
+  manifestRouteRule: {
+    override: true,
+  },
+
   vite: {
     build: {
       manifest: true,
@@ -19,30 +49,10 @@ export default defineNuxtConfig({
     },
   },
 
-  css: [
-    '~/assets/styles/index.scss',
-  ],
-
-  components: true,
-
-  modules: [
-    '@nuxtjs/stylelint-module',
-    '@nuxt/eslint',
-  ],
-
-  buildModules: [
-    '@nuxtjs/stylelint-module',
-  ],
-
   stylelint: {
     fix: true,
     files: ['**/*.{vue,css,scss}'],
   },
-
-  plugins: [
-    '~/plugins/pinia.js',
-    '~/plugins/anime.js',
-  ],
 
   build: {
     postcss: {
