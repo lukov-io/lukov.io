@@ -42,8 +42,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import '~/assets/styles/scss/variables.scss';
-          @import '~/assets/styles/scss/colors.scss';`,
+          additionalData: `@import '~/assets/styles/scss/variables.scss';`,
         },
       },
     },
@@ -64,7 +63,7 @@ export default defineNuxtConfig({
 
   devtools: {
     timeline: {
-      enabled: false,
+      enabled: true,
     },
   },
 })
