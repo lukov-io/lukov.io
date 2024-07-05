@@ -15,9 +15,5 @@ export default {
   text-transform: uppercase;
   text-wrap: balance;
   color: $text--dark;
-
-  @media #{$lg} {
-    width: 100%
-  }
 }
 </style>
