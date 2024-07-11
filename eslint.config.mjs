@@ -24,6 +24,7 @@ export default createConfigForNuxt(
     ],
     files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
     rules: {
+      'prefer-const': 'off',
       'indent': [
         'error',
         2,

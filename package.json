@@ -11,7 +11,10 @@
     "prepare": "husky",
     "eslint": "eslint .",
     "stylelint": "stylelint '**/*.{css,scss,vue}'",
-    "lint": "npm run eslint && npm run stylelint"
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint-fix": "eslint . --fix",
+    "stylelint-fix": "stylelint '**/*.{css,scss,vue}' --fix",
+    "lint-fix": "npm run eslint-fix && npm run stylelint-fix"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.3.13",
