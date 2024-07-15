@@ -1,0 +1,91 @@
+:root {
+	--purple: #7F58A6;
+	--violet: #412973;
+	--blue: #012E40;
+	--green: #1B594E;
+	--turquoise: #9CD9BC;
+	--red-brown: #851212;
+	
+	--gray300: #f6f6f6;
+	--gray400: #eaeaea;
+	--gray500: #d2d2d2;
+	--gray600: #aaaaaa;
+	--gray800: #4b4b4b;
+	--gray-dark: #1b1b1b;
+	--white: #ffffff;
+	--black: #000000;
+}
+
+.dark-mode {
+	--purple: #320361;
+	--violet: #120137;
+	--blue: #012230;
+	--green: #012c25;
+	--turquoise: #5d8371;
+	--red-brown: #500d0d;
+	
+	--gray300: #b6b5b5;
+	--gray400: #9a9999;
+	--gray500: #615f5f;
+	--gray600: #3e3d3d;
+	--gray800: #333333;
+	--gray-dark: #1b1b1b;
+	--white: #000000;
+	--black: #ffffff;
+}
+
+$my-purple: var(--purple);
+$my-violet: var(--violet);
+$my-blue: var(--blue);
+$my-green: var(--green);
+$my-turquoise: var(--turquoise);
+$my-red-brown: var(--red-brown);
+
+$my-gray300: var(--gray300);
+$my-gray400: var(--gray400);
+$my-gray500: var(--gray500);
+$my-gray600: var(--gray600);
+$my-gray800: var(--gray800);
+$my-gray-dark: var(--gray-dark);
+$my-white: var(--white);
+$my-black: var(--black);
+
+$my-primary: var(--gray400);
+$my-primary-dark-grey: var(--gray500);
+$my-primary-light: var(--gray300);
+$my-primary-dark: var(--gray800);
+$my-danger: var(--red-brown);
+$my-info: var(--gray800);
+
+$text--primary: $my-primary-dark-grey;
+$text--light: $my-primary-light;
+$text--gray: $my-gray800;
+$text--dark: $my-black;
+$text--white: $my-white;
+
+$background--primary: $my-primary;
+$background--light: $my-primary-light;
+$background--info: $my-info;
+$background--danger: $my-danger;
+$background--dark: $my-black;
+$background--white: $my-white;
+
+$icon-color--dark: $my-black;
+$icon-color--white: $my-white;
+$icon-circle-color: $background--primary;
+
+$logo-color--dark: $my-black;
+$logo-color--white: $my-white;
+
+$decoration-line-color: $my-black;
+
+$gradient165deg: linear-gradient(165deg,
+	#9CD9BC -0.99%,
+	#107D7D 35.22%,
+	#5B3D78 76.45%,
+	#0B0C39 105.97%);
+
+$gradient0deg: linear-gradient(96.5deg,
+	#9CD9BC 0%,
+	#434DA7 51.56%,
+	#5B3D78 100%);

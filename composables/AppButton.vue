@@ -74,7 +74,7 @@ $app-button__text-right-icon-padding: max(15px, $sp-custom-15-factorial-y) max(1
 $app-button-gap: 13px;
 $app-button-dark-font-color: $text--light;
 $app-button-light-font-color: $text--dark;
-$app-button__icon-padding: max($sp-xs, $sp-xs-factorial-x);
+$app-button__icon-padding: $sp-custom-20;
 $app-button__icon-color: $icon-circle-color;
 $app-button__icon-border-radius: 50%;
 $app-button__text-font-size: max($fs-xl, $fs-xl-factorial);

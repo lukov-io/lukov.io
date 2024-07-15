@@ -1,81 +1,6 @@
-$purple: #7F58A6;
-$violet: #412973;
-$blue: #012E40;
-$green: #1B594E;
-$turquoise: #9CD9BC;
-$red-brown: #851212;
-
-$gray300:   #f6f6f6;
-$gray400:   #eaeaea;
-$gray500:   #d2d2d2;
-$gray600:   #aaaaaa;
-$gray800:   #4b4b4b;
-$gray-dark: #1b1b1b;
-$white:     #ffffff;
-$black:     #000000;
-
-$primary: $gray400;
-$primary-dark: $gray500;
-$primary-light: $gray300;
-$danger: $red-brown;
-$info: $gray-dark;
-
-$gradient165deg: linear-gradient(165deg,
-				#9CD9BC -0.99%,
-				#107D7D 35.22%,
-				#5B3D78 76.45%,
-				#0B0C39 105.97%);
-
-$gradient0deg: linear-gradient(96.5deg,
-				#9CD9BC 0%,
-				#434DA7 51.56%,
-				#5B3D78 100%);
-
-$text--primary: $primary-dark;
-$text--light: $primary-light;
-$text--gray: $gray800;
-$text--dark: $black;
-$text--white: $white;
-
-$background--primary: $primary;
-$background--light: $primary-light;
-$background--info: $info;
-$background--danger: $danger;
-$background--dark: $black;
-
-// 1440: 1px = 0.0694vw
-// 1024: 1px = 0.0977vh
-
-$fs-xs: 14px;
-$fs-xs-factorial: 0.97vw;
-$fs-s: 16px;
-$fs-s-factorial: 1.11vw;
-$fs-m: 17px;
-$fs-m-factorial: 1.18vw;
-$fs-l: 19px;
-$fs-l-factorial: 1.32vw;
-$fs-xl: 22px;
-$fs-xl-factorial: 1.53vw;
-$fs-xxl: 23px;
-$fs-xxl-factorial: 1.6vw;
-$fs-big-min: 24px;
-$fs-big-min-factorial: 1.67vw;
-$fs-big-xxs: 36px;
-$fs-big-xxs-factorial: 2.5vw;
-$fs-big-xs: 40px;
-$fs-big-xs-factorial: 2.78vw;
-$fs-big-s: 46px;
-$fs-big-s-factorial: 3.19vw;
-$fs-big-m: 48px;
-$fs-big-m-factorial: 3.33vw;
-$fs-big-l: 56px;
-$fs-big-l-factorial: 3.89vw;
-$fs-big-xl: 60px;
-$fs-big-xl-factorial: 4.167vw;
-$fs-big-xxl: 78px;
-$fs-big-xxl-factorial: 5.42vw;
-$fs-big-max: 94px;
-$fs-big-max-factorial: 6.53vw;
+@import "./colors";
+@import "./font-sizes";
+@import "./spacers";
 
 $lh-xxl: 1.5;
 $lh-xl: 1.4;
@@ -95,55 +20,11 @@ $fw-bolder: 800;
 $fw-heavy: 900;
 $fw-custom-550: 550;
 
-$spacer-base: 32px;
-$sp-xxs: 8px;
-$sp-xxs-factorial-x: 0.5vw;
-$sp-xxs-factorial-y: 0.8vh;
-$sp-xs: 16px;
-$sp-xs-factorial-x: 1.1vw;
-$sp-xs-factorial-y: 1.6vh;
-$sp-s: 24px;
-$sp-s-factorial-x: 1.7vw;
-$sp-s-factorial-y: 2.3vh;
-$sp-m: 32px;
-$sp-m-factorial-x: 2.2vw;
-$sp-m-factorial-y: 3.1vh;
-$sp-l: 48px;
-$sp-l-factorial-x: 3.3vw;
-$sp-l-factorial-y: 4.7vh;
-$sp-xl: 64px;
-$sp-xl-factorial-x: 4.4vw;
-$sp-xl-factorial-y: 6.2vh;
-$sp-xxl: 72px;
-$sp-xxl-factorial-x: 5vw;
-$sp-xxl-factorial-y: 7vh;
-
-$sp-custom-10: 10px;
-$sp-custom-10-factorial-x: 0.7vw;
-$sp-custom-10factorial-y: 1vh;
-
-$sp-custom-13: 13px;
-$sp-custom-13-factorial-x: 0.9022vw;
-$sp-custom-13factorial-y: 1,2701vh;
-
-$sp-custom-15: 15px;
-$sp-custom-15-factorial-x: 1vw;
-$sp-custom-15-factorial-y: 1.4vh;
-
-$sp-custom-20: 20px;
-$sp-custom-20-factorial-x: 1.4vw;
-$sp-custom-20-factorial-y: 2vh;
-
-$icon-color--dark: $black;
-$icon-color--white: $white;
-
 $icon-circle-padding-min: 15px;
 $icon-circle-padding-factor: 1.05vw;
 
-$icon-circle-color: $background--primary;
-
-$border--grey: 0.0694vw solid $gray800;
-$border--light: 0.0694vw solid $primary;
+$border--grey: 0.0694vw solid $my-gray800;
+$border--light: 0.0694vw solid $my-primary;
 
 $mouse-device: "(hover: hover)";
 $touch-device: "(hover: none)";

@@ -24,6 +24,7 @@ export default createConfigForNuxt(
     ],
     files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
     rules: {
+      'brace-style': ['error', '1tbs'],
       'indent': [
         'error',
         2,

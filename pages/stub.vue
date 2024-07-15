@@ -2,7 +2,7 @@
   <div class="wrapper">
     <MainHeader class="area-header" />
     <div class="main">
-      <HeartSvg />
+      <HeartCanvas />
       <MainTitle class="main__title">
         <span class="main__title--color-word">Powerfull</span><br>
         <span class="main__title--black-word">Web<br>
@@ -16,12 +16,12 @@
 <script>
 import MainHeader from '~/composables/MainHeader.vue'
 import MainSlogan from '~/components/MainSlogan.vue'
-import HeartSvg from '~/components/HeartSvg.vue'
+import HeartCanvas from '~/components/HeartCanvas.vue'
 import MainTitle from '~/components/MainTitle.vue'
 
 export default {
   name: 'Stub',
-  components: { MainTitle, HeartSvg, MainSlogan, MainHeader },
+  components: { MainTitle, HeartCanvas, MainSlogan, MainHeader },
 }
 </script>
 
@@ -31,11 +31,15 @@ $main-gap: 2vw;
 $main-slogan__color-word-font-size: max($fs-big-min, $fs-big-xxs-factorial);
 $main-slogan__color-word-font-weight: $fw-custom-550;
 $main-slogan__color-word-line-height: $lh-xl;
+$wrapper-background-color: $background--white;
 
 .wrapper {
+  background-color: $wrapper-background-color;
   display: grid;
   height: 100dvh;
-  grid-template: "header header header" auto "saidbar main main" 1fr ". slogan slogan" auto / auto 1fr 90px;
+  grid-template: "header header header" auto
+  "saidbar main main" 1fr
+  ". slogan slogan" auto / auto 1fr 90px;
 
   .area-header {
     grid-area: header;
@@ -47,8 +51,8 @@ $main-slogan__color-word-line-height: $lh-xl;
 
   .area-slogan {
     grid-area: slogan;
-    height: 100%;
     align-self: end;
+    height: 100%;
     max-height: $area-slogan-max-height;
   }
 

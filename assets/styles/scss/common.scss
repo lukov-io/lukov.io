@@ -9,6 +9,10 @@ body {
 	min-height: 320px;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
 img,
 picture {
 	display: block;

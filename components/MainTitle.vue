@@ -11,13 +11,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.main-headline {
-  width: 80%;
+.main-title {
   text-transform: uppercase;
   text-wrap: balance;
-
-  @media #{$lg} {
-    width: 100%
-  }
+  color: $text--dark;
 }
 </style>
