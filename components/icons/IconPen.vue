@@ -35,7 +35,7 @@ export default {
         &__button {
           animation-duration: 2s;
           animation-iteration-count: infinite;
-          animation-name: butto-click;
+          animation-name: button-click;
         }
       }
     }
@@ -49,10 +49,9 @@ export default {
         animation-name: turn-pen;
 
         &__button {
-          animation-duration: 1s;
-          animation-iteration-count: 1;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
           animation-name: button-click;
-
         }
       }
     }
@@ -90,7 +89,7 @@ export default {
     }
 
     50% {
-      translate: -1px 1px;
+      translate: -2px 2px;
     }
 
     60% {

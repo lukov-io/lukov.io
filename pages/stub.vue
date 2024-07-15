@@ -1,10 +1,6 @@
 <template>
   <div class="wrapper">
     <MainHeader class="area-header" />
-    <NavMenu
-      class="area-saidbar"
-      orientation="vertical"
-    />
     <div class="main">
       <HeartCanvas />
       <MainTitle class="main__title">
@@ -19,14 +15,13 @@
 
 <script>
 import MainHeader from '~/composables/MainHeader.vue'
-import NavMenu from '~/composables/NavMenu.vue'
 import MainSlogan from '~/components/MainSlogan.vue'
 import HeartCanvas from '~/components/HeartCanvas.vue'
 import MainTitle from '~/components/MainTitle.vue'
 
 export default {
   name: 'Stub',
-  components: { MainTitle, HeartCanvas, MainSlogan, MainHeader, NavMenu },
+  components: { MainTitle, HeartCanvas, MainSlogan, MainHeader },
 }
 </script>
 
