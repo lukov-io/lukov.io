@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'SvgHoverEffect',
+  name: 'HeartCanvas',
   data() {
     return {
       svgElements: [
@@ -64,17 +64,24 @@ export default {
           stroke: 'black',
         },
       ],
-      originalColors: {},
-      currentHoveredElement: null,
-      pulse: {
-        growing: true,
-        width: 1,
-      },
       scale: 0.95,
+      pulse: { width: 0.5, growing: true },
+      currentHoveredElement: null,
+      originalColors: {},
     }
   },
   mounted() {
-    this.initialize()
+    this.svgElements.forEach((element) => {
+      this.originalColors[element.d] = { fill: element.fill, stroke: element.stroke }
+    })
+    this.drawElements()
+    this.$refs.canvas.addEventListener('mousemove', this.handleMouseMove)
+    this.animatePulse()
+  },
+  beforeUnmount() {
+    if (this.$refs.canvas) {
+      this.$refs.canvas.removeEventListener('mousemove', this.handleMouseMove)
+    }
   },
   methods: {
     parseSVGPath(path) {
@@ -115,10 +122,11 @@ export default {
       return points
     },
 
-    getMousePos(canvas, event) {
-      const rect = canvas.getBoundingClientRect()
-      const scaleX = canvas.width / rect.width
-      const scaleY = canvas.height / rect.height
+    getMousePos(event) {
+      const rect = this.$refs.canvas.getBoundingClientRect()
+      const scaleX = this.$refs.canvas.width / rect.width
+      const scaleY = this.$refs.canvas.height / rect.height
+
       return {
         x: (event.clientX - rect.left) * scaleX,
         y: (event.clientY - rect.top) * scaleY,
@@ -129,11 +137,13 @@ export default {
       const x = point.x, y = point.y
       let inside = false
 
+      // алгоритм ray-casting
       for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
         const xi = polygon[i].x, yi = polygon[i].y
         const xj = polygon[j].x, yj = polygon[j].y
 
         const intersect = ((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)
+
         if (intersect) inside = !inside
       }
 
@@ -143,22 +153,23 @@ export default {
     getHoveredElement(mousePos) {
       for (const element of this.svgElements) {
         const points = this.parseSVGPath(element.d)
+
         if (this.isPointInPolygon(mousePos, points)) {
           return element
         }
       }
+
       return null
     },
 
     drawElements() {
-      const canvas = this.$refs.canvas
-      const ctx = canvas.getContext('2d')
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      const ctx = this.$refs.canvas.getContext('2d')
+      ctx.clearRect(0, 0, this.$refs.canvas.width, this.$refs.canvas.height)
 
       ctx.save()
-      ctx.translate(canvas.width / 2, canvas.height / 2)
+      ctx.translate(this.$refs.canvas.width / 2, this.$refs.canvas.height / 2)
       ctx.scale(this.scale, this.scale)
-      ctx.translate(-canvas.width / 2, -canvas.height / 2)
+      ctx.translate(-this.$refs.canvas.width / 2, -this.$refs.canvas.height / 2)
 
       this.svgElements.forEach((element) => {
         ctx.fillStyle = element.fill
@@ -173,6 +184,7 @@ export default {
             ctx.lineTo(point.x, point.y)
           }
         })
+
         ctx.closePath()
         ctx.fill()
         ctx.lineJoin = 'round'
@@ -184,17 +196,18 @@ export default {
     },
 
     handleMouseMove(event) {
-      const canvas = this.$refs.canvas
-      const mousePos = this.getMousePos(canvas, event)
+      const mousePos = this.getMousePos(event)
       const hoveredElement = this.getHoveredElement(mousePos)
 
       if (this.currentHoveredElement !== hoveredElement) {
         if (this.currentHoveredElement) {
           this.animateColorChange(this.currentHoveredElement.fill, this.originalColors[this.currentHoveredElement.d].fill, Date.now(), this.currentHoveredElement)
         }
+
         this.currentHoveredElement = hoveredElement
+
         if (hoveredElement) {
-          this.animateColorChange(this.originalColors[hoveredElement.d].fill, this.pSBC(-0.5, this.originalColors[hoveredElement.d].fill), Date.now(), hoveredElement)
+          this.animateColorChange(this.originalColors[hoveredElement.d].fill, this.pSBC(0.1, this.originalColors[hoveredElement.d].fill), Date.now(), hoveredElement)
         }
       }
 
@@ -204,10 +217,9 @@ export default {
     animateColorChange(startColor, endColor, startTime, element) {
       const animate = () => {
         const currentTime = Date.now()
-        const progress = Math.min((currentTime - startTime) / 500, 1)
+        const progress = Math.min((currentTime - startTime) / 750, 1)
 
         element.fill = this.pSBC(progress, startColor, endColor)
-
         this.drawElements()
 
         if (progress < 1) {
@@ -240,23 +252,10 @@ export default {
         }
 
         this.drawElements()
-
         requestAnimationFrame(animate)
       }
 
       requestAnimationFrame(animate)
-    },
-
-    initialize() {
-      const canvas = this.$refs.canvas
-      this.svgElements.forEach((element) => {
-        this.originalColors[element.d] = { fill: element.fill, stroke: element.stroke }
-      })
-
-      this.drawElements()
-
-      canvas.addEventListener('mousemove', this.handleMouseMove)
-      this.animatePulse()
     },
 
     /* eslint-disable 'prefer-const' */
@@ -281,7 +280,9 @@ export default {
         return x
       }
       if (!this.pSBCr) this.pSBCr = parseColor
-      h = c0.length > 9, h = a ? c1.length > 9 ? true : c1 === 'c' ? !h : false : h, f = this.pSBCr(c0), P = p < 0, t = c1 && c1 !== 'c' ? this.pSBCr(c1) : P ? { r: 0, g: 0, b: 0, a: -1 } : { r: 255, g: 255, b: 255, a: -1 }, p = P ? p * -1 : p, P = 1 - p
+      h = c0.length > 9, h = a ? c1.length > 9 ? true : c1 === 'c' ? !h : false : h, f = this.pSBCr(c0), P = p < 0, t = c1 && c1 !== 'c'
+        ? this.pSBCr(c1)
+        : P ? { r: 0, g: 0, b: 0, a: -1 } : { r: 255, g: 255, b: 255, a: -1 }, p = P ? p * -1 : p, P = 1 - p
       if (!f || !t) return null
       if (l) r = m(P * f.r + p * t.r), g = m(P * f.g + p * t.g), b = m(P * f.b + p * t.b)
       else r = m((P * f.r ** 2 + p * t.r ** 2) ** 0.5), g = m((P * f.g ** 2 + p * t.g ** 2) ** 0.5), b = m((P * f.b ** 2 + p * t.b ** 2) ** 0.5)
@@ -296,9 +297,14 @@ export default {
 
 <style scoped lang="scss">
 $heart-width: max(200px, 30vw);
+$heart-width-md: max(200px, 50vw);
 
- .canvas__wrapper {
+.canvas__wrapper {
   width: $heart-width;
+
+  @media #{$md} {
+    width: $heart-width-md;
+  }
 
   .canvas {
     width: 100%;
