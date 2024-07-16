@@ -10,7 +10,7 @@ export default <RouterConfig> {
     {
       name: 'index',
       path: '/',
-      component: () => import('~/pages/stub.vue').then(r => r.default || r),
+      component: () => import('~/pages/home.vue').then(r => r.default || r),
     },
     {
       name: 'stub',

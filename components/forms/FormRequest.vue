@@ -43,7 +43,7 @@
 import axios from 'axios'
 import AppButton from '~/composables/AppButton'
 import IconEnvelope from '~/components/icons/IconEnvelope'
-import { useModalStore } from '~/stores/modal'
+import { useModalStore } from '~/stores/modal-store'
 
 export default {
   name: 'FormRequest',

@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { useModalStore } from '~/stores/modal'
+import { useModalStore } from '~/stores/modal-store'
 
 export default {
   name: 'ModalContainer',
