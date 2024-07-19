@@ -1,17 +1,26 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <ModalContainer>
-      <FormRequest />
-    </ModalContainer>
   </NuxtLayout>
 </template>
 
-<script>
-import ModalContainer from './components/modals/ModalContainer'
-import FormRequest from './components/forms/FormRequest'
-
-export default {
-  components: { ModalContainer, FormRequest },
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
 }
-</script>
+
+.page-enter-from {
+  perspective: 130px;
+  translate: 50%;
+  transform: rotateY(90deg);
+  scale: 1;
+}
+
+.page-leave-to {
+  perspective: 130px;
+  translate: -50%;
+  transform: rotateY(-90deg);
+  scale: 1;
+}
+</style>

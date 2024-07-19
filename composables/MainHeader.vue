@@ -1,7 +1,11 @@
 <template>
   <div class="header">
-    <MainLogo @click="enableDarkTheme" />
+    <MainLogo
+      class="header__logo"
+      @click="enableDarkTheme"
+    />
     <AppButton
+      class="header__button"
       button-text="Leave a request"
       tag="span"
       type="button"
@@ -11,6 +15,7 @@
     >
       <IconPen />
     </AppButton>
+    <IconBurger button-state="" />
   </div>
 </template>
 
@@ -18,13 +23,14 @@
 import MainLogo from '~/components/MainLogo.vue'
 import AppButton from '~/composables/AppButton.vue'
 import IconPen from '~/components/icons/IconPen.vue'
+import IconBurger from '~/components/icons/IconBurger.vue'
 import { useModalStore } from '~/stores/modal-store'
 import { useDarkMode } from '~/stores/theme-store'
 
 export default {
   name: 'MainHeader',
-  components: { MainLogo, AppButton, IconPen },
-  setup() {
+  components: { MainLogo, AppButton, IconPen, IconBurger },
+  data() {
     return {
       modalStore: useModalStore(),
       darkModeStore: useDarkMode(),
@@ -44,7 +50,7 @@ export default {
 
 <style scoped lang="scss">
 $header-padding: max(8px, 2vh) 0;
-$header-margin: 0 max(8px, 8vw);
+$header-margin: 0 max(8px, 3vw);
 
 .header {
   padding: $header-padding;
@@ -52,5 +58,19 @@ $header-margin: 0 max(8px, 8vw);
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .icon-burger {
+    display: none;
+
+    @media #{$sm} {
+      display: block;
+    }
+  }
+
+  &__button {
+    @media #{$sm} {
+      display: none;
+    }
+  }
 }
 </style>

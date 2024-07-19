@@ -47,6 +47,7 @@ $nav-item-dark-font-color: $text--white;
   line-height: $nav-item-line-height-max;
   font-weight: $nav-item-font-weight;
   font-size: max($nav-item-font-size-min, $nav-item-font-size-factor);
+  white-space: nowrap;
 
   @media #{$mouse-device} {
     &:hover {
@@ -60,7 +61,7 @@ $nav-item-dark-font-color: $text--white;
     }
   }
 
-  @media #{$md} {
+  @media #{$sm} {
     line-height: $nav-item-line-height-min;
   }
 

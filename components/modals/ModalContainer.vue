@@ -87,7 +87,7 @@ $modal-padding-left: max(148px, 6vw);
 $modal-padding-left-sm: 1em;
 $modal-border-radius: 8px;
 $modal__close-svg-stroke-color: $my-gray-dark;
-$modal__close-svg-width: max($sp-custom-15, $sp-custom-15-factorial-x);
+$modal__close-svg-width: max($sp-15, $sp-15-factorial-x);
 
 .modal {
   width: $modal-width;

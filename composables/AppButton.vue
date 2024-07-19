@@ -69,12 +69,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$app-button__text-left-icon-padding: max(15px, $sp-custom-15-factorial-y) max(20px, $sp-custom-20-factorial-x) max(15px, $sp-custom-15-factorial-y) max(13px, $sp-custom-13-factorial-x);
-$app-button__text-right-icon-padding: max(15px, $sp-custom-15-factorial-y) max(13px, $sp-custom-13-factorial-x) max(15px, $sp-custom-15-factorial-y) max(20px, $sp-custom-20-factorial-x);
+$app-button__text-left-icon-padding: max(15px, $sp-15-factorial-y) max(20px, $sp-20-factorial-x) max(15px, $sp-15-factorial-y) max(13px, $sp-13-factorial-x);
+$app-button__text-right-icon-padding: max(15px, $sp-15-factorial-y) max(13px, $sp-13-factorial-x) max(15px, $sp-15-factorial-y) max(20px, $sp-20-factorial-x);
 $app-button-gap: 13px;
 $app-button-dark-font-color: $text--light;
 $app-button-light-font-color: $text--dark;
-$app-button__icon-padding: $sp-custom-20;
+$app-button__icon-padding: max($sp-20, 1vw);
 $app-button__icon-color: $icon-circle-color;
 $app-button__icon-border-radius: 50%;
 $app-button__text-font-size: max($fs-xl, $fs-xl-factorial);
@@ -87,7 +87,7 @@ $app-button-border-radius: 31vw;
   text-align: center;
   display: inline-flex;
   align-items: center;
-  border: $border--light;
+  border: $border-1px $border-color--light;
   border-radius: $app-button-border-radius;
   padding: 0;
   background: none;

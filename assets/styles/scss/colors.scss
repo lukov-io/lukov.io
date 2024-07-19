@@ -55,9 +55,10 @@ $my-primary-dark-grey: var(--gray500);
 $my-primary-light: var(--gray300);
 $my-primary-dark: var(--gray800);
 $my-danger: var(--red-brown);
-$my-info: var(--gray800);
+$my-info: var(--gray-dark);
 
 $text--primary: $my-primary-dark-grey;
+$text--primary-dark: $my-primary-dark;
 $text--light: $my-primary-light;
 $text--gray: $my-gray800;
 $text--dark: $my-black;

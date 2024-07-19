@@ -1,6 +1,10 @@
 <template>
   <div class="wrapper">
-    <MainHeader class="area-header" />
+    <MainHeader class="header" />
+    <NavMenu
+      class="sidebar"
+      orientation="vertical"
+    />
     <div class="main">
       <HeartCanvas />
       <MainTitle class="main__title">
@@ -9,7 +13,7 @@
           development</span>
       </MainTitle>
     </div>
-    <MainSlogan class="area-slogan" />
+    <MainSlogan class="slogan" />
   </div>
 </template>
 
@@ -18,10 +22,11 @@ import MainHeader from '~/composables/MainHeader.vue'
 import MainSlogan from '~/components/MainSlogan.vue'
 import HeartCanvas from '~/components/HeartCanvas.vue'
 import MainTitle from '~/components/MainTitle.vue'
+import NavMenu from '~/composables/NavMenu.vue'
 
 export default {
   name: 'Stub',
-  components: { MainTitle, HeartCanvas, MainSlogan, MainHeader },
+  components: { MainTitle, HeartCanvas, MainSlogan, MainHeader, NavMenu },
 }
 </script>
 
@@ -38,18 +43,18 @@ $wrapper-background-color: $background--white;
   display: grid;
   height: 100dvh;
   grid-template: "header header header" auto
-  "saidbar main main" 1fr
+  "sidebar main main" 1fr
   ". slogan slogan" auto / auto 1fr 90px;
 
   .area-header {
     grid-area: header;
   }
 
-  .area-saidbar {
-    grid-area: saidbar;
+  .sidebar {
+    grid-area: sidebar;
   }
 
-  .area-slogan {
+  .slogan {
     grid-area: slogan;
     align-self: end;
     height: 100%;
@@ -82,12 +87,12 @@ $wrapper-background-color: $background--white;
         text-transform: uppercase;
       }
 
-      @media #{$md} {
+      @media #{$sm} {
         flex: 0 0 auto;
       }
     }
 
-    @media #{$md} {
+    @media #{$sm} {
       flex-direction: column;
       row-gap: $main-gap;
       justify-content: center;

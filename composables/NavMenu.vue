@@ -5,19 +5,23 @@
   >
     <NavItem
       :link-name="'Home'"
-      :path-to="'/home'"
+      :path-to="'/'"
+    />
+    <NavItem
+      :link-name="'What we do'"
+      :path-to="'/what-we-do'"
     />
     <NavItem
       :link-name="'Works'"
       :path-to="'/works'"
     />
     <NavItem
-      :link-name="'Agency'"
-      :path-to="'/agency'"
+      :link-name="'About Us'"
+      :path-to="'/about-us'"
     />
     <NavItem
-      :link-name="'Partners'"
-      :path-to="'/partners'"
+      :link-name="'Team'"
+      :path-to="'/team'"
     />
     <NavItem
       :link-name="'Contacts'"
@@ -38,7 +42,7 @@ export default {
       required: false,
       default: '',
       validator(value) {
-        return ['', 'vertical'].includes(value)
+        return ['', 'horizontal'].includes(value)
       },
     },
   },
@@ -46,23 +50,26 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$nav-menu-row-gap-min: $sp-xs;
-$nav-menu-row-gap-factor: $sp-xs-factorial-y;
+$nav-menu-row-gap: max($sp-xs, $sp-xs-factorial-y);
 $nav-menu-vertical-column-gap: max($sp-s, $sp-s-factorial-y);
-$nav-menu-vertical-padding: 0 max($sp-xxs, 2vw);
+$nav-menu-vertical-padding: max($sp-20, $sp-120-factorial-y) max($sp-xxs, 2vw);
 
 .nav-menu {
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
+  writing-mode: vertical-rl;
   justify-content: space-between;
-  row-gap: $nav-menu-vertical-column-gap;
+  text-orientation: sideways;
+  padding: $nav-menu-vertical-padding;
+  column-gap: $nav-menu-vertical-column-gap;
 
-  &.vertical {
-    flex-direction: row;
-    writing-mode: vertical-rl;
-    text-orientation: sideways;
-    padding: $nav-menu-vertical-padding;
-    column-gap: $nav-menu-vertical-column-gap;
+  @media #{$sm} {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: $nav-menu-vertical-column-gap;
+    writing-mode: unset;
+    text-orientation: unset;
   }
 }
 </style>
