@@ -8,11 +8,6 @@ export default <RouterConfig> {
       component: () => import('~/pages/index.vue').then(r => r.default || r),
     },
     {
-      name: 'stub',
-      path: '/stub',
-      component: () => import('~/pages/stub.vue').then(r => r.default || r),
-    },
-    {
       name: 'what-we-do',
       path: '/what-we-do',
       component: () => import('~/pages/what-we-do.vue').then(r => r.default || r),

@@ -1,27 +1,28 @@
 <template>
   <div
     class="base-field"
-    :class="['base-field', { error: hasError }]"
+    :class="{ error: hasError }"
   >
     <label
       v-if="label"
       class="base-field__label"
       :for="id"
     >{{ label }}</label>
-    <input
+    <component
+      :is="tag"
       :id="id"
-      class="base-field__input"
+      :class="inputClass"
       :type="type"
       v-bind="$attrs"
-      :value="modelValue"
-      @input="updateValue"
-    >
+      :value="innerValue"
+      @input="innerValue = $event.target.value;"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BaseInput',
+  name: 'BaseField',
   props: {
     modelValue: {
       type: String,
@@ -33,7 +34,7 @@ export default {
     },
     type: {
       type: String,
-      default: 'text',
+      default: '',
     },
     id: {
       type: String,
@@ -43,11 +44,27 @@ export default {
       type: Boolean,
       default: false,
     },
+    tag: {
+      type: String,
+      default: 'input',
+      validator: value => ['input', 'textarea'].includes(value),
+    },
   },
   emits: ['update:modelValue'],
-  methods: {
-    updateValue(event) {
-      this.$emit('update:modelValue', event.target.value)
+  computed: {
+    innerValue: {
+      get() {
+        return this.modelValue
+      },
+      set(value) {
+        this.$emit('update:modelValue', value)
+      },
+    },
+    inputClass() {
+      return {
+        'base-field__input': this.tag === 'input',
+        'base-field__textarea': this.tag === 'textarea',
+      }
     },
   },
 }
@@ -75,6 +92,7 @@ $base-field__input-padding: clamp(13px, 3vw, 20px);
 
 .base-field {
   height: $base-field-height;
+  width: auto;
 
   $this: &;
 

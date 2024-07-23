@@ -1,20 +1,31 @@
 <template>
   <div class="contacts">
-    <BaseInput
-      id="contacts-phone"
-      type="tel"
-      label="Your name:"
-      model-value=""
-    />
+    <form>
+      <BaseField
+        id="contacts-name"
+        v-model="formStore.formData.name"
+        tag="input"
+        type="text"
+        label="Your name:"
+      />
+    </form>
+
+    {{ formStore.formData }}
   </div>
 </template>
 
 <script>
-import BaseInput from '~/components/forms/components/BaseInput.vue'
+import BaseField from '~/components/forms/BaseField.vue'
+import { useFormStore } from '~/stores/form-store'
 
 export default {
   name: 'Contacts',
-  components: { BaseInput },
+  components: { BaseField },
+  data() {
+    return {
+      formStore: useFormStore(),
+    }
+  },
 }
 </script>
 
