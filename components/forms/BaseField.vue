@@ -11,7 +11,7 @@
     <component
       :is="tag"
       :id="id"
-      :class="inputClass"
+      :class="fieldClass"
       :type="type"
       v-bind="$attrs"
       :value="innerValue"
@@ -60,7 +60,7 @@ export default {
         this.$emit('update:modelValue', value)
       },
     },
-    inputClass() {
+    fieldClass() {
       return {
         'base-field__input': this.tag === 'input',
         'base-field__textarea': this.tag === 'textarea',
@@ -71,14 +71,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$base-field-height: fit-content;
 $base-field__label-font-size: max($fs-xs, $fs-m-factorial);
+$base-field__label-margin-bottom: max($sp-xxs, $sp-xxs-factorial-y);
 $base-field__label-font-weight: $fw-normal;
 $base-field__label-line-height: $lh-xxl;
 $base-field__label-font-color: $text--primary-dark;
 $base-field__label-font-color--focus: $text--dark;
 $base-field__label-font-color--error: $my-info;
-$base-field__label-padding: 0 0 0 3px;
+$base-field__label-padding: 0 0 0 max($sp-xxs, $sp-xxs-factorial-y);
 $base-field__input-font-size: max($fs-xs, $fs-m-factorial);
 $base-field__input-font-weight: $fw-normal;
 $base-field__input-line-height: $lh-xxl;
@@ -88,10 +88,11 @@ $base-field__input-background-color--error: rgba(133, 18, 18, 0.1);
 $base-field__input-border: $border-1px $border-color--grey;
 $base-field__input-border--error: $border-1px $border-color--danger;
 $base-field__input-border--focus: $border-1px $border-color--blue;
-$base-field__input-padding: clamp(13px, 3vw, 20px);
+$base-field__input-padding: max($sp-13, $sp-20-factorial-y) max($sp-13, $sp-20-factorial-x);
+$base-field__placeholder-color: $my-gray600;
+$base-field__placeholder-style: $my-gray600;
 
 .base-field {
-  height: $base-field-height;
   width: auto;
 
   $this: &;
@@ -103,9 +104,11 @@ $base-field__input-padding: clamp(13px, 3vw, 20px);
     line-height: $base-field__label-line-height;
     color: $base-field__label-font-color;
     padding: $base-field__label-padding;
+    margin-bottom: $base-field__label-margin-bottom;
     opacity: 0.5;
   }
 
+  &__textarea,
   &__input {
     width: 100%;
     font-size: $base-field__input-font-size;
@@ -118,9 +121,17 @@ $base-field__input-padding: clamp(13px, 3vw, 20px);
     position: relative;
     background-color: $base-field__input-background-color;
 
+    @media #{$sm} {
+      padding: $base-field__input-padding;
+    }
+
     &:focus-visible {
       outline: none;
     }
+  }
+
+  &__textarea {
+    height: 100%;
   }
 
   &:focus-within {
@@ -128,7 +139,7 @@ $base-field__input-padding: clamp(13px, 3vw, 20px);
       opacity: 1;
       color: $base-field__input-border--focus;
     }
-
+    #{$this}__textarea,
     #{$this}__input {
       border-bottom: $base-field__input-border--focus;
     }
@@ -140,10 +151,16 @@ $base-field__input-padding: clamp(13px, 3vw, 20px);
       color: $base-field__label-font-color--error;
     }
 
+    #{$this}__textarea,
     #{$this}__input {
       border-bottom: $base-field__input-border--error;
       background-color: $base-field__input-background-color--error;
     }
+  }
+
+  ::placeholder {
+    color: $base-field__placeholder-color;
+    font-style: italic;
   }
 }
 </style>

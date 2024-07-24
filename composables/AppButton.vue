@@ -4,6 +4,7 @@
     class="app-button"
     :class="[textColor, iconSide, collapseOnMobile]"
     :type="type"
+    v-bind="$attrs"
   >
     <span class="app-button__icon">
       <slot />
@@ -61,7 +62,7 @@ export default {
       required: false,
       default: '',
       validator(value) {
-        return ['button', 'link', 'submit', 'reset'].includes(value)
+        return ['', 'button', 'link', 'submit', 'reset'].includes(value)
       },
     },
   },
@@ -69,8 +70,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$app-button__text-left-icon-padding: max(15px, $sp-15-factorial-y) max(20px, $sp-20-factorial-x) max(15px, $sp-15-factorial-y) max(13px, $sp-13-factorial-x);
-$app-button__text-right-icon-padding: max(15px, $sp-15-factorial-y) max(13px, $sp-13-factorial-x) max(15px, $sp-15-factorial-y) max(20px, $sp-20-factorial-x);
+$app-button__text-left-icon-padding: 0 max(20px, $sp-20-factorial-x) 0 max(13px, $sp-13-factorial-x);
+$app-button__text-right-icon-padding: 0 max(13px, $sp-13-factorial-x) 0 max(20px, $sp-20-factorial-x);
 $app-button-gap: 13px;
 $app-button-dark-font-color: $text--light;
 $app-button-light-font-color: $text--dark;
