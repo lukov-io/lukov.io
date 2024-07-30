@@ -25,7 +25,6 @@ export default {
   mounted() {
     const svgString = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 582" fill="none">
       <path d="M578.5 136L623.5 251.5L662 125L578.5 136Z" fill="#2A0E40" stroke="#F6F6F6"/>
-      <path d="M518.5 395L345 456.5L432 512.5L518.5 395Z" fill="#2C2C2C" stroke="#F6F6F6"/>
       <path d="M520 394.5L459 326.5L345 457L520 394.5Z" fill="#3A1755" stroke="#F6F6F6"/>
       <path d="M459 326.5L624 251L518.5 394L459 326.5Z" fill="#2F0F48" stroke="#F6F6F6"/>
       <path d="M623.5 251.5L578.5 136L459 326.5L623.5 251.5Z" fill="#351556" stroke="#F6F6F6"/>

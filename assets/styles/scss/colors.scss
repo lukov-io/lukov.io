@@ -5,6 +5,8 @@
 	--green: #1B594E;
 	--turquoise: #9CD9BC;
 	--red-brown: #851212;
+	--cian: #474BA0;
+	
 	
 	--gray300: #f6f6f6;
 	--gray400: #eaeaea;
@@ -40,6 +42,7 @@ $my-blue: var(--blue);
 $my-green: var(--green);
 $my-turquoise: var(--turquoise);
 $my-red-brown: var(--red-brown);
+$my-cian: var(--cian);
 
 $my-gray300: var(--gray300);
 $my-gray400: var(--gray400);
@@ -63,6 +66,7 @@ $text--light: $my-primary-light;
 $text--gray: $my-gray800;
 $text--dark: $my-black;
 $text--white: $my-white;
+$text--cian: $my-cian;
 
 $background--primary: $my-primary;
 $background--light: $my-primary-light;
@@ -95,3 +99,4 @@ $gradient0deg: linear-gradient(96.5deg,
 	#9CD9BC 0%,
 	#434DA7 51.56%,
 	#5B3D78 100%);
+

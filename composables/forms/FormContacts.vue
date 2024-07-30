@@ -16,6 +16,7 @@
       class="form-contacts__input"
       tag="input"
       type="tel"
+      placeholder="Phone number..."
       label="Phone"
       required
     />
