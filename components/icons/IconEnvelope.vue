@@ -63,10 +63,6 @@ export default {
       translate: -50% 0;
     }
 
-    50% {
-      translate: 0;
-    }
-
     75% {
       translate: 50% 0;
     }

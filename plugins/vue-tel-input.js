@@ -7,10 +7,12 @@ const globalOptions = {
   defaultCountry: 'ID',
   autoDefaultCountry: true,
   dropdownOptions: {
-    showDialCodeInSelection: true,
+    showDialCodeInSelection: false,
+    showSearchBox: true,
   },
   autoFocus: true,
   inputOptions: {
+    showDialCode: true,
     maxlength: 15,
     required: true,
     type: 'tel',

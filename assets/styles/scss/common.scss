@@ -30,66 +30,77 @@ a {
 	aspect-ratio: 1 / 1;
 }
 
-$vti__field-height: max(64px, $sp-xl-factorial-y);
-$vti__input-padding: 0 max(10px, $sp-20-factorial-x) 0 max(5px, $sp-10-factorial-x);
-$vti__dropdown-padding: 0 0 0 max(10px, $sp-20-factorial-x);
-$vti__field-border-bottom: 0.1vw solid #00000029;
-$vti__field-font-size: max($fs-m, $fs-m-factorial);
-$vti__field-line-height: 1.6;
-$vti__field-height: max(64px, $sp-xl-factorial-y);
-$vti__field-background-color: $background--primary;
-$vti__dropdown-list-height: 220%;
-$vti__dropdown-list-width: max(291px, 20vw);
-
 .custom-vti {
-	border-left: none !important;
-	border-right: none !important;
-	border-top: none !important;
+	$base-field__input-font-size: max($fs-xs, $fs-m-factorial);
+	$base-field__input-font-weight: $fw-normal;
+	$base-field__input-line-height: $lh-xxl;
+	$base-field__input-font-color: $text--dark;
+	$base-field__input-background-color: $background--primary;
+	$base-field__input-background-color--error: rgba(133, 18, 18, 0.1);
+	$base-field__input-border: $border-1px $border-color--grey;
+	$base-field__input-border--error: $border-1px $border-color--danger;
+	$base-field__input-border--focus: $border-1px $border-color--blue;
+	$base-field__input-padding-x: max($sp-13, $sp-20-factorial-x);
+	$base-field__input-padding-y: max($sp-13, $sp-20-factorial-y);
+	$base-field__input-padding: $base-field__input-padding-y $base-field__input-padding-x;
+	$base-field__input-search-box-padding: max($sp-xs, $sp-xs-factorial-y) max($sp-13, $sp-20-factorial-x);
+	$base-field__placeholder-color: $my-gray600;
+	$base-field__placeholder-style: $my-gray600;
+	
+	border: none !important;
+	border-bottom: $base-field__input-border !important;
 	
 	&:focus-within {
-		border-left: none !important;
-		border-right: none !important;
-		border-top: none !important;
+		border: none !important;
+		border-bottom: $base-field__input-border--focus !important;
+		border-radius: unset;
 		box-shadow: none !important;
 	}
 	
 	.vti {
+		
+		$this: &;
+		
+		&__selection {
+			font-size: $base-field__input-font-size;
+			font-weight: $base-field__input-font-weight;
+			line-height: $base-field__input-line-height;
+			padding-left: $base-field__input-padding-x;
+		}
+		
 		&__input {
 			width: 100%;
-			padding: $vti__input-padding;
-			background-color: $background--primary;
+			font-size: $base-field__input-font-size;
+			font-weight: $base-field__input-font-weight;
+			line-height: $base-field__input-line-height;
+			color: $base-field__input-font-color;
+			padding: $base-field__input-padding;
+			padding-left: 0;
+			position: relative;
+			background-color: $base-field__input-background-color;
 		}
 		
 		&__dropdown {
-			padding: $vti__dropdown-padding;
+			width: 25%;
+			align-items: center;
+			background-color: $base-field__input-background-color;
 		}
 		
-		&__dropdown,
-		&__input {
-			height: $vti__field-height;
-			border: none;
-			border-left: none !important;
-			border-right: none !important;
-			border-top: none !important;
-			border-bottom: $vti__field-border-bottom;
-			background-color: $vti__field-background-color;
+		&__country-code {
+			font-size: $base-field__input-font-size;
+			font-weight: $base-field__input-font-weight;
+			line-height: $base-field__input-line-height;
+			color: $base-field__input-font-color;
 		}
 		
-		&__country-code,
-		&__input,
-		&__selection {
-			font-size: $vti__field-font-size;
-			line-height: $vti__field-line-height;
+		&__dropdown-list.below {
+			top: 100%;
+			width: 400%;
+			max-height: 20vh;
 		}
 		
-		&__dropdown-list {
-			height: $vti__dropdown-list-height;
-			width: $vti__dropdown-list-width;
-			max-height: none;
-			
-			&.below {
-				top: 100%;
-			}
+		&__search_box {
+			padding: $base-field__input-search-box-padding;
 		}
 	}
 }

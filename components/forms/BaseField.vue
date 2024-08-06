@@ -1,7 +1,6 @@
 <template>
   <div
-    class="base-field"
-    :class="{ error: hasError }"
+    :class="['base-field', { error: hasError }]"
   >
     <label
       v-if="label"
@@ -14,8 +13,8 @@
       :class="fieldClass"
       :type="type"
       v-bind="$attrs"
-      :value="innerValue"
-      @input="innerValue = $event.target.value;"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>
@@ -47,23 +46,25 @@ export default {
     tag: {
       type: String,
       default: 'input',
-      validator: value => ['input', 'textarea'].includes(value),
+      validator: value => ['input', 'textarea', 'vue-tel-input'].includes(value),
     },
   },
   emits: ['update:modelValue'],
   computed: {
-    innerValue: {
-      get() {
-        return this.modelValue
-      },
-      set(value) {
-        this.$emit('update:modelValue', value)
-      },
-    },
     fieldClass() {
       return {
         'base-field__input': this.tag === 'input',
         'base-field__textarea': this.tag === 'textarea',
+      }
+    },
+  },
+  methods: {
+    updateValue(event) {
+      if (this.tag === 'vue-tel-input') {
+        this.$emit('update:modelValue', event) // vue-tel-input передает объект значения
+      }
+      else {
+        this.$emit('update:modelValue', event.target.value)
       }
     },
   },

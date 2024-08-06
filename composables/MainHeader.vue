@@ -62,13 +62,13 @@ $header-margin: 0 max(8px, 3vw);
   .icon-burger {
     display: none;
 
-    @media #{$sm} {
+    @media #{$md} {
       display: block;
     }
   }
 
   &__button {
-    @media #{$sm} {
+    @media #{$md} {
       display: none;
     }
   }

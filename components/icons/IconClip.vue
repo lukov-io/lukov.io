@@ -33,12 +33,10 @@ export default {
   @media #{$mouse-device} {
     &:hover {
       .icon-clip {
-        &__item {
-          transform-origin: 0 100%;
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
-          animation-name: clip-motion;
-        }
+        transform-origin: 50% 50%;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: clip-motion;
       }
     }
   }
@@ -46,26 +44,31 @@ export default {
   @media #{$touch-device} {
     &:active {
       .icon-clip {
-        &__item {
-          transform-origin: 0 100%;
-          animation-duration: 1s;
-          animation-iteration-count: 1;
-          animation-name: clip-motion;
-        }
+        transform-origin: 50% 50%;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-name: clip-motion;
       }
     }
   }
 
   @keyframes clip-motion {
     0% {
+      translate: 0;
       rotate: 0;
     }
 
-    50% {
-      rotate: 15deg;
+    33% {
+      translate: 0 -50%;
+    }
+
+    66% {
+      translate: 0 0;
+      rotate: -40deg
     }
 
     100% {
+      translate: 0;
       rotate: 0;
     }
   }

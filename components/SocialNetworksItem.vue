@@ -58,15 +58,22 @@ $social-networks-item__icon-font-color: $my-primary-dark;
     color: $social-networks-item__name-font-color;
   }
 
+  &__error {
+    font-size: $social-networks-item__name-font-size;
+  }
+
   @media #{$mouse-device} {
     &:hover {
       #{$this}__name {
-        background: $gradient165deg;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background: $gradient165deg center center no-repeat;
       }
+
       #{$this}__icon {
-        background: $gradient0deg;
+        background: $gradient0deg center center no-repeat;
+      }
+
+      #{$this}__icon,
+      #{$this}__name {
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -77,6 +84,9 @@ $social-networks-item__icon-font-color: $my-primary-dark;
     #{$this}__name,
     #{$this}__icon {
       color: $text--cian;
+      background: unset;
+      background-clip: unset;
+      -webkit-text-fill-color: unset;
     }
   }
 }

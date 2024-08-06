@@ -1,7 +1,8 @@
 <template>
   <div class="contacts-data">
     <ContactsItem label="Address">
-      Schimmelt 245611 ZX EindhovenThe Netherlands
+      Schimmelt 245611 ZX <br>
+      EindhovenThe Netherlands
     </ContactsItem>
     <ContactsItem label="Telephone">
       +49 89 411422250
@@ -20,6 +21,7 @@ export default {
   components: {
     ContactsItem,
   },
+
 }
 </script>
 
@@ -28,6 +30,7 @@ $contacts-data-column-gap: max($sp-s, $sp-s-factorial-x);
 $contacts-data-row-gap: max($sp-s, $sp-s-factorial-y);
 
 .contacts-data {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: $contacts-data-row-gap $contacts-data-column-gap;

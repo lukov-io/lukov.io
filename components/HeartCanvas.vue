@@ -19,6 +19,7 @@ export default {
       pulse: { width: 0.5, growing: true },
       currentHoveredElement: null,
       originalColors: {},
+      animationFrameId: null,
     }
   },
 
@@ -100,6 +101,10 @@ export default {
   beforeUnmount() {
     if (this.$refs.canvas) {
       this.$refs.canvas.removeEventListener('mousemove', this.handleMouseMove)
+    }
+
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId)
     }
   },
   methods: {
@@ -183,6 +188,11 @@ export default {
 
     drawElements() {
       const ctx = this.$refs.canvas.getContext('2d')
+
+      if (!ctx) {
+        return
+      }
+
       ctx.clearRect(0, 0, this.$refs.canvas.width, this.$refs.canvas.height)
 
       ctx.save()
@@ -242,11 +252,11 @@ export default {
         this.drawElements()
 
         if (progress < 1) {
-          requestAnimationFrame(animate)
+          this.animationFrameId = requestAnimationFrame(animate)
         }
       }
 
-      requestAnimationFrame(animate)
+      this.animationFrameId = requestAnimationFrame(animate)
     },
 
     animatePulse() {
@@ -271,10 +281,10 @@ export default {
         }
 
         this.drawElements()
-        requestAnimationFrame(animate)
+        this.animationFrameId = requestAnimationFrame(animate)
       }
 
-      requestAnimationFrame(animate)
+      this.animationFrameId = requestAnimationFrame(animate)
     },
 
     /* eslint-disable 'prefer-const' */

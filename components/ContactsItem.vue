@@ -29,9 +29,10 @@ $contacts-item__text-font-color: $text--dark;
 $contacts-item__label-text-size: max($fs-xs, $fs-m-factorial);
 
 .contacts-item {
-  max-width: 250px;
   display: flex;
   flex-direction: column;
+
+  $this: &;
 
   &__label {
     font-size: $contacts-item__label-font-size;
@@ -45,6 +46,14 @@ $contacts-item__label-text-size: max($fs-xs, $fs-m-factorial);
     color: $contacts-item__text-font-color;
     font-size: $contacts-item__label-text-size;
     white-space: balance;
+  }
+
+  @media #{$mouse-device} {
+    &:hover {
+      #{$this}__text {
+        scale: 1.05;
+      }
+    }
   }
 }
 </style>

@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     isWideScreen() {
-      return this.windowWidth > 576
+      return this.windowWidth > 768
     },
   },
   mounted() {
@@ -63,7 +63,7 @@ $wrapper-background-color: $background--white;
     "sidebar content" 1fr
     "sidebar content" auto / auto 1fr;
 
-  @media #{$sm} {
+  @media #{$md} {
     grid-template-areas: unset;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
@@ -72,7 +72,7 @@ $wrapper-background-color: $background--white;
   .header {
     grid-area: header;
 
-    @media #{$sm} {
+    @media #{$md} {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
     }
@@ -80,6 +80,14 @@ $wrapper-background-color: $background--white;
 
   .sidebar {
     grid-area: sidebar;
+
+    @media #{$md} {
+      display: none;
+    }
+  }
+
+  .main {
+    padding: $sp-s;
   }
 }
 </style>
