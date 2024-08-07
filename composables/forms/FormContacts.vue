@@ -6,7 +6,7 @@
   >
     <BaseField
       id="contacts-name"
-      v-model="formData.name"
+      v-model="store.formData.name"
       :has-error="v$.name.$error"
       class="form-contacts__input"
       tag="input"
@@ -15,20 +15,16 @@
       label="Your name:"
       @change="handleChange('name')"
     />
-    <BaseField
-      id="contacts-phone"
-      v-model="formData.phone"
-      :has-error="v$.phone.$error"
-      class="form-contacts__input"
-      tag="input"
-      type="tel"
-      placeholder="Phone number..."
+    <BaseTelInput
+      id="contacts-tel-input"
+      v-model="store.formData.phone"
       label="Phone:"
+      :has-error="v$.phone.$error"
       @change="handleChange('phone')"
     />
     <BaseField
       id="contacts-email"
-      v-model="formData.email"
+      v-model="store.formData.email"
       :has-error="v$.email.$error"
       class="form-contacts__input"
       tag="input"
@@ -39,7 +35,7 @@
     />
     <BaseField
       id="contacts-details"
-      v-model="formData.details"
+      v-model="store.formData.details"
       :has-error="v$.details.$error"
       class="form-contacts__textarea"
       tag="textarea"
@@ -59,22 +55,19 @@
         tag="button"
         button-text="Send"
         collapse-on-mobile="collapse"
+        :disabled="isSubmitDisabled"
       >
         <IconEnvelope />
       </AppButton>
     </div>
-
-    <pre>
-      {{ formData }}
-    </pre>
   </form>
 </template>
 
 <script>
-import { reactive } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
 import { useFormStore } from '~/stores/form-store' // Импортируйте свой store
 import BaseField from '~/components/forms/BaseField.vue'
+import BaseTelInput from '~/components/forms/BaseTelInput.vue'
 import AppButton from '~/composables/AppButton.vue'
 import IconEnvelope from '~/components/icons/IconEnvelope.vue'
 import IconClip from '~/components/icons/IconClip.vue'
@@ -82,42 +75,56 @@ import validRules from '~/validators/validation-form-contact'
 
 export default {
   name: 'FormContacts',
-  components: { BaseField, AppButton, IconEnvelope, IconClip },
+  components: { BaseField, AppButton, IconEnvelope, IconClip, BaseTelInput },
 
   setup() {
     const store = useFormStore()
-    const formData = reactive({ ...store.formData })
-    const v$ = useVuelidate(validRules, formData)
+    const v$ = useVuelidate(validRules, store.formData)
 
-    return { formData, v$, store }
+    return { v$, store }
   },
 
+  data() {
+    return {
+      isSubmitting: false,
+    }
+  },
+  computed: {
+    isSubmitDisabled() {
+      return this.isSubmitting || this.v$.name.$invalid || this.v$.phone.$invalid || this.v$.email.$invalid || this.v$.details.$invalid
+    },
+  },
   methods: {
     handleChange(field) {
       this.v$[field].$validate()
-      console.log(`${field} validation error:`, this.v$[field].$error)
     },
 
     async submitForm() {
       this.v$.$touch()
       if (!this.v$.$invalid) {
-        console.log(this.store.formData)
+        this.isSubmitting = true
         try {
           const response = await axios.post('apiUrl', this.store.formData)
+          this.isSubmitting = false
           if (response.data.status === 'error') {
+            this.isSubmitting = false
             console.log('fail', response.data.message)
             return
           }
+
           if (response.data.status) {
             console.log('success')
           }
+
           else {
             const errorMessage = response.data?.message || 'An error occurred.'
+            this.isSubmitting = false
             console.error('fail', errorMessage)
           }
         }
         catch (error) {
           const errorMessage = error.response?.data?.message || 'An error occurred.'
+          this.isSubmitting = false
           console.error('fail', errorMessage)
         }
       }

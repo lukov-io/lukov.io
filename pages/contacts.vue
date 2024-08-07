@@ -29,6 +29,7 @@ $contacts__grid-template-md: 1fr auto / 100%;
 $contacts__form-grid-area: 1 / 1 / span 1 / span 1;
 $contacts__form-margin-bottom-md: max($sp-l, $sp-l-factorial-y);
 $contacts__other-grid-area: span 1 / span 1 / 2 / 3;
+$contacts__other-margin-bottom: max($sp-base, $sp-base-factorial-y);
 $contacts__data-margin-bottom: max($sp-m, $sp-m-factorial-y);
 
 .contacts {
@@ -48,7 +49,7 @@ $contacts__data-margin-bottom: max($sp-m, $sp-m-factorial-y);
   &__form {
     grid-area: $contacts__form-grid-area;
 
-    @media #{$md} {
+    @media #{$md}, (orientation: portrait) {
       margin-bottom: $contacts__form-margin-bottom-md;
     }
   }
@@ -61,7 +62,12 @@ $contacts__data-margin-bottom: max($sp-m, $sp-m-factorial-y);
       flex-direction: row;
       align-items: end;
       justify-content: space-evenly;
+      margin-bottom: $contacts__other-margin-bottom;
       width: 100%;
+    }
+
+    @media #{$sm} and (orientation: portrait) {
+      height: 85vh;
     }
 
     @media #{$sm} {
@@ -78,10 +84,14 @@ $contacts__data-margin-bottom: max($sp-m, $sp-m-factorial-y);
   }
 
   &__data {
-    margin-bottom: 0;
+    margin-bottom: $contacts__data-margin-bottom;
+
+    @media #{$md}, (orientation: portrait) {
+      margin-bottom: 0;
+    }
 
     @media #{$sm} {
-      margin-bottom: $contacts__data-margin-bottom;
+      margin-bottom: $contacts__data-margin-bottom;;
     }
   }
 }

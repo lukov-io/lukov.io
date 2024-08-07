@@ -4,15 +4,15 @@ import { defineNuxtPlugin } from '#app'
 
 const globalOptions = {
   mode: 'international',
-  defaultCountry: 'ID',
+  defaultCountry: 'ru',
   autoDefaultCountry: true,
   dropdownOptions: {
-    showDialCodeInSelection: false,
+    showDialCodeInSelection: true,
     showSearchBox: true,
   },
   autoFocus: true,
   inputOptions: {
-    showDialCode: true,
+    showDialCode: false,
     maxlength: 15,
     required: true,
     type: 'tel',

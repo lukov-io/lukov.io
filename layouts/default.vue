@@ -1,12 +1,12 @@
 <template>
   <div class="outer-wrapper">
-    <div class="wrapper">
-      <MainHeader class="header" />
+    <div class="app-wrapper">
+      <MainHeader class="app-header" />
       <NavMenu
         v-if="isWideScreen"
-        class="sidebar"
+        class="app-sidebar"
       />
-      <div class="main">
+      <div class="app-main">
         <slot />
       </div>
     </div>
@@ -53,8 +53,10 @@ export default {
 <style scoped lang="scss">
 $main-gap: 2vw;
 $wrapper-background-color: $background--white;
+$header-background-color: $background--white;
+$header-bottom-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-.wrapper {
+.app-wrapper {
   background-color: $wrapper-background-color;
   display: grid;
   height: 100dvh;
@@ -63,31 +65,39 @@ $wrapper-background-color: $background--white;
     "sidebar content" 1fr
     "sidebar content" auto / auto 1fr;
 
-  @media #{$md} {
+  @media #{$md}, (orientation: portrait) {
     grid-template-areas: unset;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 100%;
+    padding-top: max($sp-70, $sp-70-factorial-y);
   }
 
-  .header {
+  .app-header {
     grid-area: header;
 
-    @media #{$md} {
+    @media #{$md}, (orientation: portrait) {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: $header-background-color;
+      box-shadow: $header-bottom-shadow;
     }
   }
 
-  .sidebar {
+  .app-sidebar {
     grid-area: sidebar;
 
-    @media #{$md} {
+    @media #{$md}, (orientation: portrait) {
       display: none;
     }
   }
 
-  .main {
+  .app-main {
     padding: $sp-s;
+    padding-bottom: 0;
   }
 }
 </style>
