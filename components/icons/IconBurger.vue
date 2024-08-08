@@ -1,48 +1,37 @@
 <template>
-  <svg
-    class="icon-burger"
-    :class="buttonState"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 26 13"
-    fill="none"
-  >
-    <rect
-      y="0.5"
-      width="26"
-      height="2"
-      rx="1"
-      fill="inherit"
-    />
-    <rect
-      y="5.5"
-      width="26"
-      height="2"
-      rx="1"
-      fill="inherit"
-    />
-    <rect
-      y="10.5"
-      width="26"
-      height="2"
-      rx="1"
-      fill="inherit"
-    />
-  </svg>
+  <span class="icon-burger">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 26 13"
+    >
+      <rect
+        y="0.5"
+        width="26"
+        height="2"
+        rx="1"
+        fill="inherit"
+      />
+      <rect
+        y="5.5"
+        width="26"
+        height="2"
+        rx="1"
+        fill="inherit"
+      />
+      <rect
+        y="10.5"
+        width="26"
+        height="2"
+        rx="1"
+        fill="inherit"
+      />
+    </svg>
+  </span>
 </template>
 
 <script>
 export default {
   name: 'IconBurger',
-  props: {
-    buttonState: {
-      type: String,
-      required: false,
-      default: '',
-      validator(value) {
-        return ['', 'close'].includes(value)
-      },
-    },
-  },
 }
 </script>
 
@@ -54,23 +43,59 @@ $icon-burger-close-fill: $my-white;
   cursor: pointer;
   fill: $icon-burger-fill;
 
-  &.close {
-    fill: $icon-burger-close-fill;
-
+  &:hover {
     rect:nth-child(1) {
-      rotate: 45deg;
-      transform-origin: 27% 30%;
-      transition: rotate 0.25s
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-name: burger-rect-1;
     }
 
     rect:nth-child(2) {
-      display: none;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-name: burger-rect-2 ;
     }
 
     rect:nth-child(3) {
-      rotate: -45deg  ;
-      transform-origin: 27% 67%;
-      transition: rotate 0.25s
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-name: burger-rect-1;
+    }
+  }
+
+  @keyframes burger-rect-1 {
+    0% {
+      translate: 0;
+    }
+
+    25% {
+      translate: -50% 0;
+    }
+
+    75% {
+      translate: 50% 0;
+    }
+
+    100% {
+      translate: 0;
+    }
+  }
+
+  @keyframes burger-rect-2 {
+    0% {
+      translate: 0;
+    }
+
+    25% {
+      translate: 50% 0;
+    }
+
+    75% {
+      translate: -50% 0;
+    }
+
+    100% {
+      translate: 0;
     }
   }
 }

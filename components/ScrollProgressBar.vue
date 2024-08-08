@@ -28,8 +28,7 @@ export default {
     updateScrollProgress() {
       const scrollTop = window.scrollY
       const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      const scrollPercent = (scrollTop / docHeight) * 100
-      this.scrollProgress = scrollPercent
+      this.scrollProgress = (scrollTop / docHeight) * 100
     },
     checkScrollable() {
       this.isScrollable = document.documentElement.scrollHeight > window.innerHeight

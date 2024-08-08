@@ -10,13 +10,12 @@
         button-text="Leave a request"
         tag="span"
         type="button"
-        collapse-on-mobile="collapse"
         itemprop="url"
         @click="openModal"
       >
         <IconPen />
       </AppButton>
-      <IconBurger button-state="" />
+      <IconBurger @click="$emit('toggle-menu')" />
     </div>
     <ScrollProgressBar class="header__progress-bar" />
   </div>
@@ -34,6 +33,7 @@ import ScrollProgressBar from '~/components/ScrollProgressBar.vue'
 export default {
   name: 'MainHeader',
   components: { MainLogo, AppButton, IconPen, IconBurger, ScrollProgressBar },
+  emits: ['toggle-menu'],
   data() {
     return {
       modalStore: useModalStore(),
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$header-padding: max(8px, 2vh) max(8px, 3vw);
+$header-padding: max($sp-xs, $sp-xs-factorial-y) max($sp-m, $sp-m-factorial-x);
 
 .header {
   position: relative;
@@ -70,6 +70,8 @@ $header-padding: max(8px, 2vh) max(8px, 3vw);
       @media #{$md}, (orientation: portrait) {
         display: block;
       }
+
+      z-index: $z-index-sticky;
     }
   }
 

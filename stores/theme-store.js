@@ -7,7 +7,7 @@ export const useDarkMode = defineStore('darkMode', {
 
   actions: {
     toggleDarkMode() {
-      let body = document.querySelector('body')
+      const body = document.querySelector('body')
       this.darkMode = !this.darkMode
       this.darkMode ? body.classList.add('dark-mode') : body.classList.remove('dark-mode')
     },

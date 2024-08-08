@@ -26,11 +26,9 @@ a {
 
 [class^="icon-"],
 [class*="icon-"] {
-	width: max(30px, 2vw);
-	aspect-ratio: 1 / 1;
+	width: max($sp-m, $sp-m-factorial-x);
+	cursor: pointer;
 }
-
-
 
 .base-tel-input {
 	$base-field__input-font-size: max($fs-xs, $fs-m-factorial);
@@ -83,7 +81,7 @@ a {
 			}
 			
 			&__dropdown {
-				width: 20%;
+				width: max(100px, 20%);
 				align-items: center;
 				background-color: $base-field__input-background-color;
 			}
@@ -104,6 +102,11 @@ a {
 			&__search_box {
 				padding: $base-field__input-search-box-padding;
 				background-color: $base-field__input-background-color !important;
+			}
+			
+			&__dropdown,
+			&__input {
+				border-bottom: $base-field__input-border !important;
 			}
 		}
 	}

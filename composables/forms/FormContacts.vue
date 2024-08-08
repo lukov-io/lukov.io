@@ -135,7 +135,7 @@ export default {
 
 <style lang="scss" scoped>
 $form-contacts-grid-template: auto auto 2.5fr 1fr / 1fr 1fr;
-$form-contacts-grid-template-sm: auto auto auto 2.5fr 1fr / 1fr;
+$form-contacts-grid-template-sm: auto auto auto 2fr 1fr / 1fr;
 $form-contacts-grid-row-gap: max($sp-s, $sp-s-factorial-y);
 $form-contacts-grid-column-gap: max($sp-m, $sp-s-factorial-x);
 $form-contacts-grid-gap-sm: max($sp-xs, $sp-xs-factorial-y);
@@ -184,7 +184,7 @@ $form-contacts-buttons-margin-top: max($sp-s, $sp-s-factorial-y);
     display: flex;
     justify-content: space-between;
     align-self: center;
-    margin-top: max($sp-s, $sp-s-factorial-y);
+    margin: max($sp-s, $sp-s-factorial-y) 0;
   }
 
   &__input:nth-child(-n+3),

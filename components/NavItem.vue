@@ -1,7 +1,8 @@
 <template>
   <nuxt-link
-    :class="['nav-item', orientation === 'vertical']"
+    :class="['nav-item']"
     :to="pathTo"
+    @click="closeMenu"
   >
     {{ linkName }}
   </nuxt-link>
@@ -19,13 +20,11 @@ export default {
       type: String,
       required: true,
     },
-    orientation: {
-      type: String,
-      required: false,
-      default: '',
-      validator(value) {
-        return ['', 'vertical'].includes(value)
-      },
+  },
+  emits: ['toggle-menu'],
+  methods: {
+    closeMenu() {
+      setTimeout(() => (this.$emit('toggle-menu')), 500)
     },
   },
 }

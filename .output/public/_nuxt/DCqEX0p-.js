@@ -1,4 +1,4 @@
-import{_ as p,o as H,c as f,a as F,C as v,D as w,E as K,b as Q,w as I,p as m,e as V,d as L}from"./CjiDl9wy.js";const E={name:"HeartCanvas",data(){return{svgElements:[],scale:.95,pulse:{width:.5,growing:!0},currentHoveredElement:null,originalColors:{},animationFrameId:null}},mounted(){new DOMParser().parseFromString(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 582" fill="none">
+import{_ as p,o as H,c as f,a as F,C as v,D as w,E as K,b as Q,w as I,p as m,e as V,d as L}from"./CT9Iynu8.js";const E={name:"HeartCanvas",data(){return{svgElements:[],scale:.95,pulse:{width:.5,growing:!0},currentHoveredElement:null,originalColors:{},animationFrameId:null}},mounted(){new DOMParser().parseFromString(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 582" fill="none">
       <path d="M578.5 136L623.5 251.5L662 125L578.5 136Z" fill="#2A0E40" stroke="#F6F6F6"/>
       <path d="M520 394.5L459 326.5L345 457L520 394.5Z" fill="#3A1755" stroke="#F6F6F6"/>
       <path d="M459 326.5L624 251L518.5 394L459 326.5Z" fill="#2F0F48" stroke="#F6F6F6"/>

@@ -5,6 +5,7 @@
     :class="[textColor, iconSide, collapseOnMobile]"
     :type="type"
     v-bind="$attrs"
+    :to="pathTo"
   >
     <span class="app-button__icon">
       <slot />
@@ -26,7 +27,7 @@ export default {
       required: false,
       default: 'span',
       validator(value) {
-        return ['span', 'a', 'button'].includes(value)
+        return ['span', 'nuxt-link', 'button'].includes(value)
       },
     },
     textColor: {
@@ -64,6 +65,9 @@ export default {
       validator(value) {
         return ['', 'button', 'link', 'submit', 'reset'].includes(value)
       },
+    },
+    pathTo: {
+      type: String,
     },
   },
 }

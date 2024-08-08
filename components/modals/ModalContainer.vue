@@ -42,14 +42,10 @@ import { useModalStore } from '~/stores/modal-store'
 
 export default {
   name: 'ModalContainer',
-  setup() {
-    return {
-      modalStore: useModalStore(),
-    }
-  },
   data() {
     return {
       modal: null,
+      modalStore: useModalStore(),
     }
   },
   computed: {
