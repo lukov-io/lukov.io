@@ -37,10 +37,10 @@ export default {
   },
   mounted() {
     this.updateWindowWidth()
-    window.addEventListener('resize', this.updateWindowWidth)
+    window.addEventListener('resize', this.handleResize)
   },
   beforeUnmount() {
-    window.removeEventListener('resize', this.updateWindowWidth)
+    window.removeEventListener('resize', this.handleResize)
   },
   methods: {
     updateWindowWidth() {
@@ -49,6 +49,13 @@ export default {
     toggleMenu() {
       this.openMenu = !this.openMenu
       document.body.style.overflow = this.openMenu ? 'hidden' : ''
+    },
+    handleResize() {
+      this.updateWindowWidth()
+      if (this.windowWidth > 768 && this.openMenu) {
+        this.openMenu = false
+        document.body.style.overflow = ''
+      }
     },
   },
 }
@@ -68,12 +75,13 @@ $header-background-color: $background--white;
 $header-bottom-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 $header-grid-area-mobile: 1 / 1 / 2 / 2;
 $header-z-index-mobile: $z-index-fixed;
+$main-padding: max($sp-m, $sp-m-factorial-x) max($sp-m, $sp-m-factorial-y);
 
 .app {
   &-wrapper {
     background-color: $wrapper-background-color;
     display: grid;
-    height: 100dvh;
+    min-height: 100dvh;
     grid-template: $wrapper-grid-template;
 
     @media #{$md}, (orientation: portrait) {

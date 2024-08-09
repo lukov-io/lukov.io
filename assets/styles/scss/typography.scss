@@ -1,5 +1,5 @@
 $body-font-size: max($fs-xs, $fs-xs-factorial);
-$h1-font-size: max($fs-big-xxs, $fs-big-xxl-factorial);
+$h1-font-size: max($fs-big-xs, $fs-big-max-factorial);
 $h2-font-size: max($fs-big-m, $fs-big-m-factorial);
 $h3-font-size: max($fs-big-m, $fs-big-m-factorial);
 $h4-font-size: max($fs-big-xxs, $fs-big-xxs-factorial);
@@ -7,7 +7,7 @@ $h5-font-size: max($fs-big-min, $fs-big-min-factorial);
 $h6-font-size: max($fs-xxl, $fs-xxl-factorial);
 
 $body-line-height: $lh-xl;
-$h1-line-height: $lh-sm;
+$h1-line-height: $lh-md;
 $h2-line-height: $lh-xl;
 $h3-line-height: $lh-xl;
 $h4-line-height: $lh-xl;

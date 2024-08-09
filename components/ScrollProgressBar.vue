@@ -15,6 +15,13 @@ export default {
       isScrollable: false,
     }
   },
+  watch: {
+    $route(newVal) {
+      if (newVal) {
+        this.scrollProgress = 0
+      }
+    },
+  },
   mounted() {
     this.checkScrollable()
     window.addEventListener('scroll', this.updateScrollProgress)

@@ -60,7 +60,7 @@ $nav-item-dark-font-color: $text--white;
     }
   }
 
-  @media #{$sm} {
+  @media #{$md}, (orientation: portrait) {
     line-height: $nav-item-line-height-min;
   }
 

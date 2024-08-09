@@ -187,6 +187,10 @@ export default {
     },
 
     drawElements() {
+      if (!this.$refs.canvas) {
+        return
+      }
+
       const ctx = this.$refs.canvas.getContext('2d')
 
       if (!ctx) {
@@ -325,13 +329,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$heart-width: max(200px, 30vw);
-$heart-width-md: max(200px, 50vw);
+$heart-width: max(250px, 30vw);
+$heart-width-md: max(300px, 70vw);
 
 .canvas__wrapper {
   width: $heart-width;
 
-  @media #{$sm} {
+  @media #{$md} {
     width: $heart-width-md;
   }
 
