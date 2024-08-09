@@ -7,6 +7,13 @@ export default defineNuxtConfig({
     '~/assets/styles/index.scss',
   ],
 
+  app: {
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in', // default
+    },
+  },
+
   components: true,
 
   modules: [

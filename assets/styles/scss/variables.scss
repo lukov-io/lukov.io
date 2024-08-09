@@ -20,11 +20,18 @@ $fw-bolder: 800;
 $fw-heavy: 900;
 $fw-custom-550: 550;
 
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
 $icon-circle-padding-min: 15px;
 $icon-circle-padding-factor: 1.05vw;
 
-$border--grey: 0.0694vw solid $my-gray800;
-$border--light: 0.0694vw solid $my-primary;
+$border-1px: 0.0694vw solid;
 
 $mouse-device: "(hover: hover)";
 $touch-device: "(hover: none)";

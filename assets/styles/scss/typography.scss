@@ -1,5 +1,5 @@
 $body-font-size: max($fs-xs, $fs-xs-factorial);
-$h1-font-size: max($fs-big-xxs, $fs-big-max-factorial);
+$h1-font-size: max($fs-big-xs, $fs-big-max-factorial);
 $h2-font-size: max($fs-big-m, $fs-big-m-factorial);
 $h3-font-size: max($fs-big-m, $fs-big-m-factorial);
 $h4-font-size: max($fs-big-xxs, $fs-big-xxs-factorial);
@@ -7,7 +7,7 @@ $h5-font-size: max($fs-big-min, $fs-big-min-factorial);
 $h6-font-size: max($fs-xxl, $fs-xxl-factorial);
 
 $body-line-height: $lh-xl;
-$h1-line-height: $lh-sm;
+$h1-line-height: $lh-md;
 $h2-line-height: $lh-xl;
 $h3-line-height: $lh-xl;
 $h4-line-height: $lh-xl;
@@ -23,7 +23,7 @@ $h4-font-weight: $fw-custom-550;
 $h5-font-weight: $fw-custom-550;
 $h6-font-weight: $fw-custom-550;
 
-$h1-margin-bottom: max($sp-xxs, $sp-xxs-factorial-y);
+$h1-margin-bottom: max($sp-s, $sp-m-factorial-y);
 $h2-margin-bottom: max($sp-xs, $sp-xs-factorial-y);
 $h3-margin-bottom: max($sp-xs, $sp-xs-factorial-y);
 $h4-margin-bottom: max($sp-xxs, $sp-xxs-factorial-y);

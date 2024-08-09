@@ -30,7 +30,7 @@ $services-item-line-height: $lh-xl;
 $services-item-font-weight: $fw-custom-550;
 $services-item-hover-gradient: $gradient0deg;
 $services-item-hover-text-color: $text--white;
-$services-item-padding: $sp-custom-15-factorial-y $sp-custom-10-factorial-x;
+$services-item-padding: $sp-15-factorial-y $sp-10-factorial-x;
 
 .services-item {
   font-weight: $services-item-font-weight;

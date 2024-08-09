@@ -4,8 +4,6 @@ $layout-height: 1024px;
 $pixel-width: calc(100 / $layout-width * 1);
 $pixel-height: calc(100 / $layout-height * 1);
 
-$fs-base: 32px;
-
 $fs-xs: 14px;
 $fs-xs-factorial: #{calc($fs-xs * $pixel-width)}vw;
 
@@ -50,3 +48,6 @@ $fs-big-xxl-factorial: #{calc($fs-big-xxl * $pixel-width)}vw;
 
 $fs-big-max: 94px;
 $fs-big-max-factorial: #{calc($fs-big-max * $pixel-width)}vw;
+
+$fs-32: 32px;
+$fs-32-factorial: #{calc($fs-32 * $pixel-width)}vw;

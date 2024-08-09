@@ -1,7 +1,8 @@
 <template>
   <nuxt-link
-    :class="['nav-item', orientation === 'vertical']"
+    :class="['nav-item']"
     :to="pathTo"
+    @click="closeMenu"
   >
     {{ linkName }}
   </nuxt-link>
@@ -19,13 +20,11 @@ export default {
       type: String,
       required: true,
     },
-    orientation: {
-      type: String,
-      required: false,
-      default: '',
-      validator(value) {
-        return ['', 'vertical'].includes(value)
-      },
+  },
+  emits: ['toggle-menu'],
+  methods: {
+    closeMenu() {
+      setTimeout(() => (this.$emit('toggle-menu')), 500)
     },
   },
 }
@@ -47,6 +46,7 @@ $nav-item-dark-font-color: $text--white;
   line-height: $nav-item-line-height-max;
   font-weight: $nav-item-font-weight;
   font-size: max($nav-item-font-size-min, $nav-item-font-size-factor);
+  white-space: nowrap;
 
   @media #{$mouse-device} {
     &:hover {
@@ -60,7 +60,7 @@ $nav-item-dark-font-color: $text--white;
     }
   }
 
-  @media #{$md} {
+  @media #{$md}, (orientation: portrait) {
     line-height: $nav-item-line-height-min;
   }
 

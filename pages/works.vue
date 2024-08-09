@@ -1,3 +1,3 @@
 <template>
-  <div>Works</div>
+  <div>Partners</div>
 </template>
